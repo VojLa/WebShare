@@ -3,31 +3,8 @@ import OfficeCard from '../components/contact/OfficeCard';
 import TeamMember from '../components/contact/TeamMember';
 import { motion } from 'framer-motion';
 import { Mail, Phone } from 'lucide-react';
-
-const teamMembers = [
-  { name: 'Ing. Ivo Tirol', role: 'Výkonný ředitel, ekonom', email: 'office@bestaccount.cz' },
-  { name: 'Ing. Tereza Tirolová', role: 'Jednatelka, daňová poradkyně, členka KDP ČR, poradce č. 5270', email: 'office@bestaccount.cz' },
-  { name: 'Ing. Martin Coufal', role: 'Externí auditor, daňový poradce č. 1721', email: null },
-  { name: 'Ing. Aleš Coufal', role: 'Externí daňový poradce č. 4561', email: null },
-  { name: 'Jana Pichoňská', role: 'Senior účetní, správce účetních software', email: 'admin@bestaccount.cz' },
-  { name: 'Šimon Tirol', role: 'Asistentka vedení společnosti', email: 'sekretariat@bestaccount.cz' },
-  { name: 'Bc. Zuzana Schabjuková', role: 'Senior účetní', email: 'fakturace@bestaccount.cz' },
-  { name: 'Petr Zbedina', role: 'Senior účetní', email: 'petr.zbedina@bestaccount.cz' },
-  { name: 'Michal Bek', role: 'Účetní', email: 'opava@bestaccount.cz' },
-  { name: 'Marek Hořín', role: 'Účetní', email: 'fakturace@bestaccount.cz' },
-  { name: 'Ing. Martina Draisaitlová', role: 'Účetní', email: 'martina.draisaitlova@bestaccount.cz' },
-  { name: 'Andrea Vojtěchová', role: 'Účetní', email: 'fakturace@bestaccount.cz' },
-  { name: 'Josef Bajer', role: 'Účetní', email: 'fakturace@bestaccount.cz' },
-  { name: 'Sandra Orlíková', role: 'Účetní', email: 'opava@bestaccount.cz' },
-  { name: 'Ing. Lucie Neuwirthová', role: 'Účetní', email: 'lucie.neuwirthova@bestaccount.cz' },
-  { name: 'Eva Slámová', role: 'Administrativa', email: 'fakturace@bestaccount.cz' },
-  { name: 'Anna Dusková', role: 'Administrativní výpomoc', email: 'fakturace@bestaccount.cz' },
-  { name: 'Ing. Radomír Wisnar', role: 'Účetní', email: 'radomir.wisnar@bestaccount.cz' },
-  { name: 'Dáša Vandasová', role: 'BOZP a PO, OŽP, RTZZ — členka Komory České republiky pro BOZP a PO', email: 'dasa.vandasova@gmail.com' },
-  { name: 'Barbora Nekorancová', role: 'Mzdová účetní', email: 'personalistika@bestaccount.cz' },
-  { name: 'Ing. Vladimíra Šimečková', role: 'Mzdová účetní', email: 'mzdy@bestaccount.cz' },
-  { name: 'Hana Mičanová', role: 'Mzdová účetní', email: null },
-];
+import { teamMembers } from '@/content/team';
+import { companyInfo } from '@/content/company';
 
 export default function Contact() {
   const { t } = useTranslation();
@@ -79,9 +56,9 @@ export default function Contact() {
               phone={t('contact.branch_phone')}
             />
             <div className="bg-primary/10 border border-primary/20 rounded-2xl p-8">
-              <h3 className="text-lg font-heading font-semibold mb-5 text-primary">{t('contact.legal_title')}</h3>
+              <h3 className="text-lg font-heading font-semibold mb-5 text-primary">{companyInfo.legalTitle}</h3>
               <p className="text-sm text-muted-foreground whitespace-pre-line leading-relaxed">
-                {t('contact.legal_info')}
+                {companyInfo.legalInfo}
               </p>
             </div>
           </div>
@@ -97,11 +74,11 @@ export default function Contact() {
               <div className="text-muted-foreground text-sm mt-1">Odpovíme co nejdříve</div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="mailto:office@bestaccount.cz" className="flex items-center gap-2 px-6 py-3 rounded-xl border border-border hover:border-primary/40 hover:bg-secondary transition-all text-sm font-medium">
-                <Mail className="h-4 w-4 text-primary" /> office@bestaccount.cz
+              <a href={`mailto:${companyInfo.email}`} className="flex items-center gap-2 px-6 py-3 rounded-xl border border-border hover:border-primary/40 hover:bg-secondary transition-all text-sm font-medium">
+                <Mail className="h-4 w-4 text-primary" /> {companyInfo.email}
               </a>
-              <a href="tel:+420721075783" className="flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 transition-all text-sm font-bold">
-                <Phone className="h-4 w-4" /> +420 721 075 783
+              <a href={`tel:${companyInfo.phone.replace(/\s+/g, '')}`} className="flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 transition-all text-sm font-bold">
+                <Phone className="h-4 w-4" /> {companyInfo.phone}
               </a>
             </div>
           </div>
