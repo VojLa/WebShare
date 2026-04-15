@@ -8,8 +8,5 @@ export default function useTranslation() {
     language: lang,
     setLanguage: setLang,
     languages: supportedLanguages,
-    lang,
-    setLang,
-    supportedLanguages,
   }
 }
