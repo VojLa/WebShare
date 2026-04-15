@@ -1,0 +1,23 @@
+{
+  "name": "Translation",
+  "type": "object",
+  "properties": {
+    "language_code": {
+      "type": "string",
+      "description": "ISO language code (e.g. cs, en, de)"
+    },
+    "key": {
+      "type": "string",
+      "description": "Translation key identifier"
+    },
+    "value": {
+      "type": "string",
+      "description": "Translated text value"
+    }
+  },
+  "required": [
+    "language_code",
+    "key",
+    "value"
+  ]
+}
