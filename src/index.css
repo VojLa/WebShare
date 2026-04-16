@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,87 +6,125 @@
 
 @layer base {
   :root {
-    --font-body: 'Inter', sans-serif;
-    --font-heading: 'Plus Jakarta Sans', sans-serif;
-    --background: 222 47% 4%;
-    --foreground: 210 40% 96%;
-    --card: 222 40% 7%;
-    --card-foreground: 210 40% 96%;
-    --popover: 222 40% 7%;
-    --popover-foreground: 210 40% 96%;
-    --primary: 43 70% 52%;
-    --primary-foreground: 222 47% 4%;
-    --secondary: 217 33% 12%;
-    --secondary-foreground: 210 40% 96%;
-    --muted: 217 33% 10%;
-    --muted-foreground: 215 20% 50%;
-    --accent: 217 33% 12%;
-    --accent-foreground: 210 40% 96%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 217 33% 13%;
-    --input: 217 33% 13%;
-    --ring: 43 70% 52%;
-    --chart-1: 43 70% 52%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    --font-body: 'Poppins', sans-serif;
+    --font-heading: 'Poppins', sans-serif;
+
+    /* Best Account dark brand theme */
+    --background: 202 100% 12%;          /* #00293E */
+    --foreground: 0 0% 100%;             /* #FFFFFF */
+
+    --card: 203 100% 10%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 203 100% 10%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 203 84% 39%;              /* #1075B9 */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 203 100% 29%;           /* #005B94 */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 203 70% 18%;
+    --muted-foreground: 210 22% 72%;
+
+    --accent: 203 100% 29%;              /* #005B94 */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 48%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 203 55% 24%;
+    --input: 203 55% 24%;
+    --ring: 203 84% 39%;
+
+    --chart-1: 203 84% 39%;              /* primary blue */
+    --chart-2: 205 100% 29%;             /* medium blue */
+    --chart-3: 202 100% 12%;             /* dark blue */
+    --chart-4: 0 0% 100%;                /* white */
+    --chart-5: 112 3% 11%;               /* black */
+
     --radius: 0.75rem;
-    --sidebar-background: 222 47% 4%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --sidebar-background: 202 100% 12%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 203 84% 39%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 203 100% 18%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 203 55% 24%;
+    --sidebar-ring: 203 84% 39%;
   }
 
   .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --font-body: 'Poppins', sans-serif;
+    --font-heading: 'Poppins', sans-serif;
+
+    --background: 202 100% 12%;
+    --foreground: 0 0% 100%;
+
+    --card: 203 100% 10%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 203 100% 10%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 203 84% 39%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 203 100% 29%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 203 70% 18%;
+    --muted-foreground: 210 22% 72%;
+
+    --accent: 203 100% 29%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 48%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 203 55% 24%;
+    --input: 203 55% 24%;
+    --ring: 203 84% 39%;
+
+    --chart-1: 203 84% 39%;
+    --chart-2: 205 100% 29%;
+    --chart-3: 202 100% 12%;
+    --chart-4: 0 0% 100%;
+    --chart-5: 112 3% 11%;
+
+    --sidebar-background: 202 100% 10%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 203 84% 39%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 203 100% 18%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 203 55% 24%;
+    --sidebar-ring: 203 84% 39%;
   }
 }
-
-
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
 
+  html {
+    color-scheme: dark;
+  }
+
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
   }
 }
