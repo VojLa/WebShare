@@ -8,6 +8,19 @@ export const translations = {
 
     // Hlavní strana
 
+    // Certifikace KDP
+    'certification': 'CERTIFIKACE',
+    'services.kdp.title': 'Komora daňových poradců ČR',
+    'services.kdp.desc': 'Jsme členové Komory daňových poradců ČR a poskytujeme komplexní služby v oblasti daňového poradenství a optimalizace.',
+    'services.kdp.hero': 'Ing. Tereza Tirolová je členkou odborného kolegia při sekci daně z příjmu právnických osob u KDP ČR — poradce č. 5270. Ing. Aleš Coufal je externím daňovým poradcem č. 4561 a Ing. Martin Coufal externím auditorem a daňovým poradcem č. 1721.',
+    
+    'services.kdp.item1.title': 'Daňové poradenství',
+    'services.kdp.item1.desc': 'Komplexní služby v oblasti daňového poradenství a mezinárodního zdanění.',
+    'services.kdp.item2.title': 'Daňová optimalizace',
+    'services.kdp.item2.desc': 'Plánování a optimalizace daňové zátěže pro fyzické i právnické osoby.',
+    'services.kdp.item3.title': 'Zastoupení',
+    'services.kdp.item3.desc': 'Zastupujeme vás při daňových kontrolách, sporech a opravných prostředcích.',
+    
     // Proč my
     'about_us.title': 'O NÁS',
     'why_us.title': 'Proč my',
