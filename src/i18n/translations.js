@@ -6,6 +6,12 @@ export const translations = {
     legalTitle: 'Best Account s.r.o.',
     legalInfo: 'Doplň IČO, DIČ, sídlo, spisovou značku a další údaje.',
 
+    // NavBar
+    'nav.home': 'Domů',
+    'nav.services': 'Služby',
+    'nav.why_us': 'Proč my',
+    'nav.contact': 'Kontakt',
+    
     // Hlavní strana
 
     // Hero
@@ -91,6 +97,12 @@ export const translations = {
     legalTitle: 'Best Account s.r.o.',
     legalInfo: 'Add the company ID, VAT ID, registered office, commercial register entry and other legal details.',
 
+    //NavBar
+    'nav.home': 'Home',
+    'nav.services': 'Services',
+    'nav.why_us': 'Why us',
+    'nav.contact': 'Contact',
+    
     // Homepage
 
     // Hero
@@ -176,6 +188,12 @@ export const translations = {
     legalTitle: 'Best Account s.r.o.',
     legalInfo: 'Ergänzen Sie die Firmen-ID, USt-IdNr., den Sitz, den Registereintrag und weitere rechtliche Angaben.',
 
+    //NavBar
+    'nav.home': 'Start',
+    'nav.services': 'Dienstleistungen',
+    'nav.why_us': 'Warum wir',
+    'nav.contact': 'Kontakt',
+    
     // Startseite
 
     // Hero
