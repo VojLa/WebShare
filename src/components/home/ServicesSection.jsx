@@ -59,7 +59,6 @@ export default function ServicesSection() {
                 <div className="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:border-primary transition-all duration-300">
                   <Icon className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors" />
                 </div>
-z
                 <h3 className="text-lg font-heading font-bold mb-3 text-foreground">
                   {t(`services.${service.key}.title`)}
                 </h3>
