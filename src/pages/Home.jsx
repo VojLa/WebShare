@@ -5,17 +5,18 @@ import KDPSection from '../components/home/KDPSection';
 import WhyUsSection from '../components/home/WhyUsSection';
 import EServisSection from '../components/home/EServisSection';
 import CTASection from '../components/home/CTASection';
+import { homeContent } from '../content/home';
 
 export default function Home() {
   return (
     <div>
-      <HeroSection />
-      <StatsSection />
+      <HeroSection content={homeContent.hero} />
+      <StatsSection stats={homeContent.stats} />
       <ServicesSection />
       <KDPSection />
       <WhyUsSection />
       <EServisSection />
-      <CTASection />
+      <CTASection content={homeContent.cta} />
     </div>
   );
 }
