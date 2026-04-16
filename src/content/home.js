@@ -6,12 +6,7 @@ export const homeContent = {
     button: 'Kontaktujte nás',
     servicesButton: 'Naše služby',
   },
-  stats: [
-    { value: '20+', label: 'let zkušeností' },
-    { value: '500+', label: 'spokojených klientů' },
-    { value: '2', label: 'pobočky ČR a další se chystají' },
-    { value: '22', label: 'odborníků v týmu' },
-  ],
+  stats: ['20+', '500+', '2', '22'],
   cta: {
     eyebrow: 'Kontakt',
     title: 'Potřebujete poradit?',
