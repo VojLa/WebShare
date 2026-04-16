@@ -6,8 +6,14 @@ import { motion } from 'framer-motion';
 const HERO_IMAGE = 'https://media.base44.com/images/public/69d9229445b235d25dd03bb7/8bee05119_generated_d2089682.png';
 
 export default function HeroSection({ content = {} }) {
-  const [titleFirstLine = '', ...titleRest] = (content.title ?? '').split(' ');
-  const titleSecondLine = titleRest.join(' ');
+  let titleFirstLine = content.titleFirstLine ?? '';
+  let titleSecondLine = content.titleSecondLine ?? '';
+
+  if (!titleFirstLine && !titleSecondLine && content.title) {
+    const [firstWord = '', ...remainingWords] = content.title.split(' ');
+    titleFirstLine = firstWord;
+    titleSecondLine = remainingWords.join(' ');
+  }
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
