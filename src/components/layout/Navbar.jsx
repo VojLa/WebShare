@@ -4,6 +4,8 @@ import useTranslation from '@/hooks/useTranslation';
 import LanguageSwitcher from './LanguageSwitcher';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import logoBestAccount from '@/assets/logo-best-account.png';
+
 
 export default function Navbar() {
   const { t } = useTranslation();
@@ -52,9 +54,11 @@ export default function Navbar() {
         {/* Main nav */}
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg font-heading">B</span>
-            </div>
+            <img
+              src={logoBestAccount}
+              alt="Best Account"
+              className="h-10 w-auto object-contain"
+            />
             <div>
               <span className="font-heading text-xl font-bold tracking-tight text-foreground">Best Account</span>
               <span className="hidden sm:block text-[10px] text-muted-foreground tracking-widest uppercase">
