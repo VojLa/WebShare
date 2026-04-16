@@ -54,7 +54,7 @@ export const translations = {
     'why_us.item6': 'Professional representation towards tax authorities',
     'why_us.item7': 'We provide tax advisory not only to you, but also to your accountant',
     'why_us.item8': 'We represent you in tax proceedings within tax administration',
-    'memberKDP.title': 'Chamber of Tax Advisors',
+    'memberKDP.title': 'KDP ČR',
     'memberKDP.subtitle1': 'Member of the Chamber of Tax',
     'memberKDP.subtitle2': 'Advisors of the Czech Republic',
     
@@ -88,7 +88,7 @@ export const translations = {
     'why_us.item6': 'Professionelle Vertretung gegenüber Finanzbehörden',
     'why_us.item7': 'Wir bieten Steuerberatung nicht nur Ihnen, sondern auch Ihrem Buchhalter',
     'why_us.item8': 'Wir vertreten Sie in Steuerverfahren im Rahmen der Steuerverwaltung',
-    'memberKDP.title': 'Steuerberaterkammer',
+    'memberKDP.title': 'KDP ČR',
     'memberKDP.subtitle1': 'Mitglied der Kammer der Steuerberater',
     'memberKDP.subtitle2': 'der Tschechischen Republik',
 
