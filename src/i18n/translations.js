@@ -8,8 +8,13 @@ export const translations = {
 
     // Hlavní strana
 
+    //Statistiky
+    'stats.label1': 'let zkušeností',
+    'stats.label2': 'spokojených klientů',
+    'stats.label3': 'pobočky ČR a další se chystají',
+    'stats.label4': 'odborníků v týmu',
+    
     // Services
-
     'services.section.name': 'NAŠE PORTFOLIO',
     'services.title': 'Naše služby',
     'services.subtitle': 'Poskytujeme komplexní účetní, ekonomické a daňové poradenství.',
