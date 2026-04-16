@@ -1,9 +1,7 @@
 export const homeContent = {
   hero: {
     badge: 'Spolehlivý partner pro vaše finance',
-    title: 'Moderní účetní a daňové služby',
-    titleFirstLine: 'Moderní účetní',
-    titleSecondLine: 'a daňové služby',
+    title: 'Moderní účetní|a daňové služby',
     subtitle: 'Pomáháme firmám i podnikatelům s účetnictvím, daněmi a poradenstvím.',
     button: 'Kontaktujte nás',
     servicesButton: 'Naše služby',
