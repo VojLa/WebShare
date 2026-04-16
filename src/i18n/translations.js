@@ -8,6 +8,16 @@ export const translations = {
 
     // Hlavní strana
 
+    // Hero
+    'hero.badge': 'Spolehlivý partner pro vaše finance',
+    'hero.title.line1': 'Moderní účetní',
+    'hero.title.line2': 'a daňové služby',
+    'hero.subtitle': 'Pomáháme firmám i podnikatelům s účetnictvím, daněmi a poradenstvím.',
+    'hero.button.contact': 'Kontaktujte nás',
+    'hero.button.services': 'Naše služby',
+    'hero.scroll': 'Scroll',
+    'hero.image_alt': 'Úvodní obrázek',
+    
     // Statistiky
     'stats.label1': 'let zkušeností',
     'stats.label2': 'spokojených klientů',
@@ -83,6 +93,16 @@ export const translations = {
 
     // Homepage
 
+    // Hero
+    'hero.badge': 'Reliable partner for your finances',
+    'hero.title.line1': 'Modern accounting',
+    'hero.title.line2': 'and tax services',
+    'hero.subtitle': 'We help companies and entrepreneurs with accounting, taxes and advisory services.',
+    'hero.button.contact': 'Contact us',
+    'hero.button.services': 'Our services',
+    'hero.scroll': 'Scroll',
+    'hero.image_alt': 'Hero image',
+    
     // Stats
     'stats.label1': 'years of experience',
     'stats.label2': 'satisfied clients',
@@ -158,6 +178,16 @@ export const translations = {
 
     // Startseite
 
+    // Hero
+    'hero.badge': 'Zuverlässiger Partner für Ihre Finanzen',
+    'hero.title.line1': 'Moderne Buchhaltung',
+    'hero.title.line2': 'und Steuerdienstleistungen',
+    'hero.subtitle': 'Wir helfen Unternehmen und Unternehmern bei Buchhaltung, Steuern und Beratung.',
+    'hero.button.contact': 'Kontaktieren Sie uns',
+    'hero.button.services': 'Unsere Dienstleistungen',
+    'hero.scroll': 'Scroll',
+    'hero.image_alt': 'Titelbild',
+    
     // Statistiken
     'stats.label1': 'Jahre Erfahrung',
     'stats.label2': 'zufriedene Kunden',
