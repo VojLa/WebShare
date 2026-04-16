@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Monitor, ArrowRight, Zap, Globe, Clock } from 'lucide-react';
+import { ArrowRight, Zap, Globe, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import useTranslation from '../../hooks/useTranslation';
 
