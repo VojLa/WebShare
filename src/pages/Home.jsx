@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <div>
-      <HeroSection content={homeContent.hero} />
+      <HeroSection/>
       <StatsSection stats={[
                             { value: homeContent.stats[0], label: t('stats.label1') },
                             { value: homeContent.stats[1], label: t('stats.label2') },
