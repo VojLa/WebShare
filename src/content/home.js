@@ -9,7 +9,7 @@ export const homeContent = {
   stats: [
     { value: '20+', label: 'let zkušeností' },
     { value: '500+', label: 'spokojených klientů' },
-    { value: '2', label: 'pobočky ČR' },
+    { value: '2', label: 'pobočky ČR a další se chystají' },
     { value: '22', label: 'odborníků v týmu' },
   ],
   cta: {
