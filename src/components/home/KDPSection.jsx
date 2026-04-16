@@ -44,9 +44,9 @@ export default function KDPSection() {
             className="space-y-4"
           >
             {[
-              { icon: ShieldCheck, title: {t('services.kdp.item1.title')}, desc: {t('services.kdp.item1.desc')} },
-              { icon: Award, title: {t('services.kdp.item2.title')}, desc: {t('services.kdp.item2.desc')} },
-              { icon: Scale, title: {t('services.kdp.item3.title')}, desc: {t('services.kdp.item3.desc')} },
+              { icon: ShieldCheck, title: t('services.kdp.item1.title'), desc: t('services.kdp.item1.desc') },
+              { icon: Award, title: t('services.kdp.item2.title'), desc: t('services.kdp.item2.desc') },
+              { icon: Scale, title: t('services.kdp.item3.title'), desc: t('services.kdp.item3.desc') },
             ].map(({ icon: Icon, title, desc }, i) => (
               <motion.div
                 key={title}
