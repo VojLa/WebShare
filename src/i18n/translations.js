@@ -8,6 +8,30 @@ export const translations = {
 
     // Hlavní strana
 
+    // Services
+
+    'services.section.name': 'NAŠE PORTFOLIO',
+    'services.title': 'Naše služby',
+    'services.subtitle': 'Poskytujeme komplexní účetní, ekonomické a daňové poradenství.',
+  
+    'services.consulting.title': 'Poradenství',
+    'services.consulting.desc': 'Zcela nový přístup z pohledu ekonomického, účetního a daňového poradenství s důrazem na individuální přístup ke klientovi.',
+    
+    'services.eservis.title': 'E-Servis',
+    'services.eservis.desc': 'Prostřednictvím on-line formuláře poskytujeme účetní, ekonomické a daňové poradenství včetně tvorby závazkových vztahů.',
+    
+    'services.kdp.title': 'Komora daňových poradců ČR',
+    'services.kdp.desc': 'Jsme členové Komory daňových poradců ČR a poskytujeme komplexní služby v oblasti daňového poradenství a optimalizace.',
+    
+    'services.taxes.title': 'Daně',
+    'services.taxes.desc': 'Daňové evidence, analýzy, daňová optimalizace a možnost odkladů daní.',
+    
+    'services.accounting.title': 'Účetnictví',
+    'services.accounting.desc': 'Vedení účetnictví, hospodářské reporty a ekonomické poradenství.',
+    
+    'services.payroll.title': 'Mzdy',
+    'services.payroll.desc': 'Kompletní zpracování mezd, personalistika a související poradenství.',
+    
     // Certifikace KDP
     'certification': 'CERTIFIKACE',
     'services.kdp.title': 'Komora daňových poradců ČR',
