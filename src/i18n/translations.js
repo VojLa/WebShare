@@ -20,8 +20,9 @@ export const translations = {
     'why_us.item6': 'Profesionální zastoupení směrem k finančním úřadům',
     'why_us.item7': 'Poskytneme daňové poradenství nejen Vám, ale i Vašemu účetnímu',
     'why_us.item8': 'Zastoupíme Vás v daňových řízeních v rámci správy daní',
-    'mamberKDP.title': 'KDP ČR',
-    'mamberKDP.subtitle': 'Člen komory daňových<br/>poradců České republiky',
+    'memberKDP.title': 'KDP ČR',
+    'memberKDP.subtitle1': 'Člen komory daňových',
+    'memberKDP.subtitle2': 'poradců České republiky',
 
     // Kontaktní strana
     'contact.title': 'Kontaktujte nás',
@@ -53,9 +54,10 @@ export const translations = {
     'why_us.item6': 'Professional representation towards tax authorities',
     'why_us.item7': 'We provide tax advisory not only to you, but also to your accountant',
     'why_us.item8': 'We represent you in tax proceedings within tax administration',
-    'mamberKDP.title': 'Chamber of Tax Advisors',
-    'mamberKDP.subtitle': 'Member of the Chamber of Tax<br/>Advisors of the Czech Republic',
-
+    'memberKDP.title': 'Chamber of Tax Advisors',
+    'memberKDP.subtitle1': 'Member of the Chamber of Tax',
+    'memberKDP.subtitle2': 'Advisors of the Czech Republic',
+    
     // Contact page
     'contact.title': 'Contact us',
     'contact.subtitle': 'We are ready to help you with accounting, tax and advisory services.',
@@ -86,8 +88,9 @@ export const translations = {
     'why_us.item6': 'Professionelle Vertretung gegenüber Finanzbehörden',
     'why_us.item7': 'Wir bieten Steuerberatung nicht nur Ihnen, sondern auch Ihrem Buchhalter',
     'why_us.item8': 'Wir vertreten Sie in Steuerverfahren im Rahmen der Steuerverwaltung',
-    'mamberKDP.title': 'Steuerberaterkammer',
-    'mamberKDP.subtitle': 'Mitglied der Kammer der Steuerberater<br/>der Tschechischen Republik',
+    'memberKDP.title': 'Steuerberaterkammer',
+    'memberKDP.subtitle1': 'Mitglied der Kammer der Steuerberater',
+    'memberKDP.subtitle2': 'der Tschechischen Republik',
 
     // Kontaktseite
     'contact.title': 'Kontaktieren Sie uns',
