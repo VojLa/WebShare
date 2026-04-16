@@ -23,7 +23,7 @@ export const translations = {
     'why_us.item7': 'Protože proto',
     'why_us.item8': 'Protože proto',
     'mamberKDP.title': 'KDP ČR',
-    'mamberKDP.subtitle': 'Člen komory daňových<br/>poradců České republiky'
+    'mamberKDP.subtitle': 'Člen komory daňových<br/>poradců České republiky',
   
     
     //Kontaktni strana
