@@ -1,4 +1,4 @@
-import useTranslation from '../../hooks/useTranslation';
+import useTranslation from '@/hooks/useTranslation';
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
