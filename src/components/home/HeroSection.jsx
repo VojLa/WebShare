@@ -52,7 +52,7 @@ export default function HeroSection() {
 
             <h1 className="text-6xl sm:text-7xl lg:text-8xl font-heading font-bold text-foreground tracking-tight leading-[1.0] mb-4">
               <span className="block text-foreground">{titleFirstLine}</span>
-              <span className="block bg-gradient-to-r from-primary via-yellow-300 to-primary bg-clip-text text-transparent">
+              <span className="inline-block bg-gradient-to-r from-primary via-yellow-300 to-primary bg-clip-text text-transparent">
                 {titleSecondLine}
               </span>
             </h1>
