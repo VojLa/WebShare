@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import useTranslation from '../hooks/useTranslation';
+import useTranslation from '../../hooks/useTranslation';
 import LanguageSwitcher from './LanguageSwitcher';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import { Button } from "@/components/ui/button";
