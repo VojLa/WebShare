@@ -28,7 +28,9 @@ export default function ServicesSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary/70">Naše portfolio</span>
+            <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary/70">
+              {t('services.section.name')}
+            </span>
             <h2 className="text-4xl sm:text-5xl font-heading font-bold mt-4 mb-6 text-foreground leading-tight">
               {t('services.title')}
             </h2>
@@ -57,7 +59,7 @@ export default function ServicesSection() {
                 <div className="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:border-primary transition-all duration-300">
                   <Icon className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors" />
                 </div>
-
+z
                 <h3 className="text-lg font-heading font-bold mb-3 text-foreground">
                   {t(`services.${service.key}.title`)}
                 </h3>
