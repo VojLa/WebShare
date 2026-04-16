@@ -6,6 +6,8 @@ import { motion } from 'framer-motion';
 const HERO_IMAGE = 'https://media.base44.com/images/public/69d9229445b235d25dd03bb7/8bee05119_generated_d2089682.png';
 
 export default function HeroSection({ content = {} }) {
+  const [titleFirstLine = '', ...titleRest] = (content.title ?? '').split(' ');
+  const titleSecondLine = titleRest.join(' ');
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
@@ -42,7 +44,8 @@ export default function HeroSection({ content = {} }) {
             </motion.div>
 
             <h1 className="text-6xl sm:text-7xl lg:text-8xl font-heading font-bold text-foreground tracking-tight leading-[1.0] mb-4">
-              <span className="block bg-gradient-to-r from-primary via-yellow-300 to-primary bg-clip-text text-transparent">{content.title ?? ''}</span>
+              <span className="block text-foreground">{titleFirstLine}</span>
+              <span className="block bg-gradient-to-r from-primary via-yellow-300 to-primary bg-clip-text text-transparent">{titleSecondLine}</span>
             </h1>
 
             <motion.div
