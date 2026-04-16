@@ -38,10 +38,12 @@ export default function WhyUsSection() {
               className="absolute -bottom-6 -right-4 bg-card border border-border rounded-2xl p-5 shadow-2xl"
             >
               <div className="text-3xl font-heading font-bold text-primary">
-                {t('mamberKDP.title')}
+                {t('memberKDP.title')}
               \</div>
               <div className="text-xs text-muted-foreground mt-1">
-                {t('mamberKDP.subtitle')}
+                {t('memberKDP.subtitle1')}
+                <br />
+                {t('memberKDP.subtitle2')}
               </div>
             </motion.div>
           </motion.div>
