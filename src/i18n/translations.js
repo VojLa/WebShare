@@ -8,48 +8,47 @@ export const translations = {
 
     // Hlavní strana
 
-    //Statistiky
+    // Statistiky
     'stats.label1': 'let zkušeností',
     'stats.label2': 'spokojených klientů',
-    'stats.label3': 'pobočky ČR a další se chystají',
+    'stats.label3': 'pobočky v ČR a další se chystají',
     'stats.label4': 'odborníků v týmu',
-    
+
     // Services
     'services.section.name': 'NAŠE PORTFOLIO',
     'services.title': 'Naše služby',
     'services.subtitle': 'Poskytujeme komplexní účetní, ekonomické a daňové poradenství.',
-  
+
     'services.consulting.title': 'Poradenství',
     'services.consulting.desc': 'Zcela nový přístup z pohledu ekonomického, účetního a daňového poradenství s důrazem na individuální přístup ke klientovi.',
-    
+
     'services.eservis.title': 'E-Servis',
     'services.eservis.desc': 'Prostřednictvím on-line formuláře poskytujeme účetní, ekonomické a daňové poradenství včetně tvorby závazkových vztahů.',
-    
+
     'services.kdp.title': 'Komora daňových poradců ČR',
     'services.kdp.desc': 'Jsme členové Komory daňových poradců ČR a poskytujeme komplexní služby v oblasti daňového poradenství a optimalizace.',
-    
+
     'services.taxes.title': 'Daně',
     'services.taxes.desc': 'Daňové evidence, analýzy, daňová optimalizace a možnost odkladů daní.',
-    
+
     'services.accounting.title': 'Účetnictví',
     'services.accounting.desc': 'Vedení účetnictví, hospodářské reporty a ekonomické poradenství.',
-    
+
     'services.payroll.title': 'Mzdy',
     'services.payroll.desc': 'Kompletní zpracování mezd, personalistika a související poradenství.',
-    
+
     // Certifikace KDP
-    'certification': 'CERTIFIKACE',
-    'services.kdp.title': 'Komora daňových poradců ČR',
-    'services.kdp.desc': 'Jsme členové Komory daňových poradců ČR a poskytujeme komplexní služby v oblasti daňového poradenství a optimalizace.',
-    'services.kdp.hero': 'Ing. Tereza Tirolová je členkou odborného kolegia při sekci daně z příjmu právnických osob u KDP ČR — poradce č. 5270. Ing. Aleš Coufal je externím daňovým poradcem č. 4561 a Ing. Martin Coufal externím auditorem a daňovým poradcem č. 1721.',
-    
+    certification: 'CERTIFIKACE',
+    'services.kdp.hero':
+      'Ing. Tereza Tirolová je členkou odborného kolegia při sekci daně z příjmu právnických osob u KDP ČR — poradce č. 5270. Ing. Aleš Coufal je externím daňovým poradcem č. 4561 a Ing. Martin Coufal externím auditorem a daňovým poradcem č. 1721.',
+
     'services.kdp.item1.title': 'Daňové poradenství',
     'services.kdp.item1.desc': 'Komplexní služby v oblasti daňového poradenství a mezinárodního zdanění.',
     'services.kdp.item2.title': 'Daňová optimalizace',
     'services.kdp.item2.desc': 'Plánování a optimalizace daňové zátěže pro fyzické i právnické osoby.',
     'services.kdp.item3.title': 'Zastoupení',
     'services.kdp.item3.desc': 'Zastupujeme vás při daňových kontrolách, sporech a opravných prostředcích.',
-    
+
     // Proč my
     'about_us.title': 'O NÁS',
     'why_us.title': 'Proč my',
@@ -84,6 +83,47 @@ export const translations = {
 
     // Homepage
 
+    // Stats
+    'stats.label1': 'years of experience',
+    'stats.label2': 'satisfied clients',
+    'stats.label3': 'branches in the Czech Republic, with more coming',
+    'stats.label4': 'experts in our team',
+
+    // Services
+    'services.section.name': 'OUR PORTFOLIO',
+    'services.title': 'Our services',
+    'services.subtitle': 'We provide comprehensive accounting, economic and tax advisory services.',
+
+    'services.consulting.title': 'Consulting',
+    'services.consulting.desc': 'A completely new approach to economic, accounting and tax consulting with an emphasis on an individual approach to each client.',
+
+    'services.eservis.title': 'E-Service',
+    'services.eservis.desc': 'Through an online form, we provide accounting, economic and tax advisory services, including the creation of contractual relationships.',
+
+    'services.kdp.title': 'Chamber of Tax Advisors of the Czech Republic',
+    'services.kdp.desc': 'We are members of the Chamber of Tax Advisors of the Czech Republic and provide comprehensive services in tax advisory and tax optimization.',
+
+    'services.taxes.title': 'Taxes',
+    'services.taxes.desc': 'Tax records, analyses, tax optimization and the possibility of tax deferrals.',
+
+    'services.accounting.title': 'Accounting',
+    'services.accounting.desc': 'Bookkeeping, financial reporting and economic advisory services.',
+
+    'services.payroll.title': 'Payroll',
+    'services.payroll.desc': 'Complete payroll processing, HR administration and related advisory services.',
+
+    // KDP Certification
+    certification: 'CERTIFICATION',
+    'services.kdp.hero':
+      'Ing. Tereza Tirolová is a member of the expert board within the corporate income tax section of the Chamber of Tax Advisors of the Czech Republic — advisor no. 5270. Ing. Aleš Coufal is an external tax advisor no. 4561 and Ing. Martin Coufal is an external auditor and tax advisor no. 1721.',
+
+    'services.kdp.item1.title': 'Tax advisory',
+    'services.kdp.item1.desc': 'Comprehensive services in tax advisory and international taxation.',
+    'services.kdp.item2.title': 'Tax optimization',
+    'services.kdp.item2.desc': 'Planning and optimization of tax burden for individuals and legal entities.',
+    'services.kdp.item3.title': 'Representation',
+    'services.kdp.item3.desc': 'We represent you during tax audits, disputes and remedies.',
+
     // Why us
     'about_us.title': 'ABOUT US',
     'why_us.title': 'Why us',
@@ -96,10 +136,10 @@ export const translations = {
     'why_us.item6': 'Professional representation towards tax authorities',
     'why_us.item7': 'We provide tax advisory not only to you, but also to your accountant',
     'why_us.item8': 'We represent you in tax proceedings within tax administration',
-    'memberKDP.title': 'KDP ČR',
+    'memberKDP.title': 'CTA CR',
     'memberKDP.subtitle1': 'Member of the Chamber of Tax',
     'memberKDP.subtitle2': 'Advisors of the Czech Republic',
-    
+
     // Contact page
     'contact.title': 'Contact us',
     'contact.subtitle': 'We are ready to help you with accounting, tax and advisory services.',
@@ -117,6 +157,47 @@ export const translations = {
     legalInfo: 'Ergänzen Sie die Firmen-ID, USt-IdNr., den Sitz, den Registereintrag und weitere rechtliche Angaben.',
 
     // Startseite
+
+    // Statistiken
+    'stats.label1': 'Jahre Erfahrung',
+    'stats.label2': 'zufriedene Kunden',
+    'stats.label3': 'Niederlassungen in Tschechien, weitere sind geplant',
+    'stats.label4': 'Experten im Team',
+
+    // Services
+    'services.section.name': 'UNSER PORTFOLIO',
+    'services.title': 'Unsere Dienstleistungen',
+    'services.subtitle': 'Wir bieten umfassende Buchhaltungs-, Wirtschafts- und Steuerberatungsleistungen an.',
+
+    'services.consulting.title': 'Beratung',
+    'services.consulting.desc': 'Ein völlig neuer Ansatz in der wirtschaftlichen, buchhalterischen und steuerlichen Beratung mit Schwerpunkt auf einem individuellen Zugang zum Kunden.',
+
+    'services.eservis.title': 'E-Service',
+    'services.eservis.desc': 'Über ein Online-Formular bieten wir Buchhaltungs-, Wirtschafts- und Steuerberatung einschließlich der Erstellung von Vertragsbeziehungen an.',
+
+    'services.kdp.title': 'Kammer der Steuerberater der Tschechischen Republik',
+    'services.kdp.desc': 'Wir sind Mitglieder der Kammer der Steuerberater der Tschechischen Republik und bieten umfassende Leistungen im Bereich Steuerberatung und Steueroptimierung an.',
+
+    'services.taxes.title': 'Steuern',
+    'services.taxes.desc': 'Steuererfassung, Analysen, Steueroptimierung und die Möglichkeit von Steuerstundungen.',
+
+    'services.accounting.title': 'Buchhaltung',
+    'services.accounting.desc': 'Buchführung, betriebswirtschaftliche Berichte und wirtschaftliche Beratung.',
+
+    'services.payroll.title': 'Löhne',
+    'services.payroll.desc': 'Komplette Lohnverarbeitung, Personaladministration und damit verbundene Beratung.',
+
+    // KDP-Zertifizierung
+    certification: 'ZERTIFIZIERUNG',
+    'services.kdp.hero':
+      'Ing. Tereza Tirolová ist Mitglied des Fachkollegiums in der Sektion Körperschaftsteuer bei der Kammer der Steuerberater der Tschechischen Republik — Beraterin Nr. 5270. Ing. Aleš Coufal ist externer Steuerberater Nr. 4561 und Ing. Martin Coufal externer Auditor und Steuerberater Nr. 1721.',
+
+    'services.kdp.item1.title': 'Steuerberatung',
+    'services.kdp.item1.desc': 'Umfassende Dienstleistungen im Bereich Steuerberatung und internationale Besteuerung.',
+    'services.kdp.item2.title': 'Steueroptimierung',
+    'services.kdp.item2.desc': 'Planung und Optimierung der Steuerbelastung für natürliche und juristische Personen.',
+    'services.kdp.item3.title': 'Vertretung',
+    'services.kdp.item3.desc': 'Wir vertreten Sie bei Steuerprüfungen, Streitigkeiten und Rechtsmitteln.',
 
     // Warum wir
     'about_us.title': 'ÜBER UNS',
