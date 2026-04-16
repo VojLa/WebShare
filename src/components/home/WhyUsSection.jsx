@@ -39,7 +39,7 @@ export default function WhyUsSection() {
             >
               <div className="text-3xl font-heading font-bold text-primary">
                 {t('memberKDP.title')}
-              \</div>
+              </div>
               <div className="text-xs text-muted-foreground mt-1">
                 {t('memberKDP.subtitle1')}
                 <br />
