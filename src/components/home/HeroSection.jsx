@@ -6,9 +6,9 @@ import { motion } from 'framer-motion';
 const HERO_IMAGE = 'https://media.base44.com/images/public/69d9229445b235d25dd03bb7/8bee05119_generated_d2089682.png';
 
 export default function HeroSection({ content = {} }) {
-  const [delimitedFirstLine = '', delimitedSecondLine = ''] = (content.title ?? '').split('|').map((part) => part.trim());
-  let titleFirstLine = delimitedFirstLine;
-  let titleSecondLine = delimitedSecondLine;
+  const [titleFirstPart = '', titleSecondPart = ''] = (content.title ?? '').split('|').map((part) => part.trim());
+  let titleFirstLine = titleFirstPart;
+  let titleSecondLine = titleSecondPart;
 
   if (!titleSecondLine && content.title) {
     const [firstWord = '', ...remainingWords] = content.title.split(' ');
