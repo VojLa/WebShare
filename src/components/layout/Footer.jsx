@@ -22,7 +22,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
-              Komplexní účetní a daňová kancelář. Vaše daně děláme jako by byly naše — s maximální pečlivostí a odborností.
+              {t('footer.description')}
             </p>
             <div className="mt-5 space-y-2 text-sm">
               <a href="mailto:office@bestaccount.cz" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
@@ -49,15 +49,15 @@ export default function Footer() {
 
           <div>
             <h4 className="font-heading font-semibold mb-5 text-xs uppercase tracking-widest text-primary/70">
-              Pobočky
+              {t('footer.offices')}
             </h4>
             <div className="space-y-4 text-sm text-muted-foreground">
               <div>
-                <div className="font-medium text-foreground/80 mb-1">Centrála Vítkov</div>
+                <div className="font-medium text-foreground/80 mb-1">{t('footer.headquarters')}</div>
                 <div>Wolkerova 1009, 749 01</div>
               </div>
               <div>
-                <div className="font-medium text-foreground/80 mb-1">Pobočka Opava</div>
+                <div className="font-medium text-foreground/80 mb-1">{t('footer.branch_opava')}</div>
                 <div>U Pošty 250/6, 746 01</div>
               </div>
             </div>
@@ -66,7 +66,7 @@ export default function Footer() {
 
         <div className="pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
           <span>© {new Date().getFullYear()} Best Account s.r.o. — {t('footer.rights')}</span>
-          <span>IČ: 05067014 | DIČ: CZ05067014 | Datová schránka: thrvd6r</span>
+          <span>IČ: 05067014 | DIČ: CZ05067014 | {t('footer.data_box')}: thrvd6r</span>
         </div>
       </div>
     </footer>

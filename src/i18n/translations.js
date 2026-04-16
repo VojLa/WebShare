@@ -121,6 +121,14 @@ export const translations = {
     'contact.legal_info': 'Doplň sem právní údaje společnosti.',
     'contact.team_title': 'Náš tým',
     'contact.team_subtitle': 'Lidé, kteří se o vás postarají.',
+
+    // Footer
+    'footer.description': 'Komplexní účetní a daňová kancelář. Vaše daně děláme jako by byly naše — s maximální pečlivostí a odborností.',
+    'footer.offices': 'Pobočky',
+    'footer.headquarters': 'Centrála Vítkov',
+    'footer.branch_opava': 'Pobočka Opava',
+    'footer.data_box': 'Datová schránka',
+    'footer.rights': 'Všechna práva vyhrazena',
   },
 
   en: {
@@ -245,6 +253,15 @@ export const translations = {
     'contact.legal_info': 'Add the legal company details here.',
     'contact.team_title': 'Our team',
     'contact.team_subtitle': 'People who will take care of you.',
+
+    // Footer
+    'footer.description': 'Comprehensive accounting and tax office. We do your taxes as if they were ours — with maximum care and expertise.',
+    'footer.offices': 'Offices',
+    'footer.headquarters': 'Headquarters Vítkov',
+    'footer.branch_opava': 'Branch Opava',
+    'footer.data_box': 'Data box',
+    'footer.rights': 'All rights reserved',
+
   },
 
   de: {
@@ -369,5 +386,14 @@ export const translations = {
     'contact.legal_info': 'Ergänzen Sie hier die rechtlichen Firmendaten.',
     'contact.team_title': 'Unser Team',
     'contact.team_subtitle': 'Menschen, die sich um Sie kümmern.',
+
+    // Footer
+    'footer.description': 'Umfassende Buchhaltungs- und Steuerkanzlei. Wir machen Ihre Steuern, als wären sie unsere – mit größter Sorgfalt und Fachkenntnis.',
+    'footer.offices': 'Niederlassungen',
+    'footer.headquarters': 'Hauptsitz Vítkov',
+    'footer.branch_opava': 'Filiale Opava',
+    'footer.data_box': 'Datenbox',
+    'footer.rights': 'Alle Rechte vorbehalten',
+
   },
 }
