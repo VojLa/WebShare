@@ -21,7 +21,9 @@ export default function KDPSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary/70">Certifikace</span>
+            <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary/70">
+              {t('certification')}
+            </span>
             <h2 className="text-4xl sm:text-5xl font-heading font-bold mt-4 mb-6 text-foreground leading-tight">
               {t('services.kdp.title')}
             </h2>
@@ -29,7 +31,7 @@ export default function KDPSection() {
               {t('services.kdp.desc')}
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Ing. Tereza Tirolová je členkou odborného kolegia při sekci daně z příjmu právnických osob u KDP ČR — poradce č. 5270. Ing. Aleš Coufal je externím daňovým poradcem č. 4561 a Ing. Martin Coufal externím auditorem a daňovým poradcem č. 1721.
+              {t('services.kdp.hero')}
             </p>
           </motion.div>
 
@@ -42,9 +44,9 @@ export default function KDPSection() {
             className="space-y-4"
           >
             {[
-              { icon: ShieldCheck, title: 'Daňové poradenství', desc: 'Komplexní služby v oblasti daňového poradenství a mezinárodního zdanění.' },
-              { icon: Award, title: 'Daňová optimalizace', desc: 'Plánování a optimalizace daňové zátěže pro fyzické i právnické osoby.' },
-              { icon: Scale, title: 'Zastoupení', desc: 'Zastupujeme vás při daňových kontrolách, sporech a opravných prostředcích.' },
+              { icon: ShieldCheck, title: {t('services.kdp.item1.title')}, desc: {t('services.kdp.item1.desc')} },
+              { icon: Award, title: {t('services.kdp.item2.title')}, desc: {t('services.kdp.item2.desc')} },
+              { icon: Scale, title: {t('services.kdp.item3.title')}, desc: {t('services.kdp.item3.desc')} },
             ].map(({ icon: Icon, title, desc }, i) => (
               <motion.div
                 key={title}
