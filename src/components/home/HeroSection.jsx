@@ -46,7 +46,7 @@ export default function HeroSection() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-widest mb-8"
             >
               <Star className="h-3 w-3 fill-primary" />
-              <span className="bg-gradient-to-r from-primary via-yellow-300 to-primary bg-clip-text text-transparent">
+              <span className="text-yellow-300 bg-gradient-to-r from-primary via-yellow-300 to-primary bg-clip-text supports-[background-clip:text]:text-transparent">
                 {t('hero.badge')}
               </span>
               <Star className="h-3 w-3 fill-primary" />
