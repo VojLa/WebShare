@@ -36,10 +36,10 @@ export default function EServisSection() {
 
                 <div className="space-y-4">
                   {[
-                    { label: 'Daňové poradenství', status: 'Online' },
-                    { label: 'Odeslání dokladů', status: 'Aktivní' },
-                    { label: 'Konzultace na dálku', status: 'Online' },
-                    { label: 'Daňová přiznání', status: 'Dostupné' },
+                    { label: t('e-service.item1.title'), status: t('e-service.item1.status') },
+                    { label: t('e-service.item2.title'), status: t('e-service.item2.status') },
+                    { label: t('e-service.item3.title'), status: t('e-service.item3.status') },
+                    { label: t('e-service.item4.title'), status: t('e-service.item4.status') },
                   ].map(({ label, status }) => (
                     <div key={label} className="flex items-center justify-between p-4 rounded-xl bg-secondary/60 border border-border/50">
                       <span className="text-sm text-foreground/80">{label}</span>
@@ -60,22 +60,24 @@ export default function EServisSection() {
             transition={{ duration: 0.7 }}
             className="order-1 lg:order-2"
           >
-            <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary/70">Digitální kancelář</span>
+            <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary/70">
+              {t('e-service.subtitle')}
+            </span>
             <h2 className="text-4xl sm:text-5xl font-heading font-bold mt-4 mb-4 text-foreground leading-tight">
-              {t('services.eservis.title')}
+              {t('e-service.title')}
             </h2>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              {t('services.eservis.desc')}
+              {t('e-service.desc')}
             </p>
             <p className="text-muted-foreground leading-relaxed mb-10">
-              Máte tak možnost komunikovat vzdáleně s daňovou kanceláří, která je schopna vyřešit jakýkoliv váš problém včas a s maximální efektivitou.
+              {t('e-service.additionalInfo')}
             </p>
 
             <div className="space-y-4 mb-10">
               {[
-                { icon: Zap, text: 'Okamžitá odpověď na vaše dotazy' },
-                { icon: Globe, text: 'Dostupnost odkudkoliv, kdykoliv' },
-                { icon: Clock, text: 'Rychlé vyřízení bez osobní návštěvy' },
+                { icon: Zap, text: t('e-service.feature1') },
+                { icon: Globe, text: t('e-service.feature2') },
+                { icon: Clock, text: t('e-service.feature3') },
               ].map(({ icon: Icon, text }) => (
                 <div key={text} className="flex items-center gap-3 text-sm text-muted-foreground">
                   <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
@@ -88,7 +90,7 @@ export default function EServisSection() {
 
             <a href="https://grafikavitkov.typeform.com/to/kFBps4" target="_blank" rel="noopener noreferrer">
               <Button className="bg-primary text-primary-foreground hover:bg-primary/90 h-12 px-8 font-bold rounded-xl gap-2 shadow-lg shadow-primary/20 group">
-                Spustit E-servis
+                {t('e-service.buttonText')}
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </a>

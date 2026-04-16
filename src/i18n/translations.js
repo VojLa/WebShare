@@ -81,6 +81,39 @@ export const translations = {
     'memberKDP.subtitle1': 'Člen komory daňových',
     'memberKDP.subtitle2': 'poradců České republiky',
 
+    // E-Service
+    'e-service.subtitle': 'DIGITÁLNÍ KANCELÁŘ',
+    'e-service.title': 'E-Servis',
+    'e-service.desc': 'Prostřednictvím on-line formuláře poskytujeme účetní, ekonomické a daňové poradenství včetně tvorby závazkových vztahů.',
+    'e-service.additionalInfo': 'Máte tak možnost komunikovat vzdáleně s daňovou kanceláří, která je schopna vyřešit jakýkoliv váš problém včas a s maximální efektivitou.',
+
+    'e-service.feature1': 'Okamžitá odpověď na vaše dotazy',
+    'e-service.feature2': 'Dostupnost odkudkoliv, kdykoliv',
+    'e-service.feature3': 'Rychlé vyřízení bez osobní návštěvy',
+
+    'e-service.buttonText': 'Spustit E-servis',
+
+    'e-service.item1.title': 'Daňové poradenství',
+    'e-service.item1.status': 'Online',
+
+    'e-service.item2.title': 'Odeslání dokladů',
+    'e-service.item2.status': 'Aktivní',
+
+    'e-service.item3.title': 'Konzultace na dálku',
+    'e-service.item3.status': 'Online',
+
+    'e-service.item4.title': 'Daňová přiznání',
+    'e-service.item4.status': 'Dostupné',
+
+    // CTA sekce
+    'cta.eyebrow': 'Kontaktujte nás',
+    'cta.title': 'Jsme připraveni vám pomoci',
+    'cta.subtitle': 'S účetnictvím, daněmi i poradenstvím.',
+    'cta.button': 'Kontaktujte nás',
+    'cta.phone': 'Centrála Vítkov',
+    'cta.email': 'E-mail',
+    'cta.address': 'Adresa',
+
     // Kontaktní strana
     'contact.title': 'Kontaktujte nás',
     'contact.subtitle': 'Jsme připraveni vám pomoci s účetnictvím, daněmi i poradenstvím.',
@@ -172,6 +205,39 @@ export const translations = {
     'memberKDP.subtitle1': 'Member of the Chamber of Tax',
     'memberKDP.subtitle2': 'Advisors of the Czech Republic',
 
+    // E-Service
+    'e-service.subtitle': 'DIGITAL OFFICE',
+    'e-service.title': 'E-Service',
+    'e-service.desc': 'Through an online form, we provide accounting, economic and tax advisory services, including the creation of contractual relationships.',
+    'e-service.additionalInfo': 'This allows you to communicate remotely with a tax office that can solve any of your issues in time and with maximum efficiency.',
+
+    'e-service.feature1': 'Immediate response to your questions',
+    'e-service.feature2': 'Available from anywhere, anytime',
+    'e-service.feature3': 'Fast processing without a personal visit',
+
+    'e-service.buttonText': 'Start E-service',
+
+    'e-service.item1.title': 'Tax advisory',
+    'e-service.item1.status': 'Online',
+
+    'e-service.item2.title': 'Document submission',
+    'e-service.item2.status': 'Active',
+
+    'e-service.item3.title': 'Remote consultation',
+    'e-service.item3.status': 'Online',
+
+    'e-service.item4.title': 'Tax returns',
+    'e-service.item4.status': 'Available',
+
+    // CTA section
+    'cta.eyebrow': 'Contact us',
+    'cta.title': 'We are ready to help you',
+    'cta.subtitle': 'With accounting, taxes and advisory services.',
+    'cta.button': 'Contact us',
+    'cta.phone': 'Headquarters Vítkov',
+    'cta.email': 'E-mail',
+    'cta.address': 'Address',
+
     // Contact page
     'contact.title': 'Contact us',
     'contact.subtitle': 'We are ready to help you with accounting, tax and advisory services.',
@@ -262,6 +328,39 @@ export const translations = {
     'memberKDP.title': 'KDP ČR',
     'memberKDP.subtitle1': 'Mitglied der Kammer der Steuerberater',
     'memberKDP.subtitle2': 'der Tschechischen Republik',
+
+    // E-Service
+    'e-service.subtitle': 'DIGITALES BÜRO',
+    'e-service.title': 'E-Service',
+    'e-service.desc': 'Über ein Online-Formular bieten wir Buchhaltungs-, Wirtschafts- und Steuerberatung einschließlich der Erstellung von Vertragsbeziehungen an.',
+    'e-service.additionalInfo': 'So haben Sie die Möglichkeit, aus der Ferne mit einer Steuerkanzlei zu kommunizieren, die jedes Ihrer Probleme rechtzeitig und mit maximaler Effizienz lösen kann.',
+
+    'e-service.feature1': 'Sofortige Antwort auf Ihre Fragen',
+    'e-service.feature2': 'Von überall und jederzeit verfügbar',
+    'e-service.feature3': 'Schnelle Abwicklung ohne persönlichen Besuch',
+
+    'e-service.buttonText': 'E-Service starten',
+
+    'e-service.item1.title': 'Steuerberatung',
+    'e-service.item1.status': 'Online',
+
+    'e-service.item2.title': 'Unterlagen senden',
+    'e-service.item2.status': 'Aktiv',
+
+    'e-service.item3.title': 'Beratung aus der Ferne',
+    'e-service.item3.status': 'Online',
+
+    'e-service.item4.title': 'Steuererklärungen',
+    'e-service.item4.status': 'Verfügbar',
+
+    // CTA-Sektion
+    'cta.eyebrow': 'Kontaktieren Sie uns',
+    'cta.title': 'Wir sind bereit, Ihnen zu helfen',
+    'cta.subtitle': 'Mit Buchhaltung, Steuern und Beratungsdienstleistungen.',
+    'cta.button': 'Kontaktieren Sie uns',
+    'cta.phone': 'Hauptsitz Vítkov',
+    'cta.email': 'E-Mail',
+    'cta.address': 'Adresse',
 
     // Kontaktseite
     'contact.title': 'Kontaktieren Sie uns',
