@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import useTranslation from '@/hooks/useTranslation';
 import { Mail, Phone } from 'lucide-react';
+import logoBestAccount from '@/assets/logo-best-account.png';
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -13,9 +14,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-5">
-              <div className="w-11 h-11 rounded-xl bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl font-heading">B</span>
-              </div>
+              <img
+                src={logoBestAccount}
+                alt="Best Account"
+                className="h-10 w-auto object-contain"
+              />
               <div>
                 <span className="font-heading text-xl font-bold text-foreground">Best Account</span>
                 <div className="text-[10px] text-muted-foreground tracking-widest uppercase">s.r.o.</div>
