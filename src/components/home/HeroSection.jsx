@@ -5,15 +5,7 @@ import { motion } from 'framer-motion';
 
 const HERO_IMAGE = 'https://media.base44.com/images/public/69d9229445b235d25dd03bb7/8bee05119_generated_d2089682.png';
 
-const DEFAULT_CONTENT = {
-  badge: 'Spolehlivý partner pro vaše finance',
-  title: 'Moderní účetní a daňové služby',
-  subtitle: 'Pomáháme firmám i podnikatelům s účetnictvím, daněmi a poradenstvím.',
-  button: 'Kontaktujte nás',
-  servicesButton: 'Naše služby',
-};
-
-export default function HeroSection({ content = DEFAULT_CONTENT }) {
+export default function HeroSection({ content = {} }) {
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
@@ -45,12 +37,12 @@ export default function HeroSection({ content = DEFAULT_CONTENT }) {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-widest mb-8"
             >
               <Star className="h-3 w-3 fill-primary" />
-              {content.badge}
+              {content.badge ?? ''}
               <Star className="h-3 w-3 fill-primary" />
             </motion.div>
 
             <h1 className="text-6xl sm:text-7xl lg:text-8xl font-heading font-bold text-foreground tracking-tight leading-[1.0] mb-4">
-              <span className="block bg-gradient-to-r from-primary via-yellow-300 to-primary bg-clip-text text-transparent">{content.title}</span>
+              <span className="block bg-gradient-to-r from-primary via-yellow-300 to-primary bg-clip-text text-transparent">{content.title ?? ''}</span>
             </h1>
 
             <motion.div
@@ -66,7 +58,7 @@ export default function HeroSection({ content = DEFAULT_CONTENT }) {
               transition={{ delay: 0.4, duration: 0.7 }}
               className="text-xl sm:text-2xl text-muted-foreground leading-relaxed mb-12 max-w-xl font-light"
             >
-              {content.subtitle}
+              {content.subtitle ?? ''}
             </motion.p>
 
             <motion.div
@@ -77,13 +69,13 @@ export default function HeroSection({ content = DEFAULT_CONTENT }) {
             >
               <Link to="/contact">
                 <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 h-14 px-10 text-base font-bold rounded-xl gap-2 shadow-2xl shadow-primary/25 group">
-                  {content.button}
+                  {content.button ?? ''}
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
               <a href="#services">
                 <Button size="lg" variant="outline" className="border-border/60 text-foreground hover:bg-secondary hover:border-primary/40 h-14 px-10 text-base font-semibold rounded-xl">
-                  {content.servicesButton}
+                  {content.servicesButton ?? ''}
                 </Button>
               </a>
             </motion.div>
