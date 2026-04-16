@@ -1,11 +1,16 @@
 import { Link } from 'react-router-dom';
-import useTranslation from '../../hooks/useTranslation';
 import { ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { motion } from 'framer-motion';
 
-export default function CTASection() {
-  const { t } = useTranslation();
+const DEFAULT_CONTENT = {
+  eyebrow: 'Kontakt',
+  title: 'Potřebujete poradit?',
+  subtitle: 'Jsme připraveni vám pomoci s účetnictvím, daněmi i poradenstvím.',
+  button: 'Kontaktujte nás',
+};
+
+export default function CTASection({ content = DEFAULT_CONTENT }) {
 
   return (
     <section className="py-28 sm:py-36 relative overflow-hidden">
@@ -22,18 +27,18 @@ export default function CTASection() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary/70">Kontakt</span>
+          <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary/70">{content.eyebrow}</span>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-foreground mt-4 mb-6 leading-tight">
-            {t('contact.title')}
+            {content.title}
           </h2>
           <p className="text-xl text-muted-foreground mb-14 max-w-2xl mx-auto leading-relaxed">
-            {t('contact.subtitle')}
+            {content.subtitle}
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
             <Link to="/contact">
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 h-14 px-10 text-base font-bold rounded-xl gap-2 shadow-2xl shadow-primary/20 group">
-                {t('hero.cta')}
+                {content.button}
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>

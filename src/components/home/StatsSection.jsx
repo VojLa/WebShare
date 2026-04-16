@@ -1,13 +1,13 @@
 import { motion } from 'framer-motion';
 
-const stats = [
+const DEFAULT_STATS = [
   { value: '20+', label: 'let zkušeností' },
   { value: '500+', label: 'spokojených klientů' },
   { value: '2', label: 'pobočky ČR' },
   { value: '22', label: 'odborníků v týmu' },
 ];
 
-export default function StatsSection() {
+export default function StatsSection({ stats = DEFAULT_STATS }) {
   return (
     <section className="relative py-16 overflow-hidden">
       <div className="absolute inset-0 bg-primary/5" />
