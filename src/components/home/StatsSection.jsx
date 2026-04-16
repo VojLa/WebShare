@@ -18,7 +18,7 @@ export default function StatsSection({ stats = [] }) {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="flex flex-col items-center text-center lg:px-8"
             >
-              <span className="text-5xl sm:text-6xl font-heading font-bold bg-gradient-to-br from-primary to-yellow-400 bg-clip-text text-transparent leading-none mb-3">
+              <span className="text-5xl sm:text-6xl font-heading font-bold bg-clip-text text-transparent leading-none mb-3">
                 {stat.value}
               </span>
               <span className="text-sm text-muted-foreground font-medium uppercase tracking-wider">{stat.label}</span>
