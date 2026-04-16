@@ -37,8 +37,12 @@ export default function WhyUsSection() {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="absolute -bottom-6 -right-4 bg-card border border-border rounded-2xl p-5 shadow-2xl"
             >
-              <div className="text-3xl font-heading font-bold text-primary">KDP ČR</div>
-              <div className="text-xs text-muted-foreground mt-1">Člen komory daňových<br/>poradců České republiky</div>
+              <div className="text-3xl font-heading font-bold text-primary">
+                {t('mamberKDP.title')}
+              \</div>
+              <div className="text-xs text-muted-foreground mt-1">
+                {t('mamberKDP.subtitle')}
+              </div>
             </motion.div>
           </motion.div>
 
@@ -49,7 +53,9 @@ export default function WhyUsSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary/70">O nás</span>
+              <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary/70">
+                {t('about_us.title')}
+              </span>
               <h2 className="text-4xl sm:text-5xl font-heading font-bold mt-4 mb-4 text-foreground leading-tight">
                 {t('why_us.title')}
               </h2>
@@ -69,7 +75,7 @@ export default function WhyUsSection() {
                   className="flex items-start gap-4 p-4 rounded-xl hover:bg-secondary/60 transition-colors group"
                 >
                   <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
-                  <span className="text-sm text-foreground/80 leading-relaxed">{item}</span>
+                  <span className="text-sm text-foreground/80 leading-relaxed">{t(item)}</span>
                 </motion.div>
               ))}
             </div>
