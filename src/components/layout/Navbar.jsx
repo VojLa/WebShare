@@ -5,6 +5,7 @@ import LanguageSwitcher from './LanguageSwitcher';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import logoBestAccount from '@/assets/logo-best-account.png';
+import { hash } from 'node:crypto';
 
 
 export default function Navbar() {
@@ -20,10 +21,10 @@ export default function Navbar() {
   }, []);
 
   const links = [
-    { to: '/#home', label: t('nav.home') },
+    { to: '/#home', label: t('nav.home'), hash: true },
     { to: '/#services', label: t('nav.services'), hash: true },
     { to: '/#why-us', label: t('nav.why_us'), hash: true },
-    { to: '/contact/#contact', label: t('nav.contact') },
+    { to: '/contact/#contact', label: t('nav.contact'), hash: true },
   ];
 
   const handleHashLink = (e, link) => {
