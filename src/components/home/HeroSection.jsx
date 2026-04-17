@@ -13,7 +13,7 @@ export default function HeroSection() {
   const titleSecondLine = t('hero.title.line2');
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <img src={HERO_IMAGE} alt={t('hero.image_alt')} className="w-full h-full object-cover scale-105" />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40" />
