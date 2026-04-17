@@ -43,7 +43,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary border border-primary text-primary text-xs font-semibold uppercase tracking-widest mb-8"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/10 text-primary*2 text-xs font-semibold uppercase tracking-widest mb-8"
             >
               <Star className="h-3 w-3 fill-primary" />
               {t('hero.badge')}
