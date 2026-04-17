@@ -12,7 +12,7 @@ export default function Home() {
   const { t } = useTranslation();
 
   return (
-    <div>
+    <div id="home" >
       <HeroSection/>
       <StatsSection stats={[
                             { value: homeContent.stats[0], label: t('stats.label1') },

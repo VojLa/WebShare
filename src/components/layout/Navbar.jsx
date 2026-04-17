@@ -20,10 +20,10 @@ export default function Navbar() {
   }, []);
 
   const links = [
-    { to: '/', label: t('nav.home'), hash: true },
+    { to: '/#home', label: t('nav.home') },
     { to: '/#services', label: t('nav.services'), hash: true },
     { to: '/#why-us', label: t('nav.why_us'), hash: true },
-    { to: '/contact', label: t('nav.contact'), hash: true },
+    { to: '/contact/#contact', label: t('nav.contact') },
   ];
 
   const handleHashLink = (e, link) => {
