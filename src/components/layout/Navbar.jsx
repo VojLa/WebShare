@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useTranslation from '@/hooks/useTranslation';
 import LanguageSwitcher from './LanguageSwitcher';
 import { Menu, X, Phone, Mail } from 'lucide-react';
@@ -7,12 +7,12 @@ import { Button } from "@/components/ui/button";
 import logoBestAccount from '@/assets/logo-best-account.png';
 import { hash } from 'node:crypto';
 
-
 export default function Navbar() {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -28,11 +28,33 @@ export default function Navbar() {
   ];
 
   const handleHashLink = (e, link) => {
-    if (link.hash && location.pathname === '/') {
-      e.preventDefault();
-      const el = document.querySelector(link.to.replace('/', ''));
-      el?.scrollIntoView({ behavior: 'smooth' });
+
+    if (!link.hash) {
+      setOpen(false);
+      return;
     }
+
+    e.preventDefault();
+
+    const [targetPath, targetHash] = link.to.split('#');
+    const hashSelector = targetHash ? `#${targetHash}` : null;
+
+    if (location.pathname === targetPath) {
+      if (hashSelector) {
+        const el = document.querySelector(hashSelector);
+        el?.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      navigate(targetPath);
+
+      setTimeout(() => {
+        if (hashSelector) {
+          const el = document.querySelector(hashSelector);
+          el?.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 150);
+    }
+
     setOpen(false);
   };
 
