@@ -24,7 +24,7 @@ export default function Navbar() {
     { to: '/#home', label: t('nav.home'), hash: true },
     { to: '/#services', label: t('nav.services'), hash: true },
     { to: '/#why-us', label: t('nav.why_us'), hash: true },
-    { to: '/contact/#contact', label: t('nav.contact'), hash: true },
+    { to: '/contact#contact', label: t('nav.contact'), hash: true },
   ];
 
   const handleHashLink = (e, link) => {
