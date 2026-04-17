@@ -12,7 +12,7 @@ export default function Contact() {
   return (
     <div className="min-h-screen">
       {/* Hero header */}
-      <section className="relative py-28 sm:py-36 overflow-hidden">
+      <section id="contact" className="relative py-28 sm:py-36 overflow-hidden">
         <div className="absolute inset-0" style={{
           backgroundImage: `radial-gradient(ellipse 60% 60% at 50% 0%, hsl(43,70%,52%,0.08), transparent)`
         }} />
