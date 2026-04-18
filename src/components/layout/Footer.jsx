@@ -19,10 +19,6 @@ export default function Footer() {
                 alt="Best Account"
                 className="h-10 w-auto object-contain"
               />
-              <div>
-                <span className="font-heading text-xl font-bold text-foreground">Best Account</span>
-                <div className="text-[10px] text-muted-foreground tracking-widest uppercase">s.r.o.</div>
-              </div>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
               {t('footer.description')}
