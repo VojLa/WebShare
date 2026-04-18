@@ -7,7 +7,7 @@ import HERO_IMAGE from '@/assets/Hero_background.webp';
 
 
 export default function HeroSection() {
-  const { t } = useTranslation();
+  const { lang, t } = useTranslation();
 
   const titleFirstLine = t('hero.title.line1');
   const titleSecondLine = t('hero.title.line2');
@@ -50,9 +50,13 @@ export default function HeroSection() {
               <Star className="h-3 w-3 fill-primary" />
             </motion.div>
 
-            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-heading font-bold text-foreground tracking-tight leading-[1.0] mb-4">
+            <h1 className="text-5xl min-[480px]:text-6xl sm:text-7xl lg:text-8xl font-heading font-bold text-foreground tracking-tight leading-[1.0] mb-4">
               <span className="block text-foreground">{titleFirstLine}</span>
-              <span className="inline-block bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent pb-4">
+              <span
+                lang={lang}
+                style={{ hyphens: 'auto', overflowWrap: 'normal', wordBreak: 'normal' }}
+                className="block whitespace-normal bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent pb-4"
+              >
                 {titleSecondLine}
               </span>
             </h1>
@@ -101,15 +105,6 @@ export default function HeroSection() {
             </motion.div>
           </motion.div>
         </div>
-      </div>
-
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
-        <span className="text-[10px] text-muted-foreground uppercase tracking-widest">
-          {t('hero.scroll')}
-        </span>
-        <motion.div animate={{ y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 2 }}>
-          <ChevronDown className="h-5 w-5 text-primary/60" />
-        </motion.div>
       </div>
     </section>
   );

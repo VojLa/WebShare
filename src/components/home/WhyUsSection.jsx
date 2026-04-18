@@ -16,7 +16,7 @@ export default function WhyUsSection() {
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        <div className="grid grid-cols-1 min-[850px]:grid-cols-2 gap-20 items-center">
 
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -48,7 +48,7 @@ export default function WhyUsSection() {
             </motion.div>
           </motion.div>
 
-          <div className="order-1 lg:order-2">
+          <div className="order-1 min-[850px]:order-2">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}

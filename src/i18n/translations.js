@@ -280,7 +280,7 @@ export const translations = {
     // Hero
     'hero.badge': 'Zuverlässiger Partner für Ihre Finanzen',
     'hero.title.line1': 'Moderne Buchhaltung',
-    'hero.title.line2': 'und Steuerdienstleistungen',
+    'hero.title.line2': 'und Steu\u00ADerdienst\u00ADleistungen',
     'hero.subtitle': 'Wir helfen Unternehmen und Unternehmern bei Buchhaltung, Steuern und Beratung.',
     'hero.button.contact': 'Kontaktieren Sie uns',
     'hero.button.services': 'Unsere Dienstleistungen',
