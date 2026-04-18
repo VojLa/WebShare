@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import useTranslation from '@/hooks/useTranslation';
 import { Mail, Phone } from 'lucide-react';
-import logoBestAccount from '@/assets/logo-best-account.png';
+import logoBestAccount from '@/assets/BA HORIZONTAL - NO TEXT - ORIGINAL.svg';
 
 export default function Footer() {
   const { t } = useTranslation();
