@@ -4,7 +4,7 @@ import useTranslation from '@/hooks/useTranslation';
 import LanguageSwitcher from './LanguageSwitcher';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-import logoBestAccount from '@/assets/BA HORIZONTAL V2 - TEXT - ORIGINAL.svg';
+import logoBestAccount from '@/assets/BA HORIZONTAL V2 - TEXT - WHITE.svg';
 import { hash } from 'node:crypto';
 
 export default function Navbar() {

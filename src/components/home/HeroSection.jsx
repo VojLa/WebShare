@@ -3,8 +3,7 @@ import { ArrowRight, ChevronDown, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import useTranslation from '@/hooks/useTranslation';
-
-const HERO_IMAGE = 'https://media.base44.com/images/public/69d9229445b235d25dd03bb7/8bee05119_generated_d2089682.png';
+import HERO_IMAGE from '@/assets/Hero_background.webp';
 
 export default function HeroSection() {
   const { t } = useTranslation();
