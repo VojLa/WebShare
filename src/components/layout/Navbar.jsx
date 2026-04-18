@@ -4,7 +4,7 @@ import useTranslation from '@/hooks/useTranslation';
 import LanguageSwitcher from './LanguageSwitcher';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-import logoBestAccount from '@/assets/logo-best-account.png';
+import logoBestAccount from '@/assets/BA HORIZONTAL V2 - TEXT - ORIGINAL.svg';
 import { hash } from 'node:crypto';
 
 export default function Navbar() {
@@ -82,12 +82,6 @@ export default function Navbar() {
               alt="Best Account"
               className="h-10 w-auto object-contain"
             />
-            <div>
-              <span className="font-heading text-xl font-bold tracking-tight text-foreground">Best Account</span>
-              <span className="hidden sm:block text-[10px] text-muted-foreground tracking-widest uppercase">
-                {t('hero.subtitle')}
-              </span>
-            </div>
           </Link>
 
           <div className="hidden md:flex items-center gap-1">

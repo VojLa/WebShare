@@ -6,7 +6,7 @@ const SERVICES_IMAGE = 'https://media.base44.com/images/public/69d9229445b235d25
 
 export default function WhyUsSection() {
   const { t } = useTranslation();
-  const items = Array.from({ length: 8 }, (_, i) => t(`why_us.item${i + 1}`));
+  const items = Array.from({ length: 5 }, (_, i) => t(`why_us.item${i + 1}`));
 
   return (
     <section id="why-us" className="py-28 sm:py-36 relative overflow-hidden">

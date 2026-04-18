@@ -6,7 +6,7 @@ export const homeContent = {
     button: 'Kontaktujte nás',
     servicesButton: 'Naše služby',
   },
-  stats: ['20+', '500+', '2', '22'],
+  stats: ['10+', '700+', '2', '22'],
   cta: {
     eyebrow: 'Kontakt',
     title: 'Potřebujete poradit?',
