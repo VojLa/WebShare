@@ -1,8 +1,8 @@
 import useTranslation from '../../hooks/useTranslation';
 import { CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import SERVICES_IMAGE from '@/assets/Portret.jpg';
 
-const SERVICES_IMAGE = 'https://media.base44.com/images/public/69d9229445b235d25dd03bb7/37affe4a6_generated_2ff0d2fc.png';
 
 export default function WhyUsSection() {
   const { t } = useTranslation();
@@ -15,7 +15,7 @@ export default function WhyUsSection() {
         <div className="absolute -left-20 bottom-0 w-64 h-64 bg-primary/3 rounded-full blur-3xl" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
 
           <motion.div
@@ -26,7 +26,7 @@ export default function WhyUsSection() {
             className="relative order-2 lg:order-1"
           >
             <div className="relative rounded-3xl overflow-hidden">
-              <img src={SERVICES_IMAGE} alt="Proč k nám" className="w-full h-auto object-cover" />
+              <img src={SERVICES_IMAGE} alt="Ing. Tereza Tirolová" className="w-full h-auto object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
             </div>
             <div className="absolute -inset-px rounded-3xl border border-primary/20 pointer-events-none" />
