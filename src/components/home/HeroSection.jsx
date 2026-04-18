@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import useTranslation from '@/hooks/useTranslation';
 import HERO_IMAGE from '@/assets/Hero_background.webp';
 
+
 export default function HeroSection() {
   const { t } = useTranslation();
 
