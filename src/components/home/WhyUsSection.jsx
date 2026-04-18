@@ -2,6 +2,7 @@ import useTranslation from '../../hooks/useTranslation';
 import { CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import SERVICES_IMAGE from '@/assets/Portret.jpg';
+import SERVICES_IMAGE_MOBILE from '@/assets/Portret_mobile.jpg';
 
 
 export default function WhyUsSection() {
@@ -23,10 +24,14 @@ export default function WhyUsSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="relative order-2 lg:order-1"
+            className="relative order-2 min-[850px]:order-1 max-w-10xl min-[850px]:max-w-auto mx-auto"
           >
             <div className="relative rounded-3xl overflow-hidden">
-              <img src={SERVICES_IMAGE} alt="Ing. Tereza Tirolová" className="w-full h-auto object-cover" />
+              <picture>
+                <source media="(min-width: 850px)" srcSet={SERVICES_IMAGE} />
+                <source media="(max-width: 849px)" srcSet={SERVICES_IMAGE_MOBILE} />
+                <img src={SERVICES_IMAGE} alt="Ing. Tereza Tirolová" className="w-full h-auto object-cover" />
+              </picture>
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
             </div>
             <div className="absolute -inset-px rounded-3xl border border-primary/20 pointer-events-none" />
