@@ -23,6 +23,8 @@ export default function Navbar() {
     { to: '/#home', label: t('nav.home'), hash: true },
     { to: '/#services', label: t('nav.services'), hash: true },
     { to: '/#why-us', label: t('nav.why_us'), hash: true },
+    { to: '/#contact_form', label: t('nav.contact_form'), hash: true },
+    { to: '/#references', label: t('nav.references'), hash: true },
     { to: '/contact#contact', label: t('nav.contact'), hash: true },
   ];
 
@@ -75,7 +77,11 @@ export default function Navbar() {
 
         {/* Main nav */}
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center gap-3">
+          <Link
+          key={'/#home'}
+          to={'/#home'}
+          onClick={(e) => handleHashLink(e, { to: '/#home', label: t('nav.home'), hash: true })}
+          className="flex items-center gap-3" >
             <img
               src={logoBestAccount}
               alt="Best Account"

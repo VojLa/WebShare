@@ -3,6 +3,8 @@ import { CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import SERVICES_IMAGE from '@/assets/Portret.jpg';
 import SERVICES_IMAGE_MOBILE from '@/assets/Portret_mobile.jpg';
+import KDP_Image from '@/assets/KDPČR - BLUE.svg';
+import KA_Image from '@/assets/KAČR - BLUE.svg';
 
 
 export default function WhyUsSection() {
@@ -29,28 +31,24 @@ export default function WhyUsSection() {
             <div className="relative rounded-3xl overflow-hidden">
               <picture>
                 <source media="(min-width: 850px)" srcSet={SERVICES_IMAGE} />
-                <source media="(max-width: 849px)" srcSet={SERVICES_IMAGE_MOBILE} />
+                <source media="(max-width: 850px)" srcSet={SERVICES_IMAGE_MOBILE} />
                 <img src={SERVICES_IMAGE} alt="Ing. Tereza Tirolová" className="w-full h-auto object-cover" />
               </picture>
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
             </div>
             <div className="absolute -inset-px rounded-3xl border border-primary/20 pointer-events-none" />
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              className="absolute -bottom-6 -right-4 bg-card border border-border rounded-2xl p-5 shadow-2xl"
-            >
-              <div className="text-3xl font-heading font-bold text-primary">
-                {t('memberKDP.title')}
-              </div>
-              <div className="text-xs text-muted-foreground mt-1">
-                {t('memberKDP.subtitle1')}
-                <br />
-                {t('memberKDP.subtitle2')}
-              </div>
-            </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4, duration: 0.6 }}
+                className="absolute -bottom-6 left-[-1rem] -translate-x-1/2 min-[850px]:left-auto min-[850px]:right-[-1rem] min-[850px]:translate-x-0 bg-card border border-border rounded-2xl p-3 shadow-2xl"
+              >
+                <div className="flex items-center gap-4">
+                  <img src={KDP_Image} alt="KDP Logo" className="w-16 h-16" />
+                  <img src={KA_Image} alt="KA Logo" className="w-16 h-16 mt-2" />
+                </div>
+              </motion.div>
           </motion.div>
 
           <div className="order-1 min-[850px]:order-2">

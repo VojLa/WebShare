@@ -1,12 +1,47 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ArrowRight, ChevronDown, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import useTranslation from '@/hooks/useTranslation';
 import HERO_IMAGE from '@/assets/Hero_background.webp';
+import { useState } from 'react';
 
 
 export default function HeroSection() {
+  const navigate = useNavigate();
+  const [open, setOpen] = useState(false);
+  
+  const handleHashLink = (e, link) => {
+
+    if (!link.hash) {
+      setOpen(false);
+      return;
+    }
+
+    e.preventDefault();
+
+    const [targetPath, targetHash] = link.to.split('#');
+    const hashSelector = targetHash ? `#${targetHash}` : null;
+
+    if (location.pathname === targetPath) {
+      if (hashSelector) {
+        const el = document.querySelector(hashSelector);
+        el?.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      navigate(targetPath);
+
+      setTimeout(() => {
+        if (hashSelector) {
+          const el = document.querySelector(hashSelector);
+          el?.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 150);
+    }
+
+    setOpen(false);
+  };
+  
   const { lang, t } = useTranslation();
 
   const titleFirstLine = t('hero.title.line1');
@@ -83,25 +118,32 @@ export default function HeroSection() {
               transition={{ delay: 0.6, duration: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Link to="/contact">
-                <Button
-                  size="lg"
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 h-14 px-10 text-base font-bold rounded-xl gap-2 shadow-2xl shadow-primary/25 group"
-                >
-                  {t('hero.button.contact')}
-                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
 
-              <a href="#services">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-border/60 text-foreground hover:bg-secondary hover:border-primary/40 h-14 px-10 text-base font-semibold rounded-xl"
-                >
-                  {t('hero.button.services')}
-                </Button>
-              </a>
+
+              <Button
+                onClick={() => {
+                  const el = document.querySelector('#contact_form');
+                  el?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                size="lg"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 h-14 px-10 text-base font-bold rounded-xl gap-2 shadow-2xl shadow-primary/25 group"
+              >
+                {t('hero.button.contact')}
+                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+
+              <Button
+                onClick={() => {
+                  const el = document.querySelector('#services');
+                  el?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                size="lg"
+                variant="outline"
+                className="border-border/60 text-foreground hover:bg-secondary hover:border-primary/40 h-14 px-10 text-base font-semibold rounded-xl"
+              >
+                {t('hero.button.services')}
+              </Button>
+
             </motion.div>
           </motion.div>
         </div>

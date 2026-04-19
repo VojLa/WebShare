@@ -4,15 +4,57 @@ export const translations = {
     phone: '+420 721 075 783',
     email: 'office@bestaccount.cz',
     legalTitle: 'Best Account s.r.o.',
-    legalInfo: 'Doplň IČO, DIČ, sídlo, spisovou značku a další údaje.',
+    legalInfo: `Bankovní spojení: 9338116001/5500
+    DATOVÁ SCHRÁNKA: thrvd6r
+    IČ: 05067014
+    DIČ: CZ05067014
+    Zapsáno u Krajského soudu v Ostravě, oddíl C,
+    vložka 66124`,
+    'company.legal_heading': 'PRÁVNICKÉ SÍDLO SPOLEČNOSTI',
+    'company.bank_account': 'Bankovní spojení',
+    'company.data_box': 'Datová schránka',
+    'company.ico': 'IČ',
+    'company.dic': 'DIČ',
+    'company.registered': 'Zapsáno u',
+    'company.section': 'oddíl',
+    'company.insert': 'vložka',
+    // Contact + team badges
+    'contact.hero_badge': 'Jsme tu pro vás',
+    'contact.offices_badge': 'Kde nás najdete',
+    'contact.offices_title': 'Naše pobočky',
+    'contact.team_badge': 'Lidé',
+
+    // Team roles
+    'team.role.ivo_tirol': 'Výkonný ředitel, ekonom',
+    'team.role.tereza_tirolova': 'Jednatelka, daňová poradkyně, členka KDP ČR, poradce č. 5270',
+    'team.role.martin_coufal': 'Externí auditor, daňový poradce č. 1721',
+    'team.role.ales_coufal': 'Externí daňový poradce č. 4561',
+    'team.role.jana_pichonska': 'Senior účetní, správce účetních software',
+    'team.role.simon_tirol': 'Asistentka vedení společnosti',
+    'team.role.zuzana_schabjukova': 'Senior účetní',
+    'team.role.petr_zbedina': 'Senior účetní',
+    'team.role.michal_bek': 'Účetní',
+    'team.role.marek_horin': 'Účetní',
+    'team.role.martina_draisaitlova': 'Účetní',
+    'team.role.andrea_vojtechova': 'Účetní',
+    'team.role.josef_bajer': 'Účetní',
+    'team.role.sandra_orlikova': 'Účetní',
+    'team.role.lucie_neuwirthova': 'Účetní',
+    'team.role.eva_slamova': 'Administrativa',
+    'team.role.anna_duskova': 'Administrativní výpomoc',
+    'team.role.radomir_wisnar': 'Účetní',
+    'team.role.dasa_vandasova': 'BOZP a PO, OŽP, RTZZ — členka Komory České republiky pro BOZP a PO',
+    'team.role.barbora_nekorancova': 'Mzdová účetní',
+    'team.role.vladimira_simeckova': 'Mzdová účetní',
+    'team.role.hana_micanova': 'Mzdová účetní',
 
     // NavBar
     'nav.home': 'Domů',
     'nav.services': 'Služby',
     'nav.why_us': 'Proč my',
+    'nav.contact_form': 'Kontaktní formulář',
+    'nav.references': 'Reference',
     'nav.contact': 'Kontakt',
-    
-    // Hlavní strana
 
     // Hero
     'hero.badge': 'Spolehlivý partner pro vaše finance',
@@ -23,7 +65,7 @@ export const translations = {
     'hero.button.services': 'Naše služby',
     'hero.scroll': 'Scroll',
     'hero.image_alt': 'Úvodní obrázek',
-    
+
     // Statistiky
     'stats.label1': 'let zkušeností',
     'stats.label2': 'spokojených klientů',
@@ -34,22 +76,16 @@ export const translations = {
     'services.section.name': 'NAŠE PORTFOLIO',
     'services.title': 'Naše služby',
     'services.subtitle': 'Poskytujeme komplexní účetní, ekonomické a daňové poradenství.',
-
     'services.consulting.title': 'Poradenství',
     'services.consulting.desc': 'Zcela nový přístup z pohledu ekonomického, účetního a daňového poradenství s důrazem na individuální přístup ke klientovi.',
-
     'services.eservis.title': 'E-Servis',
     'services.eservis.desc': 'Prostřednictvím on-line formuláře poskytujeme účetní, ekonomické a daňové poradenství včetně tvorby závazkových vztahů.',
-
     'services.kdp.title': 'Komora daňových poradců ČR',
     'services.kdp.desc': 'Jsme členové Komory daňových poradců ČR a poskytujeme komplexní služby v oblasti daňového poradenství a optimalizace.',
-
     'services.taxes.title': 'Daně',
     'services.taxes.desc': 'Daňové evidence, analýzy, daňová optimalizace a možnost odkladů daní.',
-
     'services.accounting.title': 'Účetnictví',
     'services.accounting.desc': 'Vedení účetnictví, hospodářské reporty a ekonomické poradenství.',
-
     'services.payroll.title': 'Mzdy',
     'services.payroll.desc': 'Kompletní zpracování mezd, personalistika a související poradenství.',
 
@@ -57,7 +93,6 @@ export const translations = {
     certification: 'CERTIFIKACE',
     'services.kdp.hero':
       'Ing. Tereza Tirolová je členkou odborného kolegia při sekci daně z příjmu právnických osob u KDP ČR — poradce č. 5270. Ing. Aleš Coufal je externím daňovým poradcem č. 4561 a Ing. Martin Coufal externím auditorem a daňovým poradcem č. 1721.',
-
     'services.kdp.item1.title': 'Daňové poradenství',
     'services.kdp.item1.desc': 'Komplexní služby v oblasti daňového poradenství a mezinárodního zdanění.',
     'services.kdp.item2.title': 'Daňová optimalizace',
@@ -84,22 +119,16 @@ export const translations = {
     'e-service.title': 'E-Servis',
     'e-service.desc': 'Prostřednictvím on-line formuláře poskytujeme účetní, ekonomické a daňové poradenství včetně tvorby závazkových vztahů.',
     'e-service.additionalInfo': 'Máte tak možnost komunikovat vzdáleně s daňovou kanceláří, která je schopna vyřešit jakýkoliv váš problém včas a s maximální efektivitou.',
-
     'e-service.feature1': 'Okamžitá odpověď na vaše dotazy',
     'e-service.feature2': 'Dostupnost odkudkoliv, kdykoliv',
     'e-service.feature3': 'Rychlé vyřízení bez osobní návštěvy',
-
     'e-service.buttonText': 'Spustit E-servis',
-
     'e-service.item1.title': 'Daňové poradenství',
     'e-service.item1.status': 'Online',
-
     'e-service.item2.title': 'Odeslání dokladů',
     'e-service.item2.status': 'Aktivní',
-
     'e-service.item3.title': 'Konzultace na dálku',
     'e-service.item3.status': 'Online',
-
     'e-service.item4.title': 'Daňová přiznání',
     'e-service.item4.status': 'Dostupné',
 
@@ -119,6 +148,99 @@ export const translations = {
     'contact.legal_info': 'Doplň sem právní údaje společnosti.',
     'contact.team_title': 'Náš tým',
     'contact.team_subtitle': 'Lidé, kteří se o vás postarají.',
+    'contact.hq': 'Centrála Vítkov',
+    'contact.hq_address': 'Wolkerova 1009, 749 01 Vítkov',
+    'contact.hq_hours': 'Po–Pá 8-16h',
+    'contact.hq_phone': '+420 721 075 783',
+    'contact.branch': 'Pobočka Opava',
+    'contact.branch_address': 'U Pošty 250/6, Opava, 746 01',
+    'contact.branch_hours': 'Po–Pá 8-16h',
+    'contact.branch_phone': '+420 725 423 579',
+
+    // Kontaktní formulář
+    'contact_form.title': 'Nezávazná poptávka',
+    'contact_form.subtitle': 'Kontaktní formulář',
+    'contact_form.desc': 'Místo dlouhého vyplňování stačí několik krátkých kroků a my se vám ozveme s řešením na míru podle toho, co právě potřebujete.',
+    'contact_form.step1.label': 'Krok 1',
+    'contact_form.step1.preview': 'Výběr potřeby: Přechod od jiné účetní / Nový projekt / Daně',
+    'contact_form.step2.label': 'Krok 2',
+    'contact_form.step2.preview': 'Forma podnikání: OSVČ / s.r.o. / Jiné',
+    'contact_form.step3.label': 'Krok 3',
+    'contact_form.step3.preview': 'Kontakt a preferovaný způsob komunikace',
+    'contact_form.badge': 'Interaktivní formulář',
+    'contact_form.done': 'Hotovo',
+    'contact_form.step_label': 'Krok',
+    'contact_form.step1.heading': 'Co právě řešíte?',
+    'contact_form.step1.subtitle': 'Vyberte oblast, se kterou vám máme pomoci.',
+    'contact_form.need.transition': 'Přechod od jiné účetní',
+    'contact_form.need.new_project': 'Nový projekt',
+    'contact_form.need.taxes': 'Daně',
+    'contact_form.step2.heading': 'Jakou máte formu podnikání?',
+    'contact_form.step2.subtitle': 'Vyberte typ podnikání. U varianty „Jiné“ doplňte upřesnění.',
+    'contact_form.business.osvc': 'OSVČ',
+    'contact_form.business.sro': 's.r.o.',
+    'contact_form.business.other': 'Jiné',
+    'contact_form.business.other_placeholder': 'Upřesněte jinou formu podnikání',
+    'contact_form.step3.heading': 'Jak vás máme kontaktovat?',
+    'contact_form.step3.subtitle': 'Vyberte preferovaný způsob komunikace a vyplňte kontaktní údaje.',
+    'contact_form.contact.phone': 'Telefon',
+    'contact_form.contact.email': 'E-mail',
+    'contact_form.contact.both': 'Telefon i e-mail',
+    'contact_form.field.name': 'Jméno a příjmení',
+    'contact_form.field.company': 'Firma (volitelné)',
+    'contact_form.field.email': 'E-mail',
+    'contact_form.field.phone': 'Telefon',
+    'contact_form.field.note': 'Stručně popište váš dotaz (volitelné)',
+    'contact_form.step4.heading': 'Děkujeme za poptávku',
+    'contact_form.step4.desc': 'Vaše údaje byly připraveny k odeslání. Teď se můžete napojit na backend, e-mail nebo webhook.',
+    'contact_form.btn.back': 'Zpět',
+    'contact_form.btn.continue': 'Pokračovat',
+    'contact_form.btn.submit': 'Odeslat poptávku',
+
+    // Reference
+    'references.subtitle': 'Reference',
+    'references.title': 'Důvěra postavená na skutečných zkušenostech',
+    'references.desc': 'Skutečné příběhy a zkušenosti spokojených klientů pomáhají potvrdit důvěryhodnost, kvalitu služeb a osobní přístup, na kterém si zakládáme.',
+    'references.item1.name': 'Jan Novák',
+    'references.item1.company': 'NOVAK STAV s.r.o.',
+    'references.item1.role': 'Jednatel společnosti',
+    'references.item1.text': 'Na spolupráci oceňuji hlavně rychlost, spolehlivost a schopnost vše srozumitelně vysvětlit. Přechod k nové účetní kanceláři proběhl bez komplikací a dnes máme mnohem větší přehled o financích i povinnostech.',
+    'references.item2.name': 'Petra Dvořáková',
+    'references.item2.company': 'Petra Design',
+    'references.item2.role': 'OSVČ',
+    'references.item2.text': 'Potřebovala jsem mít jistotu, že mám účetnictví i daně správně a včas. Oceňuji osobní přístup, ochotu poradit a také to, že všechno funguje přehledně a bez zbytečného stresu.',
+    'references.item3.name': 'Martin Svoboda',
+    'references.item3.company': 'MS Tech Solutions',
+    'references.item3.role': 'Majitel firmy',
+    'references.item3.text': 'Spolupráce nám pomohla lépe nastavit procesy, získat přehled nad účetnictvím a vyřešit i složitější daňové otázky. Je vidět vysoká odbornost i zkušenost z praxe.',
+
+    // Flexibilita s doklady
+    'documents_flexibility.subtitle': 'Flexibilita dokladů',
+    'documents_flexibility.title': 'Doklady tak, jak to vyhovuje vám',
+    'documents_flexibility.desc': 'Ukazujeme, že moderní účetní služby mohou být technicky vyspělé i lidsky praktické zároveň.',
+    'documents_flexibility.additional': 'Ať už využíváte e-shop, mobilní aplikace, sdílené online úložiště nebo stále pracujete s papírovými doklady, umíme nastavit spolupráci tak, aby byla pohodlná, přehledná a funkční pro váš každodenní provoz.',
+    'documents_flexibility.item1.title': 'Napojení na e-shopy',
+    'documents_flexibility.item1.desc': 'Pomůžeme s nastavením návaznosti na e-shopová řešení a s efektivnějším zpracováním dokladů z online prodeje.',
+    'documents_flexibility.item2.title': 'Mobilní a online nástroje',
+    'documents_flexibility.item2.desc': 'Doklady můžete předávat digitálně pomocí mobilních aplikací, sdílených složek nebo jiných online nástrojů podle toho, co vám nejvíce vyhovuje.',
+    'documents_flexibility.item3.title': 'Praktický přístup',
+    'documents_flexibility.item3.desc': 'Pokud preferujete osobnější spolupráci, je možné domluvit i vyzvednutí papírových dokladů nebo jiný praktický způsob předání.',
+    'documents_flexibility.item4.title': 'Přehledné zpracování',
+    'documents_flexibility.item4.desc': 'Cílem je, aby předávání dokladů bylo co nejjednodušší, srozumitelné a přizpůsobené velikosti i fungování vašeho podnikání.',
+
+    // Sociální dopad
+    'social_impact.subtitle': 'Společenský přesah',
+    'social_impact.title': 'Hodnoty, které dávají podnikání širší smysl',
+    'social_impact.desc': 'Vedle odbornosti a kvality služeb je pro nás důležitý také férový přístup, odpovědnost a aktivity, které mají pozitivní dopad i mimo běžné podnikání.',
+    'social_impact.additional': 'Tato sekce může představit charitativní podporu, partnerské iniciativy, etický přístup ke klientům i další aktivity, které pomáhají budovat důvěru, sympatie ke značce a dlouhodobé vztahy.',
+    'social_impact.item1.title': 'Charitativní aktivity',
+    'social_impact.item1.desc': 'Podporujeme smysluplné projekty a aktivity, které pomáhají lidem, komunitám nebo organizacím v situacích, kde je pomoc skutečně potřeba.',
+    'social_impact.item2.title': 'Férový přístup',
+    'social_impact.item2.desc': 'Zakládáme si na otevřené komunikaci, čestném jednání a dlouhodobé spolupráci postavené na důvěře a respektu.',
+    'social_impact.item3.title': 'Lidský rozměr služeb',
+    'social_impact.item3.desc': 'Za každým účetním nebo daňovým tématem vidíme konkrétní lidi, jejich podnikání a reálné životní situace, které si zaslouží individuální přístup.',
+    'social_impact.item4.title': 'Hodnoty značky',
+    'social_impact.item4.desc': 'Ukazujeme, že kvalitní služby nejsou jen o výsledcích, ale také o způsobu, jakým ke klientům, partnerům i společnosti přistupujeme.',
 
     // Footer
     'footer.description': 'Komplexní účetní a daňová kancelář. Vaše daně děláme jako by byly naše — s maximální pečlivostí a odborností.',
@@ -136,13 +258,43 @@ export const translations = {
     legalTitle: 'Best Account s.r.o.',
     legalInfo: 'Add the company ID, VAT ID, registered office, commercial register entry and other legal details.',
 
-    //NavBar
+    // Contact + team badges
+    'contact.hero_badge': 'We are here for you',
+    'contact.offices_badge': 'Where to find us',
+    'contact.offices_title': 'Our offices',
+    'contact.team_badge': 'People',
+
+    // Team roles
+    'team.role.ivo_tirol': 'Executive Director, Economist',
+    'team.role.tereza_tirolova': 'Managing Director, Tax Advisor, Member of the Chamber of Tax Advisors of the Czech Republic, Advisor No. 5270',
+    'team.role.martin_coufal': 'External Auditor, Tax Advisor No. 1721',
+    'team.role.ales_coufal': 'External Tax Advisor No. 4561',
+    'team.role.jana_pichonska': 'Senior Accountant, Accounting Software Administrator',
+    'team.role.simon_tirol': 'Executive Assistant',
+    'team.role.zuzana_schabjukova': 'Senior Accountant',
+    'team.role.petr_zbedina': 'Senior Accountant',
+    'team.role.michal_bek': 'Accountant',
+    'team.role.marek_horin': 'Accountant',
+    'team.role.martina_draisaitlova': 'Accountant',
+    'team.role.andrea_vojtechova': 'Accountant',
+    'team.role.josef_bajer': 'Accountant',
+    'team.role.sandra_orlikova': 'Accountant',
+    'team.role.lucie_neuwirthova': 'Accountant',
+    'team.role.eva_slamova': 'Administration',
+    'team.role.anna_duskova': 'Administrative Support',
+    'team.role.radomir_wisnar': 'Accountant',
+    'team.role.dasa_vandasova': 'Occupational Safety and Fire Protection, Environmental Protection, RTZZ — Member of the Chamber of the Czech Republic for Occupational Safety and Fire Protection',
+    'team.role.barbora_nekorancova': 'Payroll Accountant',
+    'team.role.vladimira_simeckova': 'Payroll Accountant',
+    'team.role.hana_micanova': 'Payroll Accountant',
+
+    // NavBar
     'nav.home': 'Home',
     'nav.services': 'Services',
     'nav.why_us': 'Why us',
+    'nav.contact_form': 'Contact form',
+    'nav.references': 'References',
     'nav.contact': 'Contact',
-    
-    // Homepage
 
     // Hero
     'hero.badge': 'Reliable partner for your finances',
@@ -153,7 +305,7 @@ export const translations = {
     'hero.button.services': 'Our services',
     'hero.scroll': 'Scroll',
     'hero.image_alt': 'Hero image',
-    
+
     // Stats
     'stats.label1': 'years of experience',
     'stats.label2': 'satisfied clients',
@@ -164,22 +316,16 @@ export const translations = {
     'services.section.name': 'OUR PORTFOLIO',
     'services.title': 'Our services',
     'services.subtitle': 'We provide comprehensive accounting, economic and tax advisory services.',
-
     'services.consulting.title': 'Consulting',
     'services.consulting.desc': 'A completely new approach to economic, accounting and tax consulting with an emphasis on an individual approach to each client.',
-
     'services.eservis.title': 'E-Service',
     'services.eservis.desc': 'Through an online form, we provide accounting, economic and tax advisory services, including the creation of contractual relationships.',
-
     'services.kdp.title': 'Chamber of Tax Advisors of the Czech Republic',
     'services.kdp.desc': 'We are members of the Chamber of Tax Advisors of the Czech Republic and provide comprehensive services in tax advisory and tax optimization.',
-
     'services.taxes.title': 'Taxes',
     'services.taxes.desc': 'Tax records, analyses, tax optimization and the possibility of tax deferrals.',
-
     'services.accounting.title': 'Accounting',
     'services.accounting.desc': 'Bookkeeping, financial reporting and economic advisory services.',
-
     'services.payroll.title': 'Payroll',
     'services.payroll.desc': 'Complete payroll processing, HR administration and related advisory services.',
 
@@ -187,7 +333,6 @@ export const translations = {
     certification: 'CERTIFICATION',
     'services.kdp.hero':
       'Ing. Tereza Tirolová is a member of the expert board within the corporate income tax section of the Chamber of Tax Advisors of the Czech Republic — advisor no. 5270. Ing. Aleš Coufal is an external tax advisor no. 4561 and Ing. Martin Coufal is an external auditor and tax advisor no. 1721.',
-
     'services.kdp.item1.title': 'Tax advisory',
     'services.kdp.item1.desc': 'Comprehensive services in tax advisory and international taxation.',
     'services.kdp.item2.title': 'Tax optimization',
@@ -201,12 +346,10 @@ export const translations = {
     'why_us.subtitle': 'Are you looking for advisors who offer a personal approach and think in context?',
     'why_us.item1': 'We are a comprehensive accounting and tax office',
     'why_us.item2': 'We know where and how to save you money',
-    'why_us.item3': 'Finding efficiency where it is missing is our top priority',
-    'why_us.item4': 'Reviews and analyses of your business performance are our strength',
-    'why_us.item5': 'Flexible collection of accounting documents leading to tax optimization',
-    'why_us.item6': 'Professional representation towards tax authorities',
-    'why_us.item7': 'We provide tax advisory not only to you, but also to your accountant',
-    'why_us.item8': 'We represent you in tax proceedings within tax administration',
+    'why_us.item3': 'Individual approach is a matter of course for us',
+    'why_us.item4': 'Analysis and finding efficiency are our strengths',
+    'why_us.item5': 'Flexible document handling saves your time',
+    'why_us.item6': 'Fairness and professionalism are our standard',
     'memberKDP.title': 'CTA CR',
     'memberKDP.subtitle1': 'Member of the Chamber of Tax',
     'memberKDP.subtitle2': 'Advisors of the Czech Republic',
@@ -216,22 +359,16 @@ export const translations = {
     'e-service.title': 'E-Service',
     'e-service.desc': 'Through an online form, we provide accounting, economic and tax advisory services, including the creation of contractual relationships.',
     'e-service.additionalInfo': 'This allows you to communicate remotely with a tax office that can solve any of your issues in time and with maximum efficiency.',
-
     'e-service.feature1': 'Immediate response to your questions',
     'e-service.feature2': 'Available from anywhere, anytime',
     'e-service.feature3': 'Fast processing without a personal visit',
-
     'e-service.buttonText': 'Start E-service',
-
     'e-service.item1.title': 'Tax advisory',
     'e-service.item1.status': 'Online',
-
     'e-service.item2.title': 'Document submission',
     'e-service.item2.status': 'Active',
-
     'e-service.item3.title': 'Remote consultation',
     'e-service.item3.status': 'Online',
-
     'e-service.item4.title': 'Tax returns',
     'e-service.item4.status': 'Available',
 
@@ -251,6 +388,99 @@ export const translations = {
     'contact.legal_info': 'Add the legal company details here.',
     'contact.team_title': 'Our team',
     'contact.team_subtitle': 'People who will take care of you.',
+    'contact.hq': 'Headquarters Vítkov',
+    'contact.hq_address': 'Wolkerova 1009, 749 01 Vítkov',
+    'contact.hq_hours': 'Mon–Fri by arrangement',
+    'contact.hq_phone': '+420 721 075 783',
+    'contact.branch': 'Branch Opava',
+    'contact.branch_address': 'Fill in the Opava branch address',
+    'contact.branch_hours': 'Mon–Fri by arrangement',
+    'contact.branch_phone': '+420 721 075 783',
+
+    // Contact form
+    'contact_form.title': 'Non-binding inquiry',
+    'contact_form.subtitle': 'Contact form',
+    'contact_form.desc': 'Instead of lengthy forms, just a few quick steps — we will get back to you with a solution tailored to your needs.',
+    'contact_form.step1.label': 'Step 1',
+    'contact_form.step1.preview': 'Your need: Switching accountant / New project / Taxes',
+    'contact_form.step2.label': 'Step 2',
+    'contact_form.step2.preview': 'Business type: Sole trader / Ltd. / Other',
+    'contact_form.step3.label': 'Step 3',
+    'contact_form.step3.preview': 'Contact and preferred method of communication',
+    'contact_form.badge': 'Interactive form',
+    'contact_form.done': 'Done',
+    'contact_form.step_label': 'Step',
+    'contact_form.step1.heading': 'What are you looking for?',
+    'contact_form.step1.subtitle': 'Select the area where you need our help.',
+    'contact_form.need.transition': 'Switching from another accountant',
+    'contact_form.need.new_project': 'New project',
+    'contact_form.need.taxes': 'Taxes',
+    'contact_form.step2.heading': 'What is your business type?',
+    'contact_form.step2.subtitle': 'Select your business type. For "Other", please provide details.',
+    'contact_form.business.osvc': 'Sole trader',
+    'contact_form.business.sro': 'Ltd.',
+    'contact_form.business.other': 'Other',
+    'contact_form.business.other_placeholder': 'Describe your business type',
+    'contact_form.step3.heading': 'How should we contact you?',
+    'contact_form.step3.subtitle': 'Select your preferred contact method and fill in your details.',
+    'contact_form.contact.phone': 'Phone',
+    'contact_form.contact.email': 'E-mail',
+    'contact_form.contact.both': 'Phone & e-mail',
+    'contact_form.field.name': 'Full name',
+    'contact_form.field.company': 'Company (optional)',
+    'contact_form.field.email': 'E-mail',
+    'contact_form.field.phone': 'Phone',
+    'contact_form.field.note': 'Briefly describe your question (optional)',
+    'contact_form.step4.heading': 'Thank you for your inquiry',
+    'contact_form.step4.desc': 'Your details have been prepared for submission. You can now connect a backend, email or webhook.',
+    'contact_form.btn.back': 'Back',
+    'contact_form.btn.continue': 'Continue',
+    'contact_form.btn.submit': 'Submit inquiry',
+
+    // References
+    'references.subtitle': 'References',
+    'references.title': 'Trust built on real experience',
+    'references.desc': 'Real stories and experiences of satisfied clients help confirm the credibility, quality of services and personal approach we stand for.',
+    'references.item1.name': 'Jan Novák',
+    'references.item1.company': 'NOVAK STAV s.r.o.',
+    'references.item1.role': 'Managing Director',
+    'references.item1.text': 'What I value most in our cooperation is speed, reliability and the ability to explain everything clearly. The transition to a new accounting office went smoothly and today we have a much better overview of our finances and obligations.',
+    'references.item2.name': 'Petra Dvořáková',
+    'references.item2.company': 'Petra Design',
+    'references.item2.role': 'Sole trader',
+    'references.item2.text': 'I needed confidence that my accounting and taxes were handled correctly and on time. I appreciate the personal approach, willingness to advise and the fact that everything works clearly and without unnecessary stress.',
+    'references.item3.name': 'Martin Svoboda',
+    'references.item3.company': 'MS Tech Solutions',
+    'references.item3.role': 'Business Owner',
+    'references.item3.text': 'The cooperation helped us better set up processes, gain control over our accounting and solve more complex tax issues. Their expertise and practical experience are obvious.',
+
+    // Documents flexibility
+    'documents_flexibility.subtitle': 'Document flexibility',
+    'documents_flexibility.title': 'Documents in the way that suits you best',
+    'documents_flexibility.desc': 'We show that modern accounting services can be both technologically advanced and practically human at the same time.',
+    'documents_flexibility.additional': 'Whether you use an e-commerce store, mobile apps, shared online storage or still work with paper documents, we can set up cooperation so that it is convenient, clear and functional for your daily operations.',
+    'documents_flexibility.item1.title': 'E-commerce integrations',
+    'documents_flexibility.item1.desc': 'We help set up connections to e-commerce solutions and make processing documents from online sales more efficient.',
+    'documents_flexibility.item2.title': 'Mobile and online tools',
+    'documents_flexibility.item2.desc': 'You can submit documents digitally using mobile apps, shared folders or other online tools depending on what suits you best.',
+    'documents_flexibility.item3.title': 'Practical human approach',
+    'documents_flexibility.item3.desc': 'If you prefer a more personal way of cooperation, we can also arrange collection of paper documents or another practical method of handover.',
+    'documents_flexibility.item4.title': 'Clear processing',
+    'documents_flexibility.item4.desc': 'The goal is to make document handover as simple, understandable and tailored to the size and day-to-day functioning of your business as possible.',
+
+    // Social impact
+    'social_impact.subtitle': 'Social impact',
+    'social_impact.title': 'Values that give business a broader meaning',
+    'social_impact.desc': 'In addition to expertise and service quality, fair approach, responsibility and activities with a positive impact beyond everyday business are also important to us.',
+    'social_impact.additional': 'This section can present charitable support, partnership initiatives, ethical client approach and other activities that help build trust, brand affinity and long-term relationships.',
+    'social_impact.item1.title': 'Charity activities',
+    'social_impact.item1.desc': 'We support meaningful projects and activities that help people, communities or organizations where support is truly needed.',
+    'social_impact.item2.title': 'Fair approach',
+    'social_impact.item2.desc': 'We value open communication, honest conduct and long-term cooperation built on trust and respect.',
+    'social_impact.item3.title': 'Human side of services',
+    'social_impact.item3.desc': 'Behind every accounting or tax matter, we see real people, their businesses and real-life situations that deserve an individual approach.',
+    'social_impact.item4.title': 'Brand values',
+    'social_impact.item4.desc': 'We show that quality services are not only about results, but also about the way we approach clients, partners and society.',
 
     // Footer
     'footer.description': 'Comprehensive accounting and tax office. We do your taxes as if they were ours — with maximum care and expertise.',
@@ -259,7 +489,6 @@ export const translations = {
     'footer.branch_opava': 'Branch Opava',
     'footer.data_box': 'Data box',
     'footer.rights': 'All rights reserved',
-
   },
 
   de: {
@@ -269,13 +498,43 @@ export const translations = {
     legalTitle: 'Best Account s.r.o.',
     legalInfo: 'Ergänzen Sie die Firmen-ID, USt-IdNr., den Sitz, den Registereintrag und weitere rechtliche Angaben.',
 
-    //NavBar
+    // Contact + team badges
+    'contact.hero_badge': 'Wir sind für Sie da',
+    'contact.offices_badge': 'Wo Sie uns finden',
+    'contact.offices_title': 'Unsere Niederlassungen',
+    'contact.team_badge': 'Menschen',
+
+    // Team roles
+    'team.role.ivo_tirol': 'Geschäftsführer, Ökonom',
+    'team.role.tereza_tirolova': 'Geschäftsführerin, Steuerberaterin, Mitglied der Kammer der Steuerberater der Tschechischen Republik, Beraterin Nr. 5270',
+    'team.role.martin_coufal': 'Externer Auditor, Steuerberater Nr. 1721',
+    'team.role.ales_coufal': 'Externer Steuerberater Nr. 4561',
+    'team.role.jana_pichonska': 'Senior-Buchhalterin, Administratorin für Buchhaltungssoftware',
+    'team.role.simon_tirol': 'Assistenz der Geschäftsleitung',
+    'team.role.zuzana_schabjukova': 'Senior-Buchhalterin',
+    'team.role.petr_zbedina': 'Senior-Buchhalter',
+    'team.role.michal_bek': 'Buchhalter',
+    'team.role.marek_horin': 'Buchhalter',
+    'team.role.martina_draisaitlova': 'Buchhalterin',
+    'team.role.andrea_vojtechova': 'Buchhalterin',
+    'team.role.josef_bajer': 'Buchhalter',
+    'team.role.sandra_orlikova': 'Buchhalterin',
+    'team.role.lucie_neuwirthova': 'Buchhalterin',
+    'team.role.eva_slamova': 'Administration',
+    'team.role.anna_duskova': 'Administrative Unterstützung',
+    'team.role.radomir_wisnar': 'Buchhalter',
+    'team.role.dasa_vandasova': 'Arbeitsschutz und Brandschutz, Umweltschutz, RTZZ — Mitglied der Kammer der Tschechischen Republik für Arbeitsschutz und Brandschutz',
+    'team.role.barbora_nekorancova': 'Lohnbuchhalterin',
+    'team.role.vladimira_simeckova': 'Lohnbuchhalterin',
+    'team.role.hana_micanova': 'Lohnbuchhalterin',
+
+    // NavBar
     'nav.home': 'Start',
     'nav.services': 'Dienstleistungen',
     'nav.why_us': 'Warum wir',
+    'nav.contact_form': 'Kontaktformular',
+    'nav.references': 'Referenzen',
     'nav.contact': 'Kontakt',
-    
-    // Startseite
 
     // Hero
     'hero.badge': 'Zuverlässiger Partner für Ihre Finanzen',
@@ -286,7 +545,7 @@ export const translations = {
     'hero.button.services': 'Unsere Dienstleistungen',
     'hero.scroll': 'Scroll',
     'hero.image_alt': 'Titelbild',
-    
+
     // Statistiken
     'stats.label1': 'Jahre Erfahrung',
     'stats.label2': 'zufriedene Kunden',
@@ -297,22 +556,16 @@ export const translations = {
     'services.section.name': 'UNSER PORTFOLIO',
     'services.title': 'Unsere Dienstleistungen',
     'services.subtitle': 'Wir bieten umfassende Buchhaltungs-, Wirtschafts- und Steuerberatungsleistungen an.',
-
     'services.consulting.title': 'Beratung',
     'services.consulting.desc': 'Ein völlig neuer Ansatz in der wirtschaftlichen, buchhalterischen und steuerlichen Beratung mit Schwerpunkt auf einem individuellen Zugang zum Kunden.',
-
     'services.eservis.title': 'E-Service',
     'services.eservis.desc': 'Über ein Online-Formular bieten wir Buchhaltungs-, Wirtschafts- und Steuerberatung einschließlich der Erstellung von Vertragsbeziehungen an.',
-
     'services.kdp.title': 'Kammer der Steuerberater der Tschechischen Republik',
     'services.kdp.desc': 'Wir sind Mitglieder der Kammer der Steuerberater der Tschechischen Republik und bieten umfassende Leistungen im Bereich Steuerberatung und Steueroptimierung an.',
-
     'services.taxes.title': 'Steuern',
     'services.taxes.desc': 'Steuererfassung, Analysen, Steueroptimierung und die Möglichkeit von Steuerstundungen.',
-
     'services.accounting.title': 'Buchhaltung',
     'services.accounting.desc': 'Buchführung, betriebswirtschaftliche Berichte und wirtschaftliche Beratung.',
-
     'services.payroll.title': 'Löhne',
     'services.payroll.desc': 'Komplette Lohnverarbeitung, Personaladministration und damit verbundene Beratung.',
 
@@ -320,7 +573,6 @@ export const translations = {
     certification: 'ZERTIFIZIERUNG',
     'services.kdp.hero':
       'Ing. Tereza Tirolová ist Mitglied des Fachkollegiums in der Sektion Körperschaftsteuer bei der Kammer der Steuerberater der Tschechischen Republik — Beraterin Nr. 5270. Ing. Aleš Coufal ist externer Steuerberater Nr. 4561 und Ing. Martin Coufal externer Auditor und Steuerberater Nr. 1721.',
-
     'services.kdp.item1.title': 'Steuerberatung',
     'services.kdp.item1.desc': 'Umfassende Dienstleistungen im Bereich Steuerberatung und internationale Besteuerung.',
     'services.kdp.item2.title': 'Steueroptimierung',
@@ -334,12 +586,10 @@ export const translations = {
     'why_us.subtitle': 'Suchen Sie Berater, die Ihnen einen persönlichen Ansatz bieten und Zusammenhänge verstehen?',
     'why_us.item1': 'Wir sind eine umfassende Buchhaltungs- und Steuerkanzlei',
     'why_us.item2': 'Wir wissen, wo und wie wir Ihnen Geld sparen können',
-    'why_us.item3': 'Effizienz dort zu finden, wo sie fehlt, ist unser vorrangiges Ziel',
-    'why_us.item4': 'Auswertungen und Analysen Ihrer Geschäftstätigkeit gehören zu unseren Stärken',
-    'why_us.item5': 'Flexible Sammlung von Buchhaltungsunterlagen zur Steueroptimierung',
-    'why_us.item6': 'Professionelle Vertretung gegenüber Finanzbehörden',
-    'why_us.item7': 'Wir bieten Steuerberatung nicht nur Ihnen, sondern auch Ihrem Buchhalter',
-    'why_us.item8': 'Wir vertreten Sie in Steuerverfahren im Rahmen der Steuerverwaltung',
+    'why_us.item3': 'Ein individueller Ansatz ist für uns selbstverständlich',
+    'why_us.item4': 'Analysen und das Finden von Effizienz gehören zu unseren Stärken',
+    'why_us.item5': 'Flexible Arbeit mit Belegen spart Ihre Zeit',
+    'why_us.item6': 'Fairness und Professionalität sind unser Standard',
     'memberKDP.title': 'KDP ČR',
     'memberKDP.subtitle1': 'Mitglied der Kammer der Steuerberater',
     'memberKDP.subtitle2': 'der Tschechischen Republik',
@@ -349,22 +599,16 @@ export const translations = {
     'e-service.title': 'E-Service',
     'e-service.desc': 'Über ein Online-Formular bieten wir Buchhaltungs-, Wirtschafts- und Steuerberatung einschließlich der Erstellung von Vertragsbeziehungen an.',
     'e-service.additionalInfo': 'So haben Sie die Möglichkeit, aus der Ferne mit einer Steuerkanzlei zu kommunizieren, die jedes Ihrer Probleme rechtzeitig und mit maximaler Effizienz lösen kann.',
-
     'e-service.feature1': 'Sofortige Antwort auf Ihre Fragen',
     'e-service.feature2': 'Von überall und jederzeit verfügbar',
     'e-service.feature3': 'Schnelle Abwicklung ohne persönlichen Besuch',
-
     'e-service.buttonText': 'E-Service starten',
-
     'e-service.item1.title': 'Steuerberatung',
     'e-service.item1.status': 'Online',
-
     'e-service.item2.title': 'Unterlagen senden',
     'e-service.item2.status': 'Aktiv',
-
     'e-service.item3.title': 'Beratung aus der Ferne',
     'e-service.item3.status': 'Online',
-
     'e-service.item4.title': 'Steuererklärungen',
     'e-service.item4.status': 'Verfügbar',
 
@@ -384,6 +628,99 @@ export const translations = {
     'contact.legal_info': 'Ergänzen Sie hier die rechtlichen Firmendaten.',
     'contact.team_title': 'Unser Team',
     'contact.team_subtitle': 'Menschen, die sich um Sie kümmern.',
+    'contact.hq': 'Hauptsitz Vítkov',
+    'contact.hq_address': 'Wolkerova 1009, 749 01 Vítkov',
+    'contact.hq_hours': 'Mo–Fr nach Vereinbarung',
+    'contact.hq_phone': '+420 721 075 783',
+    'contact.branch': 'Filiale Opava',
+    'contact.branch_address': 'Adresse der Filiale Opava ergänzen',
+    'contact.branch_hours': 'Mo–Fr nach Vereinbarung',
+    'contact.branch_phone': '+420 721 075 783',
+
+    // Kontaktformular
+    'contact_form.title': 'Unverbindliche Anfrage',
+    'contact_form.subtitle': 'Kontaktformular',
+    'contact_form.desc': 'Statt langer Formulare genügen wenige kurze Schritte — wir melden uns mit einer maßgeschneiderten Lösung für Ihre Bedürfnisse.',
+    'contact_form.step1.label': 'Schritt 1',
+    'contact_form.step1.preview': 'Ihr Anliegen: Buchhalter wechseln / Neues Projekt / Steuern',
+    'contact_form.step2.label': 'Schritt 2',
+    'contact_form.step2.preview': 'Unternehmensform: Einzelunternehmer / GmbH / Sonstiges',
+    'contact_form.step3.label': 'Schritt 3',
+    'contact_form.step3.preview': 'Kontakt und bevorzugte Kommunikationsweise',
+    'contact_form.badge': 'Interaktives Formular',
+    'contact_form.done': 'Fertig',
+    'contact_form.step_label': 'Schritt',
+    'contact_form.step1.heading': 'Was beschäftigt Sie gerade?',
+    'contact_form.step1.subtitle': 'Wählen Sie den Bereich, in dem wir Ihnen helfen sollen.',
+    'contact_form.need.transition': 'Wechsel vom bisherigen Buchhalter',
+    'contact_form.need.new_project': 'Neues Projekt',
+    'contact_form.need.taxes': 'Steuern',
+    'contact_form.step2.heading': 'In welcher Form sind Sie tätig?',
+    'contact_form.step2.subtitle': 'Wählen Sie Ihre Unternehmensform. Bei „Sonstiges“ geben Sie bitte Details an.',
+    'contact_form.business.osvc': 'Einzelunternehmer',
+    'contact_form.business.sro': 'GmbH',
+    'contact_form.business.other': 'Sonstiges',
+    'contact_form.business.other_placeholder': 'Unternehmensform näher beschreiben',
+    'contact_form.step3.heading': 'Wie sollen wir Sie kontaktieren?',
+    'contact_form.step3.subtitle': 'Wählen Sie Ihre bevorzugte Kontaktmethode und geben Sie Ihre Daten ein.',
+    'contact_form.contact.phone': 'Telefon',
+    'contact_form.contact.email': 'E-Mail',
+    'contact_form.contact.both': 'Telefon & E-Mail',
+    'contact_form.field.name': 'Vor- und Nachname',
+    'contact_form.field.company': 'Unternehmen (optional)',
+    'contact_form.field.email': 'E-Mail',
+    'contact_form.field.phone': 'Telefon',
+    'contact_form.field.note': 'Beschreiben Sie kurz Ihr Anliegen (optional)',
+    'contact_form.step4.heading': 'Danke für Ihre Anfrage',
+    'contact_form.step4.desc': 'Ihre Daten wurden versandfertig vorbereitet. Sie können jetzt ein Backend, E-Mail oder Webhook anbinden.',
+    'contact_form.btn.back': 'Zurück',
+    'contact_form.btn.continue': 'Weiter',
+    'contact_form.btn.submit': 'Anfrage senden',
+
+    // Referenzen
+    'references.subtitle': 'Referenzen',
+    'references.title': 'Vertrauen auf Grundlage realer Erfahrungen',
+    'references.desc': 'Echte Geschichten und Erfahrungen zufriedener Kunden helfen, die Vertrauenswürdigkeit, Qualität der Dienstleistungen und den persönlichen Ansatz zu bestätigen, auf den wir Wert legen.',
+    'references.item1.name': 'Jan Novák',
+    'references.item1.company': 'NOVAK STAV s.r.o.',
+    'references.item1.role': 'Geschäftsführer',
+    'references.item1.text': 'An der Zusammenarbeit schätze ich vor allem die Schnelligkeit, Zuverlässigkeit und die Fähigkeit, alles verständlich zu erklären. Der Wechsel zu einer neuen Buchhaltungskanzlei verlief problemlos und heute haben wir einen deutlich besseren Überblick über Finanzen und Pflichten.',
+    'references.item2.name': 'Petra Dvořáková',
+    'references.item2.company': 'Petra Design',
+    'references.item2.role': 'Selbstständige',
+    'references.item2.text': 'Ich brauchte die Sicherheit, dass meine Buchhaltung und Steuern korrekt und rechtzeitig erledigt werden. Ich schätze den persönlichen Ansatz, die Bereitschaft zu beraten und dass alles übersichtlich und ohne unnötigen Stress funktioniert.',
+    'references.item3.name': 'Martin Svoboda',
+    'references.item3.company': 'MS Tech Solutions',
+    'references.item3.role': 'Firmeninhaber',
+    'references.item3.text': 'Die Zusammenarbeit hat uns geholfen, Prozesse besser einzustellen, einen besseren Überblick über die Buchhaltung zu bekommen und auch komplexere Steuerfragen zu lösen. Die fachliche Kompetenz und praktische Erfahrung sind deutlich erkennbar.',
+
+    // Flexibilität bei Belegen
+    'documents_flexibility.subtitle': 'Flexibilität bei Belegen',
+    'documents_flexibility.title': 'Belege so, wie es für Sie am besten passt',
+    'documents_flexibility.desc': 'Wir zeigen, dass moderne Buchhaltungsdienstleistungen technologisch fortschrittlich und gleichzeitig menschlich sowie praktisch sein können.',
+    'documents_flexibility.additional': 'Ob Sie einen E-Shop nutzen, mobile Apps, gemeinsame Online-Speicher verwenden oder weiterhin mit Papierbelegen arbeiten – wir richten die Zusammenarbeit so ein, dass sie bequem, übersichtlich und für Ihren täglichen Betrieb funktional ist.',
+    'documents_flexibility.item1.title': 'Anbindung an E-Shops',
+    'documents_flexibility.item1.desc': 'Wir helfen bei der Einrichtung der Anbindung an E-Commerce-Lösungen und bei der effizienteren Verarbeitung von Belegen aus dem Online-Verkauf.',
+    'documents_flexibility.item2.title': 'Mobile und Online-Tools',
+    'documents_flexibility.item2.desc': 'Sie können Belege digital über mobile Apps, gemeinsame Ordner oder andere Online-Tools übergeben – je nachdem, was Ihnen am besten passt.',
+    'documents_flexibility.item3.title': 'Praktischer Ansatz',
+    'documents_flexibility.item3.desc': 'Wenn Sie eine persönlichere Zusammenarbeit bevorzugen, kann auch die Abholung von Papierbelegen oder eine andere praktische Übergabeform vereinbart werden.',
+    'documents_flexibility.item4.title': 'Übersichtliche Verarbeitung',
+    'documents_flexibility.item4.desc': 'Ziel ist es, die Übergabe von Belegen so einfach, verständlich und an die Größe sowie den Alltag Ihres Unternehmens angepasst wie möglich zu gestalten.',
+
+    // Gesellschaftlicher Mehrwert
+    'social_impact.subtitle': 'Gesellschaftlicher Mehrwert',
+    'social_impact.title': 'Werte, die dem Unternehmen eine breitere Bedeutung geben',
+    'social_impact.desc': 'Neben Fachkompetenz und Servicequalität sind uns auch ein fairer Ansatz, Verantwortung und Aktivitäten wichtig, die über das alltägliche Geschäft hinaus positive Wirkung entfalten.',
+    'social_impact.additional': 'Dieser Abschnitt kann wohltätige Unterstützung, Partnerschaftsinitiativen, einen ethischen Umgang mit Kunden und weitere Aktivitäten präsentieren, die Vertrauen, Sympathie für die Marke und langfristige Beziehungen fördern.',
+    'social_impact.item1.title': 'Wohltätige Aktivitäten',
+    'social_impact.item1.desc': 'Wir unterstützen sinnvolle Projekte und Aktivitäten, die Menschen, Gemeinschaften oder Organisationen dort helfen, wo Unterstützung wirklich gebraucht wird.',
+    'social_impact.item2.title': 'Fairer Ansatz',
+    'social_impact.item2.desc': 'Wir legen Wert auf offene Kommunikation, ehrliches Handeln und langfristige Zusammenarbeit, die auf Vertrauen und Respekt basiert.',
+    'social_impact.item3.title': 'Menschliche Seite der Dienstleistungen',
+    'social_impact.item3.desc': 'Hinter jedem Buchhaltungs- oder Steuerthema sehen wir konkrete Menschen, ihre Unternehmen und reale Lebenssituationen, die einen individuellen Ansatz verdienen.',
+    'social_impact.item4.title': 'Markenwerte',
+    'social_impact.item4.desc': 'Wir zeigen, dass qualitativ hochwertige Dienstleistungen nicht nur von Ergebnissen abhängen, sondern auch davon, wie wir mit Kunden, Partnern und der Gesellschaft umgehen.',
 
     // Footer
     'footer.description': 'Umfassende Buchhaltungs- und Steuerkanzlei. Wir machen Ihre Steuern, als wären sie unsere – mit größter Sorgfalt und Fachkenntnis.',
@@ -392,6 +729,5 @@ export const translations = {
     'footer.branch_opava': 'Filiale Opava',
     'footer.data_box': 'Datenbox',
     'footer.rights': 'Alle Rechte vorbehalten',
-
   },
 }
