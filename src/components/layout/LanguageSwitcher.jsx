@@ -8,6 +8,10 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Globe } from 'lucide-react';
 
+const UiButton = /** @type {any} */ (Button);
+const UiDropdownMenuContent = /** @type {any} */ (DropdownMenuContent);
+const UiDropdownMenuItem = /** @type {any} */ (DropdownMenuItem);
+
 export default function LanguageSwitcher() {
   const { language, setLanguage, languages } = useTranslation();
 
@@ -16,24 +20,24 @@ export default function LanguageSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="sm" className="gap-2 text-sm font-medium">
+        <UiButton variant="ghost" size="sm" className="gap-2 text-sm font-medium">
           <Globe className="h-4 w-4" />
           <span className="hidden sm:inline">{current?.flag} {current?.label}</span>
           <span className="sm:hidden">{current?.flag}</span>
-        </Button>
+        </UiButton>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <UiDropdownMenuContent align="end">
         {languages.map(lang => (
-          <DropdownMenuItem
+          <UiDropdownMenuItem
             key={lang.code}
-            onClick={() => setLanguage(lang.code)}
+            onSelect={() => setLanguage(lang.code)}
             className={language === lang.code ? 'bg-accent' : ''}
           >
             <span className="mr-2">{lang.flag}</span>
             {lang.label}
-          </DropdownMenuItem>
+          </UiDropdownMenuItem>
         ))}
-      </DropdownMenuContent>
+      </UiDropdownMenuContent>
     </DropdownMenu>
   );
 }
