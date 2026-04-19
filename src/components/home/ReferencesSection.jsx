@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
 import { Quote, Star } from 'lucide-react';
 import useTranslation from '../../hooks/useTranslation';
-
-const referenceKeys = ['item1', 'item2', 'item3'];
+import { homeContent } from '@/content/home';
 
 export default function ReferencesSection() {
   const { t } = useTranslation();
@@ -35,9 +34,9 @@ export default function ReferencesSection() {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {referenceKeys.map((key, index) => (
+          {homeContent.references.map((reference, index) => (
             <motion.article
-              key={key}
+              key={reference.key}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -55,18 +54,18 @@ export default function ReferencesSection() {
               </div>
 
               <p className="text-muted-foreground leading-relaxed mb-8">
-                „{t(`references.${key}.text`)}“
+                „{t(`references.${reference.key}.text`)}“
               </p>
 
               <div className="pt-6 border-t border-border">
                 <div className="font-semibold text-foreground">
-                  {t(`references.${key}.name`)}
+                  {reference.name}
                 </div>
                 <div className="text-sm text-primary mt-1">
-                  {t(`references.${key}.role`)}
+                  {t(`references.${reference.key}.role`)}
                 </div>
                 <div className="text-sm text-muted-foreground mt-1">
-                  {t(`references.${key}.company`)}
+                  {reference.company}
                 </div>
               </div>
             </motion.article>

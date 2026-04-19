@@ -11,11 +11,38 @@ import {
   MessageSquare,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useI18n } from '@/i18n/I18nProvider';
+import useTranslation from '@/hooks/useTranslation';
+import { homeContent } from '@/content/home';
+
+const STEPS = {
+  NEED: 1,
+  BUSINESS: 2,
+  CONTACT: 3,
+  DONE: 4,
+};
+
+const STEP_PROGRESS = {
+  [STEPS.NEED]: '0%',
+  [STEPS.BUSINESS]: '33.33%',
+  [STEPS.CONTACT]: '66.66%',
+  [STEPS.DONE]: '100%',
+};
+
+const businessIcons = {
+  osvc: Briefcase,
+  sro: Building2,
+  jine: CheckCircle2,
+}
+
+const contactIcons = {
+  telefon: Phone,
+  email: Mail,
+  'telefon-email': MessageSquare,
+}
 
 export default function ContactForm() {
-  const { t } = useI18n();
-  const [step, setStep] = useState(1);
+  const { t } = useTranslation();
+  const [step, setStep] = useState(STEPS.NEED);
   const [form, setForm] = useState({
     need: '',
     businessType: '',
@@ -28,23 +55,22 @@ export default function ContactForm() {
     note: '',
   });
 
-  const needOptions = [
-    { value: 'prechod-od-jine-ucetni', label: t('contact_form.need.transition') },
-    { value: 'novy-projekt', label: t('contact_form.need.new_project') },
-    { value: 'dane', label: t('contact_form.need.taxes') },
-  ];
+  const needOptions = homeContent.contactForm.needOptions.map((item) => ({
+    value: item.value,
+    label: t(item.labelKey),
+  }));
 
-  const businessOptions = [
-    { value: 'osvc', label: t('contact_form.business.osvc'), icon: Briefcase },
-    { value: 'sro', label: t('contact_form.business.sro'), icon: Building2 },
-    { value: 'jine', label: t('contact_form.business.other'), icon: CheckCircle2 },
-  ];
+  const businessOptions = homeContent.contactForm.businessOptions.map((item) => ({
+    value: item.value,
+    label: t(item.labelKey),
+    icon: businessIcons[item.value],
+  }));
 
-  const contactOptions = [
-    { value: 'telefon', label: t('contact_form.contact.phone'), icon: Phone },
-    { value: 'email', label: t('contact_form.contact.email'), icon: Mail },
-    { value: 'telefon-email', label: t('contact_form.contact.both'), icon: MessageSquare },
-  ];
+  const contactOptions = homeContent.contactForm.contactOptions.map((item) => ({
+    value: item.value,
+    label: t(item.labelKey),
+    icon: contactIcons[item.value],
+  }));
 
   const updateField = (field, value) => {
     setForm((prev) => ({ ...prev, [field]: value }));
@@ -52,7 +78,7 @@ export default function ContactForm() {
 
   const handleNeedSelect = (value) => {
     setForm((prev) => ({ ...prev, need: value }));
-    setStep(2);
+    setStep(STEPS.BUSINESS);
   };
 
   const handleBusinessTypeSelect = (value) => {
@@ -69,27 +95,27 @@ export default function ContactForm() {
       businessType: value,
       businessTypeOther: '',
     }));
-    setStep(3);
+    setStep(STEPS.CONTACT);
   };
 
   const handleOtherBusinessContinue = () => {
     if (!form.businessTypeOther.trim()) return;
-    setStep(3);
+    setStep(STEPS.CONTACT);
   };
 
   const prevStep = () => {
-    if (step === 2) {
-      setStep(1);
+    if (step === STEPS.BUSINESS) {
+      setStep(STEPS.NEED);
       return;
     }
 
-    if (step === 3) {
-      setStep(2);
+    if (step === STEPS.CONTACT) {
+      setStep(STEPS.BUSINESS);
       return;
     }
 
-    if (step === 4) {
-      setStep(3);
+    if (step === STEPS.DONE) {
+      setStep(STEPS.CONTACT);
     }
   };
 
@@ -108,13 +134,10 @@ export default function ContactForm() {
       return;
     }
 
-    console.log('Odeslaná poptávka:', form);
-
-    setStep(4);
+    setStep(STEPS.DONE);
   };
 
-  const progressWidth =
-    step === 1 ? '0%' : step === 2 ? '33.33%' : step === 3 ? '66.66%' : '100%';
+  const progressWidth = STEP_PROGRESS[step];
 
   return (
     <section id="contact_form" className="relative py-24 overflow-hidden bg-secondary/30">
@@ -143,26 +166,14 @@ export default function ContactForm() {
             </p>
 
             <div className="space-y-4">
-              <div className="rounded-2xl border border-border bg-card p-5">
-                <div className="text-sm font-semibold text-foreground mb-1">{t('contact_form.step1.label')}</div>
-                <div className="text-sm text-muted-foreground">
-                  {t('contact_form.step1.preview')}
+              {homeContent.contactForm.previewSteps.map((stepKey) => (
+                <div key={stepKey} className="rounded-2xl border border-border bg-card p-5">
+                  <div className="text-sm font-semibold text-foreground mb-1">{t(`contact_form.${stepKey}.label`)}</div>
+                  <div className="text-sm text-muted-foreground">
+                    {t(`contact_form.${stepKey}.preview`)}
+                  </div>
                 </div>
-              </div>
-
-              <div className="rounded-2xl border border-border bg-card p-5">
-                <div className="text-sm font-semibold text-foreground mb-1">{t('contact_form.step2.label')}</div>
-                <div className="text-sm text-muted-foreground">
-                  {t('contact_form.step2.preview')}
-                </div>
-              </div>
-
-              <div className="rounded-2xl border border-border bg-card p-5">
-                <div className="text-sm font-semibold text-foreground mb-1">{t('contact_form.step3.label')}</div>
-                <div className="text-sm text-muted-foreground">
-                  {t('contact_form.step3.preview')}
-                </div>
-              </div>
+              ))}
             </div>
           </motion.div>
 
@@ -183,7 +194,7 @@ export default function ContactForm() {
                       {t('contact_form.badge')}
                     </span>
                     <span className="text-sm text-muted-foreground">
-                      {step === 4 ? t('contact_form.done') : `${t('contact_form.step_label')} ${step} / 3`}
+                      {step === STEPS.DONE ? t('contact_form.done') : `${t('contact_form.step_label')} ${step} / 3`}
                     </span>
                   </div>
 
@@ -197,7 +208,7 @@ export default function ContactForm() {
 
                 <form onSubmit={handleSubmit}>
                   <AnimatePresence mode="wait">
-                    {step === 1 && (
+                    {step === STEPS.NEED && (
                       <motion.div
                         key="step-1"
                         initial={{ opacity: 0, x: 20 }}
@@ -231,7 +242,7 @@ export default function ContactForm() {
                       </motion.div>
                     )}
 
-                    {step === 2 && (
+                    {step === STEPS.BUSINESS && (
                       <motion.div
                         key="step-2"
                         initial={{ opacity: 0, x: 20 }}
@@ -293,7 +304,7 @@ export default function ContactForm() {
                       </motion.div>
                     )}
 
-                    {step === 3 && (
+                    {step === STEPS.CONTACT && (
                       <motion.div
                         key="step-3"
                         initial={{ opacity: 0, x: 20 }}
@@ -379,7 +390,7 @@ export default function ContactForm() {
                       </motion.div>
                     )}
 
-                    {step === 4 && (
+                    {step === STEPS.DONE && (
                       <motion.div
                         key="step-4"
                         initial={{ opacity: 0, scale: 0.96 }}
@@ -402,7 +413,7 @@ export default function ContactForm() {
                     )}
                   </AnimatePresence>
 
-                  {step === 3 && (
+                  {step === STEPS.CONTACT && (
                     <div className="flex items-center justify-between gap-4 mt-8">
                       <Button
                         type="button"
@@ -424,7 +435,7 @@ export default function ContactForm() {
                     </div>
                   )}
 
-                  {step === 2 && form.businessType !== 'jine' && (
+                  {step === STEPS.BUSINESS && form.businessType !== 'jine' && (
                     <div className="flex items-center justify-start gap-4 mt-8">
                       <Button
                         type="button"
@@ -438,7 +449,7 @@ export default function ContactForm() {
                     </div>
                   )}
 
-                  {step === 1 && (
+                  {step === STEPS.NEED && (
                     <div className="flex items-center justify-start gap-4 mt-8">
                       <Button
                         type="button"

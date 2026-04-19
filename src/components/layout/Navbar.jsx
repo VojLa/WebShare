@@ -5,9 +5,12 @@ import LanguageSwitcher from './LanguageSwitcher';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import logoBestAccount from '@/assets/BA HORIZONTAL V2 - TEXT - WHITE.svg';
+import { companyInfo } from '@/content/company';
 
 export default function Navbar() {
   const { t } = useTranslation();
+  const phoneHref = `tel:${companyInfo.contact.phone.replace(/\s/g, '')}`;
+  const mailHref = `mailto:${companyInfo.contact.email}`;
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
@@ -66,11 +69,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top bar */}
         <div className="hidden md:flex items-center justify-end gap-6 py-2 text-xs text-muted-foreground border-b border-border/20">
-          <a href="tel:+420721075783" className="flex items-center gap-1.5 hover:text-primary transition-colors">
-            <Phone className="h-3 w-3" /> +420 721 075 783
+          <a href={phoneHref} className="flex items-center gap-1.5 hover:text-primary transition-colors">
+            <Phone className="h-3 w-3" /> {companyInfo.contact.phone}
           </a>
-          <a href="mailto:office@bestaccount.cz" className="flex items-center gap-1.5 hover:text-primary transition-colors">
-            <Mail className="h-3 w-3" /> office@bestaccount.cz
+          <a href={mailHref} className="flex items-center gap-1.5 hover:text-primary transition-colors">
+            <Mail className="h-3 w-3" /> {companyInfo.contact.email}
           </a>
           <LanguageSwitcher />
         </div>
@@ -127,8 +130,8 @@ export default function Navbar() {
               </Link>
             ))}
             <div className="pt-3 border-t border-border flex items-center gap-4 text-xs text-muted-foreground px-4">
-              <a href="tel:+420721075783" className="flex items-center gap-1">
-                <Phone className="h-3 w-3" /> +420 721 075 783
+              <a href={phoneHref} className="flex items-center gap-1">
+                <Phone className="h-3 w-3" /> {companyInfo.contact.phone}
               </a>
             </div>
           </div>

@@ -4,7 +4,6 @@ import ServicesSection from '../components/home/ServicesSection';
 import KDPSection from '../components/home/KDPSection';
 import WhyUsSection from '../components/home/WhyUsSection';
 import ContactForm from '@/components/home/ContactForm';
-import CTASection from '../components/home/CTASection';
 import { homeContent } from '../content/home';
 import useTranslation from '../hooks/useTranslation';
 import ReferencesSection from '@/components/home/ReferencesSection';
@@ -13,16 +12,15 @@ import SocialImpactSection from '@/components/home/SocialImpactSection';
 
 export default function Home() {
   const { t } = useTranslation();
+  const stats = homeContent.stats.map((item) => ({
+    value: item.value,
+    label: t(item.labelKey),
+  }));
 
   return (
-    <div >
+    <div>
       <HeroSection/>
-      <StatsSection stats={[
-                            { value: homeContent.stats[0], label: t('stats.label1') },
-                            { value: homeContent.stats[1], label: t('stats.label2') },
-                            { value: homeContent.stats[2], label: t('stats.label3') },
-                            { value: homeContent.stats[3], label: t('stats.label4') },
-                          ]} />
+      <StatsSection stats={stats} />
       <ServicesSection />
       <KDPSection />
       <WhyUsSection />

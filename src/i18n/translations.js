@@ -1,15 +1,5 @@
 export const translations = {
   cs: {
-    // Obecně
-    phone: '+420 721 075 783',
-    email: 'office@bestaccount.cz',
-    legalTitle: 'Best Account s.r.o.',
-    legalInfo: `Bankovní spojení: 9338116001/5500
-    DATOVÁ SCHRÁNKA: thrvd6r
-    IČ: 05067014
-    DIČ: CZ05067014
-    Zapsáno u Krajského soudu v Ostravě, oddíl C,
-    vložka 66124`,
     'company.legal_heading': 'PRÁVNICKÉ SÍDLO SPOLEČNOSTI',
     'company.bank_account': 'Bankovní spojení',
     'company.data_box': 'Datová schránka',
@@ -63,7 +53,6 @@ export const translations = {
     'hero.subtitle': 'Pomáháme firmám i podnikatelům s účetnictvím, daněmi a poradenstvím.',
     'hero.button.contact': 'Kontaktujte nás',
     'hero.button.services': 'Naše služby',
-    'hero.scroll': 'Scroll',
     'hero.image_alt': 'Úvodní obrázek',
 
     // Statistiky
@@ -109,53 +98,16 @@ export const translations = {
     'why_us.item3': 'Individuální přístup je pro nás samozřejmostí',
     'why_us.item4': 'Rozbory a hledání efektivity jsou naší předností',
     'why_us.item5': 'Flexibilní práce s doklady šetří váš čas',
-    'why_us.item6': 'Férovost a profesionální přístup jsou naším standardem',
-    'memberKDP.title': 'KDP ČR',
-    'memberKDP.subtitle1': 'Člen komory daňových',
-    'memberKDP.subtitle2': 'poradců České republiky',
-
-    // E-Service
-    'e-service.subtitle': 'DIGITÁLNÍ KANCELÁŘ',
-    'e-service.title': 'E-Servis',
-    'e-service.desc': 'Prostřednictvím on-line formuláře poskytujeme účetní, ekonomické a daňové poradenství včetně tvorby závazkových vztahů.',
-    'e-service.additionalInfo': 'Máte tak možnost komunikovat vzdáleně s daňovou kanceláří, která je schopna vyřešit jakýkoliv váš problém včas a s maximální efektivitou.',
-    'e-service.feature1': 'Okamžitá odpověď na vaše dotazy',
-    'e-service.feature2': 'Dostupnost odkudkoliv, kdykoliv',
-    'e-service.feature3': 'Rychlé vyřízení bez osobní návštěvy',
-    'e-service.buttonText': 'Spustit E-servis',
-    'e-service.item1.title': 'Daňové poradenství',
-    'e-service.item1.status': 'Online',
-    'e-service.item2.title': 'Odeslání dokladů',
-    'e-service.item2.status': 'Aktivní',
-    'e-service.item3.title': 'Konzultace na dálku',
-    'e-service.item3.status': 'Online',
-    'e-service.item4.title': 'Daňová přiznání',
-    'e-service.item4.status': 'Dostupné',
-
-    // CTA sekce
-    'cta.eyebrow': 'Kontaktujte nás',
-    'cta.title': 'Jsme připraveni vám pomoci',
-    'cta.subtitle': 'S účetnictvím, daněmi i poradenstvím.',
-    'cta.button': 'Kontaktujte nás',
-    'cta.phone': 'Centrála Vítkov',
-    'cta.email': 'E-mail',
-    'cta.address': 'Adresa',
 
     // Kontaktní strana
     'contact.title': 'Kontaktujte nás',
     'contact.subtitle': 'Jsme připraveni vám pomoci s účetnictvím, daněmi i poradenstvím.',
-    'contact.legal_title': 'Údaje společnosti',
-    'contact.legal_info': 'Doplň sem právní údaje společnosti.',
     'contact.team_title': 'Náš tým',
     'contact.team_subtitle': 'Lidé, kteří se o vás postarají.',
     'contact.hq': 'Centrála Vítkov',
-    'contact.hq_address': 'Wolkerova 1009, 749 01 Vítkov',
     'contact.hq_hours': 'Po–Pá 8-16h',
-    'contact.hq_phone': '+420 721 075 783',
     'contact.branch': 'Pobočka Opava',
-    'contact.branch_address': 'U Pošty 250/6, Opava, 746 01',
     'contact.branch_hours': 'Po–Pá 8-16h',
-    'contact.branch_phone': '+420 725 423 579',
 
     // Kontaktní formulář
     'contact_form.title': 'Nezávazná poptávka',
@@ -201,16 +153,10 @@ export const translations = {
     'references.subtitle': 'Reference',
     'references.title': 'Důvěra postavená na skutečných zkušenostech',
     'references.desc': 'Skutečné příběhy a zkušenosti spokojených klientů pomáhají potvrdit důvěryhodnost, kvalitu služeb a osobní přístup, na kterém si zakládáme.',
-    'references.item1.name': 'Jan Novák',
-    'references.item1.company': 'NOVAK STAV s.r.o.',
     'references.item1.role': 'Jednatel společnosti',
     'references.item1.text': 'Na spolupráci oceňuji hlavně rychlost, spolehlivost a schopnost vše srozumitelně vysvětlit. Přechod k nové účetní kanceláři proběhl bez komplikací a dnes máme mnohem větší přehled o financích i povinnostech.',
-    'references.item2.name': 'Petra Dvořáková',
-    'references.item2.company': 'Petra Design',
     'references.item2.role': 'OSVČ',
     'references.item2.text': 'Potřebovala jsem mít jistotu, že mám účetnictví i daně správně a včas. Oceňuji osobní přístup, ochotu poradit a také to, že všechno funguje přehledně a bez zbytečného stresu.',
-    'references.item3.name': 'Martin Svoboda',
-    'references.item3.company': 'MS Tech Solutions',
     'references.item3.role': 'Majitel firmy',
     'references.item3.text': 'Spolupráce nám pomohla lépe nastavit procesy, získat přehled nad účetnictvím a vyřešit i složitější daňové otázky. Je vidět vysoká odbornost i zkušenost z praxe.',
 
@@ -252,12 +198,6 @@ export const translations = {
   },
 
   en: {
-    // General
-    phone: '+420 721 075 783',
-    email: 'office@bestaccount.cz',
-    legalTitle: 'Best Account s.r.o.',
-    legalInfo: 'Add the company ID, VAT ID, registered office, commercial register entry and other legal details.',
-
     // Contact + team badges
     'contact.hero_badge': 'We are here for you',
     'contact.offices_badge': 'Where to find us',
@@ -303,7 +243,6 @@ export const translations = {
     'hero.subtitle': 'We help companies and entrepreneurs with accounting, taxes and advisory services.',
     'hero.button.contact': 'Contact us',
     'hero.button.services': 'Our services',
-    'hero.scroll': 'Scroll',
     'hero.image_alt': 'Hero image',
 
     // Stats
@@ -349,53 +288,16 @@ export const translations = {
     'why_us.item3': 'Individual approach is a matter of course for us',
     'why_us.item4': 'Analysis and finding efficiency are our strengths',
     'why_us.item5': 'Flexible document handling saves your time',
-    'why_us.item6': 'Fairness and professionalism are our standard',
-    'memberKDP.title': 'CTA CR',
-    'memberKDP.subtitle1': 'Member of the Chamber of Tax',
-    'memberKDP.subtitle2': 'Advisors of the Czech Republic',
-
-    // E-Service
-    'e-service.subtitle': 'DIGITAL OFFICE',
-    'e-service.title': 'E-Service',
-    'e-service.desc': 'Through an online form, we provide accounting, economic and tax advisory services, including the creation of contractual relationships.',
-    'e-service.additionalInfo': 'This allows you to communicate remotely with a tax office that can solve any of your issues in time and with maximum efficiency.',
-    'e-service.feature1': 'Immediate response to your questions',
-    'e-service.feature2': 'Available from anywhere, anytime',
-    'e-service.feature3': 'Fast processing without a personal visit',
-    'e-service.buttonText': 'Start E-service',
-    'e-service.item1.title': 'Tax advisory',
-    'e-service.item1.status': 'Online',
-    'e-service.item2.title': 'Document submission',
-    'e-service.item2.status': 'Active',
-    'e-service.item3.title': 'Remote consultation',
-    'e-service.item3.status': 'Online',
-    'e-service.item4.title': 'Tax returns',
-    'e-service.item4.status': 'Available',
-
-    // CTA section
-    'cta.eyebrow': 'Contact us',
-    'cta.title': 'We are ready to help you',
-    'cta.subtitle': 'With accounting, taxes and advisory services.',
-    'cta.button': 'Contact us',
-    'cta.phone': 'Headquarters Vítkov',
-    'cta.email': 'E-mail',
-    'cta.address': 'Address',
 
     // Contact page
     'contact.title': 'Contact us',
     'contact.subtitle': 'We are ready to help you with accounting, tax and advisory services.',
-    'contact.legal_title': 'Company details',
-    'contact.legal_info': 'Add the legal company details here.',
     'contact.team_title': 'Our team',
     'contact.team_subtitle': 'People who will take care of you.',
     'contact.hq': 'Headquarters Vítkov',
-    'contact.hq_address': 'Wolkerova 1009, 749 01 Vítkov',
     'contact.hq_hours': 'Mon–Fri by arrangement',
-    'contact.hq_phone': '+420 721 075 783',
     'contact.branch': 'Branch Opava',
-    'contact.branch_address': 'Fill in the Opava branch address',
     'contact.branch_hours': 'Mon–Fri by arrangement',
-    'contact.branch_phone': '+420 721 075 783',
 
     // Contact form
     'contact_form.title': 'Non-binding inquiry',
@@ -441,16 +343,10 @@ export const translations = {
     'references.subtitle': 'References',
     'references.title': 'Trust built on real experience',
     'references.desc': 'Real stories and experiences of satisfied clients help confirm the credibility, quality of services and personal approach we stand for.',
-    'references.item1.name': 'Jan Novák',
-    'references.item1.company': 'NOVAK STAV s.r.o.',
     'references.item1.role': 'Managing Director',
     'references.item1.text': 'What I value most in our cooperation is speed, reliability and the ability to explain everything clearly. The transition to a new accounting office went smoothly and today we have a much better overview of our finances and obligations.',
-    'references.item2.name': 'Petra Dvořáková',
-    'references.item2.company': 'Petra Design',
     'references.item2.role': 'Sole trader',
     'references.item2.text': 'I needed confidence that my accounting and taxes were handled correctly and on time. I appreciate the personal approach, willingness to advise and the fact that everything works clearly and without unnecessary stress.',
-    'references.item3.name': 'Martin Svoboda',
-    'references.item3.company': 'MS Tech Solutions',
     'references.item3.role': 'Business Owner',
     'references.item3.text': 'The cooperation helped us better set up processes, gain control over our accounting and solve more complex tax issues. Their expertise and practical experience are obvious.',
 
@@ -492,12 +388,6 @@ export const translations = {
   },
 
   de: {
-    // Allgemein
-    phone: '+420 721 075 783',
-    email: 'office@bestaccount.cz',
-    legalTitle: 'Best Account s.r.o.',
-    legalInfo: 'Ergänzen Sie die Firmen-ID, USt-IdNr., den Sitz, den Registereintrag und weitere rechtliche Angaben.',
-
     // Contact + team badges
     'contact.hero_badge': 'Wir sind für Sie da',
     'contact.offices_badge': 'Wo Sie uns finden',
@@ -543,7 +433,6 @@ export const translations = {
     'hero.subtitle': 'Wir helfen Unternehmen und Unternehmern bei Buchhaltung, Steuern und Beratung.',
     'hero.button.contact': 'Kontaktieren Sie uns',
     'hero.button.services': 'Unsere Dienstleistungen',
-    'hero.scroll': 'Scroll',
     'hero.image_alt': 'Titelbild',
 
     // Statistiken
@@ -589,53 +478,16 @@ export const translations = {
     'why_us.item3': 'Ein individueller Ansatz ist für uns selbstverständlich',
     'why_us.item4': 'Analysen und das Finden von Effizienz gehören zu unseren Stärken',
     'why_us.item5': 'Flexible Arbeit mit Belegen spart Ihre Zeit',
-    'why_us.item6': 'Fairness und Professionalität sind unser Standard',
-    'memberKDP.title': 'KDP ČR',
-    'memberKDP.subtitle1': 'Mitglied der Kammer der Steuerberater',
-    'memberKDP.subtitle2': 'der Tschechischen Republik',
-
-    // E-Service
-    'e-service.subtitle': 'DIGITALES BÜRO',
-    'e-service.title': 'E-Service',
-    'e-service.desc': 'Über ein Online-Formular bieten wir Buchhaltungs-, Wirtschafts- und Steuerberatung einschließlich der Erstellung von Vertragsbeziehungen an.',
-    'e-service.additionalInfo': 'So haben Sie die Möglichkeit, aus der Ferne mit einer Steuerkanzlei zu kommunizieren, die jedes Ihrer Probleme rechtzeitig und mit maximaler Effizienz lösen kann.',
-    'e-service.feature1': 'Sofortige Antwort auf Ihre Fragen',
-    'e-service.feature2': 'Von überall und jederzeit verfügbar',
-    'e-service.feature3': 'Schnelle Abwicklung ohne persönlichen Besuch',
-    'e-service.buttonText': 'E-Service starten',
-    'e-service.item1.title': 'Steuerberatung',
-    'e-service.item1.status': 'Online',
-    'e-service.item2.title': 'Unterlagen senden',
-    'e-service.item2.status': 'Aktiv',
-    'e-service.item3.title': 'Beratung aus der Ferne',
-    'e-service.item3.status': 'Online',
-    'e-service.item4.title': 'Steuererklärungen',
-    'e-service.item4.status': 'Verfügbar',
-
-    // CTA-Sektion
-    'cta.eyebrow': 'Kontaktieren Sie uns',
-    'cta.title': 'Wir sind bereit, Ihnen zu helfen',
-    'cta.subtitle': 'Mit Buchhaltung, Steuern und Beratungsdienstleistungen.',
-    'cta.button': 'Kontaktieren Sie uns',
-    'cta.phone': 'Hauptsitz Vítkov',
-    'cta.email': 'E-Mail',
-    'cta.address': 'Adresse',
 
     // Kontaktseite
     'contact.title': 'Kontaktieren Sie uns',
     'contact.subtitle': 'Wir helfen Ihnen gerne bei Buchhaltung, Steuern und Beratung.',
-    'contact.legal_title': 'Firmendaten',
-    'contact.legal_info': 'Ergänzen Sie hier die rechtlichen Firmendaten.',
     'contact.team_title': 'Unser Team',
     'contact.team_subtitle': 'Menschen, die sich um Sie kümmern.',
     'contact.hq': 'Hauptsitz Vítkov',
-    'contact.hq_address': 'Wolkerova 1009, 749 01 Vítkov',
     'contact.hq_hours': 'Mo–Fr nach Vereinbarung',
-    'contact.hq_phone': '+420 721 075 783',
     'contact.branch': 'Filiale Opava',
-    'contact.branch_address': 'Adresse der Filiale Opava ergänzen',
     'contact.branch_hours': 'Mo–Fr nach Vereinbarung',
-    'contact.branch_phone': '+420 721 075 783',
 
     // Kontaktformular
     'contact_form.title': 'Unverbindliche Anfrage',
@@ -681,16 +533,10 @@ export const translations = {
     'references.subtitle': 'Referenzen',
     'references.title': 'Vertrauen auf Grundlage realer Erfahrungen',
     'references.desc': 'Echte Geschichten und Erfahrungen zufriedener Kunden helfen, die Vertrauenswürdigkeit, Qualität der Dienstleistungen und den persönlichen Ansatz zu bestätigen, auf den wir Wert legen.',
-    'references.item1.name': 'Jan Novák',
-    'references.item1.company': 'NOVAK STAV s.r.o.',
     'references.item1.role': 'Geschäftsführer',
     'references.item1.text': 'An der Zusammenarbeit schätze ich vor allem die Schnelligkeit, Zuverlässigkeit und die Fähigkeit, alles verständlich zu erklären. Der Wechsel zu einer neuen Buchhaltungskanzlei verlief problemlos und heute haben wir einen deutlich besseren Überblick über Finanzen und Pflichten.',
-    'references.item2.name': 'Petra Dvořáková',
-    'references.item2.company': 'Petra Design',
     'references.item2.role': 'Selbstständige',
     'references.item2.text': 'Ich brauchte die Sicherheit, dass meine Buchhaltung und Steuern korrekt und rechtzeitig erledigt werden. Ich schätze den persönlichen Ansatz, die Bereitschaft zu beraten und dass alles übersichtlich und ohne unnötigen Stress funktioniert.',
-    'references.item3.name': 'Martin Svoboda',
-    'references.item3.company': 'MS Tech Solutions',
     'references.item3.role': 'Firmeninhaber',
     'references.item3.text': 'Die Zusammenarbeit hat uns geholfen, Prozesse besser einzustellen, einen besseren Überblick über die Buchhaltung zu bekommen und auch komplexere Steuerfragen zu lösen. Die fachliche Kompetenz und praktische Erfahrung sind deutlich erkennbar.',
 

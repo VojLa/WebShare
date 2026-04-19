@@ -2,9 +2,13 @@ import { Link } from 'react-router-dom';
 import useTranslation from '@/hooks/useTranslation';
 import { Mail, Phone } from 'lucide-react';
 import logoBestAccount from '@/assets/BA HORIZONTAL - NO TEXT - WHITE.svg';
+import { companyInfo } from '@/content/company';
 
 export default function Footer() {
   const { t } = useTranslation();
+  const registration = companyInfo.registration;
+  const headquarters = companyInfo.offices.headquarters;
+  const branch = companyInfo.offices.branch;
 
   return (
     <footer className="relative bg-card border-t border-border">
@@ -24,11 +28,11 @@ export default function Footer() {
               {t('footer.description')}
             </p>
             <div className="mt-5 space-y-2 text-sm">
-              <a href="mailto:office@bestaccount.cz" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
-                <Mail className="h-4 w-4" /> office@bestaccount.cz
+              <a href={`mailto:${companyInfo.contact.email}`} className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+                <Mail className="h-4 w-4" /> {companyInfo.contact.email}
               </a>
-              <a href="tel:+420721075783" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
-                <Phone className="h-4 w-4" /> +420 721 075 783
+              <a href={`tel:${companyInfo.contact.phone.replace(/\s/g, '')}`} className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+                <Phone className="h-4 w-4" /> {companyInfo.contact.phone}
               </a>
             </div>
           </div>
@@ -53,19 +57,19 @@ export default function Footer() {
             <div className="space-y-4 text-sm text-muted-foreground">
               <div>
                 <div className="font-medium text-foreground/80 mb-1">{t('footer.headquarters')}</div>
-                <div>Wolkerova 1009, 749 01</div>
+                <div>{headquarters.addressShort}</div>
               </div>
               <div>
                 <div className="font-medium text-foreground/80 mb-1">{t('footer.branch_opava')}</div>
-                <div>U Pošty 250/6, 746 01</div>
+                <div>{branch.addressShort}</div>
               </div>
             </div>
           </div>
         </div>
 
         <div className="pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
-          <span>© {new Date().getFullYear()} Best Account s.r.o. — {t('footer.rights')}</span>
-          <span>IČ: 05067014 | DIČ: CZ05067014 | {t('footer.data_box')}: thrvd6r</span>
+          <span>© {new Date().getFullYear()} {companyInfo.name} — {t('footer.rights')}</span>
+          <span>IČ: {registration.ico} | DIČ: {registration.dic} | {t('footer.data_box')}: {registration.dataBox}</span>
         </div>
       </div>
     </footer>

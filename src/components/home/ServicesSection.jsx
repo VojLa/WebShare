@@ -1,15 +1,16 @@
 import useTranslation from '../../hooks/useTranslation';
 import { MessageSquare, Monitor, Shield, FileText, Calculator, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { homeContent } from '@/content/home';
 
-const services = [
-  { key: 'consulting', icon: MessageSquare, num: '01' },
-  { key: 'eservis', icon: Monitor, num: '02' },
-  { key: 'kdp', icon: Shield, num: '03' },
-  { key: 'taxes', icon: FileText, num: '04' },
-  { key: 'accounting', icon: Calculator, num: '05' },
-  { key: 'payroll', icon: Users, num: '06' },
-];
+const serviceIcons = {
+  consulting: MessageSquare,
+  eservis: Monitor,
+  kdp: Shield,
+  taxes: FileText,
+  accounting: Calculator,
+  payroll: Users,
+}
 
 export default function ServicesSection() {
   const { t } = useTranslation();
@@ -41,8 +42,8 @@ export default function ServicesSection() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border/30 rounded-2xl overflow-hidden">
-          {services.map((service, i) => {
-            const Icon = service.icon;
+          {homeContent.services.map((service, i) => {
+            const Icon = serviceIcons[service.key];
             return (
               <motion.div
                 key={service.key}
@@ -53,7 +54,7 @@ export default function ServicesSection() {
                 className="group bg-card p-10 hover:bg-secondary transition-all duration-500 cursor-default relative overflow-hidden"
               >
                 <span className="absolute top-6 right-8 text-5xl font-heading font-bold text-primary/5 group-hover:text-primary/10 transition-colors">
-                  {service.num}
+                  {service.number}
                 </span>
 
                 <div className="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:border-primary transition-all duration-300">

@@ -7,6 +7,9 @@ import { companyInfo } from '@/content/company';
 
 export default function Contact() {
   const { t } = useTranslation();
+  const registration = companyInfo.registration;
+  const headquarters = companyInfo.offices.headquarters;
+  const branch = companyInfo.offices.branch;
 
   return (
     <div className="min-h-screen">
@@ -55,18 +58,18 @@ export default function Contact() {
           <div className="grid grid-cols-1 min-[950px]:grid-cols-2 gap-12">
             <OfficeCard
               title={t('contact.hq')}
-              address={t('contact.hq_address')}
+              address={headquarters.addressFull}
               hours={t('contact.hq_hours')}
-              phone={t('contact.hq_phone')}
-              mapEmbedUrl="https://mapy.com/s/kebazarola"
+              phone={headquarters.phone}
+              mapEmbedUrl={headquarters.mapEmbedUrl}
             />
 
             <OfficeCard
               title={t('contact.branch')}
-              address={t('contact.branch_address')}
+              address={branch.addressFull}
               hours={t('contact.branch_hours')}
-              phone={t('contact.branch_phone')}
-              mapEmbedUrl="https://mapy.com/s/kogevunehe"
+              phone={branch.phone}
+              mapEmbedUrl={branch.mapEmbedUrl}
             />
 
             <div className="bg-primary/10 border border-primary/20 rounded-2xl p-8 min-[950px]:col-span-2">
@@ -76,13 +79,13 @@ export default function Contact() {
 
               <div className="text-sm text-muted-foreground whitespace-pre-line leading-relaxed space-y-1">
                 <p>{t('company.legal_heading')}</p>
-                <p>{companyInfo.address}</p>
-                <p>{t('company.bank_account')}: {companyInfo.bankAccount}</p>
-                <p>{t('company.data_box')}: {companyInfo.dataBox}</p>
-                <p>{t('company.ico')}: {companyInfo.ico}</p>
-                <p>{t('company.dic')}: {companyInfo.dic}</p>
+                <p>{registration.registeredOffice}</p>
+                <p>{t('company.bank_account')}: {registration.bankAccount}</p>
+                <p>{t('company.data_box')}: {registration.dataBox}</p>
+                <p>{t('company.ico')}: {registration.ico}</p>
+                <p>{t('company.dic')}: {registration.dic}</p>
                 <p>
-                  {t('company.registered')} {companyInfo.court}, {t('company.section')} {companyInfo.section}, {t('company.insert')} {companyInfo.insert}
+                  {t('company.registered')} {registration.court}, {t('company.section')} {registration.section}, {t('company.insert')} {registration.insert}
                 </p>
               </div>
             </div>

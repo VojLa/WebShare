@@ -14,8 +14,8 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "types": []
+    "types": ["vite/client"]
   },
-  "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.json"],
+  "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.json", "src/**/*.d.ts"],
   "exclude": ["node_modules", "dist"]
 }

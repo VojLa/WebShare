@@ -1,13 +1,14 @@
 import { motion } from 'framer-motion';
 import { HeartHandshake, Scale, HandHelping, Sparkles } from 'lucide-react';
 import useTranslation from '../../hooks/useTranslation';
+import { homeContent } from '@/content/home';
 
-const itemConfigs = [
-  { key: 'item1', icon: HeartHandshake },
-  { key: 'item2', icon: Scale },
-  { key: 'item3', icon: HandHelping },
-  { key: 'item4', icon: Sparkles },
-];
+const itemIcons = {
+  item1: HeartHandshake,
+  item2: Scale,
+  item3: HandHelping,
+  item4: Sparkles,
+}
 
 export default function SocialImpactSection() {
   const { t } = useTranslation();
@@ -45,12 +46,12 @@ export default function SocialImpactSection() {
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {itemConfigs.map((item, index) => {
-              const Icon = item.icon;
+            {homeContent.socialImpactItems.map((itemKey, index) => {
+              const Icon = itemIcons[itemKey];
 
               return (
                 <motion.article
-                  key={item.key}
+                  key={itemKey}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -62,11 +63,11 @@ export default function SocialImpactSection() {
                   </div>
 
                   <h3 className="text-lg font-heading font-bold text-foreground mb-3">
-                    {t(`social_impact.${item.key}.title`)}
+                    {t(`social_impact.${itemKey}.title`)}
                   </h3>
 
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    {t(`social_impact.${item.key}.desc`)}
+                    {t(`social_impact.${itemKey}.desc`)}
                   </p>
                 </motion.article>
               );

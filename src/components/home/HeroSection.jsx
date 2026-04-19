@@ -1,47 +1,13 @@
-import { Link, useNavigate } from 'react-router-dom';
-import { ArrowRight, ChevronDown, Star } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { ArrowRight, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import useTranslation from '@/hooks/useTranslation';
 import HERO_IMAGE from '@/assets/Hero_background.webp';
-import { useState } from 'react';
 
 
 export default function HeroSection() {
   const navigate = useNavigate();
-  const [open, setOpen] = useState(false);
-  
-  const handleHashLink = (e, link) => {
-
-    if (!link.hash) {
-      setOpen(false);
-      return;
-    }
-
-    e.preventDefault();
-
-    const [targetPath, targetHash] = link.to.split('#');
-    const hashSelector = targetHash ? `#${targetHash}` : null;
-
-    if (location.pathname === targetPath) {
-      if (hashSelector) {
-        const el = document.querySelector(hashSelector);
-        el?.scrollIntoView({ behavior: 'smooth' });
-      }
-    } else {
-      navigate(targetPath);
-
-      setTimeout(() => {
-        if (hashSelector) {
-          const el = document.querySelector(hashSelector);
-          el?.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 150);
-    }
-
-    setOpen(false);
-  };
-  
   const { lang, t } = useTranslation();
 
   const titleFirstLine = t('hero.title.line1');
@@ -122,8 +88,11 @@ export default function HeroSection() {
 
               <Button
                 onClick={() => {
-                  const el = document.querySelector('#contact_form');
-                  el?.scrollIntoView({ behavior: 'smooth' });
+                  navigate('/#contact_form');
+                  setTimeout(() => {
+                    const el = document.querySelector('#contact_form');
+                    el?.scrollIntoView({ behavior: 'smooth' });
+                  }, 150);
                 }}
                 size="lg"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 h-14 px-10 text-base font-bold rounded-xl gap-2 shadow-2xl shadow-primary/25 group"

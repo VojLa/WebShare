@@ -1,13 +1,14 @@
 import { motion } from 'framer-motion';
 import { Smartphone, ShoppingCart, Truck, FileText } from 'lucide-react';
 import useTranslation from '../../hooks/useTranslation';
+import { homeContent } from '@/content/home';
 
-const itemConfigs = [
-  { key: 'item1', icon: ShoppingCart },
-  { key: 'item2', icon: Smartphone },
-  { key: 'item3', icon: Truck },
-  { key: 'item4', icon: FileText },
-];
+const itemIcons = {
+  item1: ShoppingCart,
+  item2: Smartphone,
+  item3: Truck,
+  item4: FileText,
+}
 
 export default function DocumentsFlexibilitySection() {
   const { t } = useTranslation();
@@ -45,12 +46,12 @@ export default function DocumentsFlexibilitySection() {
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {itemConfigs.map((item, index) => {
-              const Icon = item.icon;
+            {homeContent.documentsFlexibilityItems.map((itemKey, index) => {
+              const Icon = itemIcons[itemKey];
 
               return (
                 <motion.article
-                  key={item.key}
+                  key={itemKey}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -62,11 +63,11 @@ export default function DocumentsFlexibilitySection() {
                   </div>
 
                   <h3 className="text-lg font-heading font-bold text-foreground mb-3">
-                    {t(`documents_flexibility.${item.key}.title`)}
+                    {t(`documents_flexibility.${itemKey}.title`)}
                   </h3>
 
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    {t(`documents_flexibility.${item.key}.desc`)}
+                    {t(`documents_flexibility.${itemKey}.desc`)}
                   </p>
                 </motion.article>
               );

@@ -1,6 +1,13 @@
 import { motion } from 'framer-motion';
 import { ShieldCheck, Award, Scale } from 'lucide-react';
 import useTranslation from '../../hooks/useTranslation';
+import { homeContent } from '@/content/home';
+
+const kdpIcons = {
+  item1: ShieldCheck,
+  item2: Award,
+  item3: Scale,
+}
 
 export default function KDPSection() {
   const { t } = useTranslation();
@@ -43,11 +50,12 @@ export default function KDPSection() {
             transition={{ duration: 0.7 }}
             className="space-y-4"
           >
-            {[
-              { icon: ShieldCheck, title: t('services.kdp.item1.title'), desc: t('services.kdp.item1.desc') },
-              { icon: Award, title: t('services.kdp.item2.title'), desc: t('services.kdp.item2.desc') },
-              { icon: Scale, title: t('services.kdp.item3.title'), desc: t('services.kdp.item3.desc') },
-            ].map(({ icon: Icon, title, desc }, i) => (
+            {homeContent.kdpItems.map((itemKey, i) => {
+              const Icon = kdpIcons[itemKey]
+              const title = t(`services.kdp.${itemKey}.title`)
+              const desc = t(`services.kdp.${itemKey}.desc`)
+
+              return (
               <motion.div
                 key={title}
                 initial={{ opacity: 0, y: 15 }}
@@ -64,7 +72,8 @@ export default function KDPSection() {
                   <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
                 </div>
               </motion.div>
-            ))}
+              )
+            })}
           </motion.div>
         </div>
       </div>

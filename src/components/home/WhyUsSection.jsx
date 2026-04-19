@@ -80,7 +80,7 @@ export default function WhyUsSection() {
                   className="flex items-start gap-4 p-4 rounded-xl hover:bg-secondary/60 transition-colors group"
                 >
                   <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
-                  <span className="text-sm text-foreground/80 leading-relaxed">{t(item)}</span>
+                  <span className="text-sm text-foreground/80 leading-relaxed">{item}</span>
                 </motion.div>
               ))}
             </div>
