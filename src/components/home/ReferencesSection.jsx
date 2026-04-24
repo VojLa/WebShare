@@ -1,14 +1,17 @@
 import { motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import useTranslation from '../../hooks/useTranslation';
 import { homeContent } from '@/content/home';
+import kacrLogo from '@/assets/KAČR - BLUE.png';
+import kdpLogo from '@/assets/KDPČR - BLUE.png';
 
 function relativeDate(dateStr, lang = 'cs') {
   const diff = Date.now() - new Date(dateStr).getTime();
   const days = Math.floor(diff / 86400000);
+  const weeks = Math.floor(days / 7);
   const months = Math.floor(days / 30);
   const years = Math.floor(days / 365);
-
-  const weeks = Math.floor(days / 7);
 
   const labels = {
     cs: {
@@ -72,61 +75,102 @@ export default function ReferencesSection() {
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-start">
 
-        {/* Widget header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-8"
-        >
-          <div className="flex items-center gap-3 mb-1.5">
-            <span className="text-2xl font-bold text-foreground">{t('references.excellent')}</span>
-            <Stars rating={5} size={26} />
-          </div>
-          <div className="flex items-center gap-1.5 text-sm text-muted-foreground flex-wrap">
-            <span>{t('references.rating_text')}</span>
-            <GoogleG />
-            <span className="font-semibold text-foreground">Google</span>
-          </div>
-        </motion.div>
+          {/* Left: Google reviews widget */}
+          <div className="flex-1 min-w-0">
 
-        {/* Review cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-          {homeContent.references.map((ref, index) => (
-            <motion.a
-              key={ref.key}
-              href={ref.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 24 }}
+            {/* Widget header */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex flex-col rounded-2xl border border-border bg-card p-5 shadow-sm hover:shadow-md transition-shadow"
+              transition={{ duration: 0.6 }}
+              className="mb-8"
             >
-              <div className="flex items-center justify-between mb-3">
-                <Stars rating={ref.rating ?? 5} size={18} />
+              <div className="flex items-center gap-3 mb-1.5">
+                <span className="text-2xl font-bold text-foreground">{t('references.excellent')}</span>
+                <Stars rating={5} size={26} />
+              </div>
+              <div className="flex items-center gap-1.5 text-sm text-muted-foreground flex-wrap">
+                <span>{t('references.rating_text')}</span>
                 <GoogleG />
+                <span className="font-semibold text-foreground">Google</span>
+              </div>
+            </motion.div>
+
+            <div className="flex flex-col lg:flex-row gap-6">
+              {/* Review cards */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                {homeContent.references.map((ref, index) => (
+                  <motion.a
+                    key={ref.key}
+                    href={ref.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="flex flex-col rounded-2xl border border-border bg-card hover:bg-primary/10 p-5 shadow-sm hover:shadow-md transition-shadow"
+                  >
+                    <div className="flex items-center justify-between mb-3">
+                      <Stars rating={ref.rating ?? 5} size={18} />
+                      <GoogleG />
+                    </div>
+
+                    <p className="text-foreground text-sm leading-snug mb-2 line-clamp-4">
+                      {t(`references.${ref.key}.text`)}
+                    </p>
+
+                    <div className="flex items-center justify-between mt-auto pt-3 border-t border-border">
+                      <div className="font-semibold text-sm text-foreground">{ref.name}</div>
+                      <span className="text-xs text-muted-foreground shrink-0 ml-2">{relativeDate(ref.date, language)}</span>
+                    </div>
+                  </motion.a>
+                ))}
               </div>
 
-              {/* Review title — truncated first sentence */}
-              <p className="text-foreground text-sm leading-snug mb-2 line-clamp-4">
-                {t(`references.${ref.key}.text`)}
-              </p>
+              {/* Right: certificates panel */}
+              <Link
+                to="/certifikaty"
+                className='h-fill mb-6'
+              >
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="w-full lg:w-44 h-full shrink-0 border border-border rounded-2xl bg-card hover:bg-primary/10 p-6 text-center"
+                >
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary/70 mb-4">
+                    {t('references.our_certs')}
+                  </p>
 
-              {/* Author + date */}
-              <div className="flex items-center justify-between mt-auto pt-3 border-t border-border">
-                <div className="font-semibold text-sm text-foreground">{ref.name}</div>
-                <span className="text-xs text-muted-foreground shrink-0 ml-2">{relativeDate(ref.date, language)}</span>
-              </div>
-            </motion.a>
-          ))}
+                  <div className="grid grid-cols-2 gap-3 mb-4">
+                    <div className="block transition-all">
+                      <img
+                        src={kacrLogo}
+                        alt="KAČR"
+                        className="w-full h-16 object-contain"
+                      />
+                    </div>
+                    <div className="block transition-all">
+                      <img
+                        src={kdpLogo}
+                        alt="KDP ČR"
+                        className="w-full h-16 object-contain"
+                      />
+                    </div>
+                  </div>
+                </motion.div>
+              </Link>
+            </div>
+
+            {/* Footer note */}
+            <p className="text-xs text-muted-foreground">{t('references.footer_note')}</p>
+          </div>
         </div>
-
-        {/* Footer note */}
-        <p className="text-xs text-muted-foreground">{t('references.footer_note')}</p>
       </div>
     </section>
   );

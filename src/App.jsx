@@ -22,6 +22,7 @@ function App() {
           <Route path="/personalistika" element={<ComingSoon />} />
           <Route path="/poradenstvi" element={<ComingSoon />} />
           <Route path="/sluzby" element={<ComingSoon />} />
+          <Route path="/certifikaty" element={<ComingSoon />} />
           <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>

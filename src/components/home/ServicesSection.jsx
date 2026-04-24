@@ -36,7 +36,7 @@ export default function ServicesSection() {
             <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary/70">
               {t('services.section.name')}
             </span>
-            <div className="flex items-center gap-24 mt-4 mb-5">
+            <div className="block sm:flex items-center gap-24 mt-4 mb-5">
               <h2 className="text-4xl sm:text-5xl font-heading font-bold mt-4 mb-6 text-foreground leading-tight">
                 {t('services.title')}
               </h2>
