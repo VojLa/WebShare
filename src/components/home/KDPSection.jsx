@@ -14,10 +14,6 @@ export default function KDPSection() {
 
   return (
     <section className="relative py-24 overflow-hidden">
-      <div className="absolute inset-0" style={{
-        backgroundImage: `radial-gradient(ellipse 70% 50% at 80% 50%, hsl(43,70%,52%,0.06), transparent)`
-      }} />
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
@@ -34,11 +30,8 @@ export default function KDPSection() {
             <h2 className="text-4xl sm:text-5xl font-heading font-bold mt-4 mb-6 text-foreground leading-tight">
               {t('services.kdp.title')}
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+            <p className="text-xl text-muted-foreground leading-relaxed">
               {t('services.kdp.desc')}
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              {t('services.kdp.hero')}
             </p>
           </motion.div>
 

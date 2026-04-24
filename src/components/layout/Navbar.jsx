@@ -6,6 +6,7 @@ import { Menu, X, Phone, Mail } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import logoBestAccount from '@/assets/BA HORIZONTAL V2 - TEXT - WHITE.svg';
 import { companyInfo } from '@/content/company';
+import { scrollTo as smoothScrollTo } from '@/utils/scrollTo';
 
 export default function Navbar() {
   const { t } = useTranslation();
@@ -25,14 +26,13 @@ export default function Navbar() {
   const links = [
     { to: '/#home', label: t('nav.home'), hash: true },
     { to: '/#services', label: t('nav.services'), hash: true },
-    { to: '/#why-us', label: t('nav.why_us'), hash: true },
-    { to: '/#contact_form', label: t('nav.contact_form'), hash: true },
+    { to: '/#prevzeti', label: t('nav.takeover'), hash: true },
+    { to: '/#poptavka', label: t('nav.contact_form'), hash: true },
     { to: '/#references', label: t('nav.references'), hash: true },
     { to: '/contact#contact', label: t('nav.contact'), hash: true },
   ];
 
   const handleHashLink = (e, link) => {
-
     if (!link.hash) {
       setOpen(false);
       return;
@@ -41,26 +41,21 @@ export default function Navbar() {
     e.preventDefault();
 
     const [targetPath, targetHash] = link.to.split('#');
-    const hashSelector = targetHash ? `#${targetHash}` : null;
 
     if (location.pathname === targetPath) {
-      if (hashSelector) {
-        const el = document.querySelector(hashSelector);
-        el?.scrollIntoView({ behavior: 'smooth' });
-      }
+      if (targetHash) smoothScrollTo(targetHash);
     } else {
       navigate(targetPath);
 
       setTimeout(() => {
-        if (hashSelector) {
-          const el = document.querySelector(hashSelector);
-          el?.scrollIntoView({ behavior: 'smooth' });
-        }
+        if (targetHash) smoothScrollTo(targetHash);
       }, 150);
     }
 
     setOpen(false);
   };
+
+  const poptavkaLink = { to: '/#poptavka', hash: true };
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -68,27 +63,41 @@ export default function Navbar() {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top bar */}
-        <div className="hidden md:flex items-center justify-end gap-6 py-2 text-xs text-muted-foreground border-b border-border/20">
-          <a href={phoneHref} className="flex items-center gap-1.5 hover:text-primary transition-colors">
-            <Phone className="h-3 w-3" /> {companyInfo.contact.phone}
-          </a>
-          <a href={mailHref} className="flex items-center gap-1.5 hover:text-primary transition-colors">
-            <Mail className="h-3 w-3" /> {companyInfo.contact.email}
-          </a>
-          <LanguageSwitcher />
+        <div className="hidden md:flex items-center justify-between gap-6 py-2 text-xs text-muted-foreground border-b border-border/20">
+          <div className="flex items-center gap-6">
+            <a href={phoneHref} className="flex items-center gap-1.5 hover:text-primary transition-colors">
+              <Phone className="h-3 w-3" />
+              {companyInfo.contact.phone}
+              <span className="text-muted-foreground/60">({companyInfo.offices.headquarters.hours})</span>
+            </a>
+            <a href={mailHref} className="flex items-center gap-1.5 hover:text-primary transition-colors">
+              <Mail className="h-3 w-3" /> {companyInfo.contact.email}
+            </a>
+          </div>
+          <div className="flex items-center gap-4">
+            <Link
+              to="/#poptavka"
+              onClick={(e) => handleHashLink(e, poptavkaLink)}
+              className="px-3 py-1 text-xs font-semibold rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+            >
+              {t('nav.cta')}
+            </Link>
+            <LanguageSwitcher />
+          </div>
         </div>
 
         {/* Main nav */}
         <div className="flex items-center justify-between h-16">
           <Link
-          key={'/#home'}
-          to={'/#home'}
-          onClick={(e) => handleHashLink(e, { to: '/#home', label: t('nav.home'), hash: true })}
-          className="flex items-center gap-3" >
+            key={'/#home'}
+            to={'/#home'}
+            onClick={(e) => handleHashLink(e, { to: '/#home', label: t('nav.home'), hash: true })}
+            className="flex items-center gap-3"
+          >
             <img
               src={logoBestAccount}
               alt="Best Account"
-              className="h-10 w-auto object-contain"
+              className="h-16 w-auto object-contain"
             />
           </Link>
 
@@ -129,9 +138,17 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <Link
+              to="/#poptavka"
+              onClick={(e) => handleHashLink(e, poptavkaLink)}
+              className="block mx-4 mt-2 px-4 py-2.5 text-sm font-semibold text-center rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+            >
+              {t('nav.cta')}
+            </Link>
             <div className="pt-3 border-t border-border flex items-center gap-4 text-xs text-muted-foreground px-4">
-              <a href={phoneHref} className="flex items-center gap-1">
+              <a href={phoneHref} className="flex items-center gap-1.5">
                 <Phone className="h-3 w-3" /> {companyInfo.contact.phone}
+                <span className="text-muted-foreground/60">({companyInfo.offices.headquarters.hours})</span>
               </a>
             </div>
           </div>

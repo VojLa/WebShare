@@ -1,32 +1,30 @@
 import HeroSection from '../components/home/HeroSection';
-import StatsSection from '../components/home/StatsSection';
+import TrustBar from '../components/home/TrustBar';
 import ServicesSection from '../components/home/ServicesSection';
-import KDPSection from '../components/home/KDPSection';
+import TakeoverSection from '../components/home/TakeoverSection';
 import WhyUsSection from '../components/home/WhyUsSection';
-import ContactForm from '@/components/home/ContactForm';
-import { homeContent } from '../content/home';
-import useTranslation from '../hooks/useTranslation';
 import ReferencesSection from '@/components/home/ReferencesSection';
 import FlexibilitySection from '@/components/home/FlexibilitySection';
+import FAQSection from '@/components/home/FAQSection';
+import ContactForm from '@/components/home/ContactForm';
 import SocialImpactSection from '@/components/home/SocialImpactSection';
+import KDPSection from '@/components/home/KDPSection';
+import Video from '@/components/home/Video';
 
 export default function Home() {
-  const { t } = useTranslation();
-  const stats = homeContent.stats.map((item) => ({
-    value: item.value,
-    label: t(item.labelKey),
-  }));
-
   return (
     <div>
-      <HeroSection/>
-      <StatsSection stats={stats} />
+      <HeroSection />
+      <TrustBar />
       <ServicesSection />
-      <KDPSection />
+      <TakeoverSection />
       <WhyUsSection />
-      <ContactForm/>
       <ReferencesSection />
       <FlexibilitySection />
+      <FAQSection />
+      <ContactForm />
+      <Video />
+      <KDPSection />
       <SocialImpactSection />
     </div>
   );

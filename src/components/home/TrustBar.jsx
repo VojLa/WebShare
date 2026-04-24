@@ -1,6 +1,10 @@
 import { motion } from 'framer-motion';
+import useTranslation from '@/hooks/useTranslation';
+import { homeContent } from '@/content/home';
 
-export default function StatsSection({ stats = [] }) {
+export default function TrustBar() {
+  const { t } = useTranslation();
+
   return (
     <section className="relative py-16 overflow-hidden">
       <div className="absolute inset-0 bg-primary/5" />
@@ -9,9 +13,9 @@ export default function StatsSection({ stats = [] }) {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 lg:divide-x lg:divide-border">
-          {stats.map((stat, i) => (
+          {homeContent.trustBar.map((item, i) => (
             <motion.div
-              key={stat.label}
+              key={item.key}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -19,9 +23,11 @@ export default function StatsSection({ stats = [] }) {
               className="flex flex-col items-center text-center lg:px-8"
             >
               <span className="text-5xl sm:text-6xl font-heading font-bold text-primary leading-none mb-3">
-                {stat.value}
+                {item.value}
               </span>
-              <span className="text-sm text-muted-foreground font-medium uppercase tracking-wider">{stat.label}</span>
+              <span className="text-sm text-muted-foreground font-medium uppercase tracking-wider">
+                {t(`trust.${item.key}`)}
+              </span>
             </motion.div>
           ))}
         </div>
