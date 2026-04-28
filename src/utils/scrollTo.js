@@ -2,7 +2,13 @@ export function scrollTo(id) {
   const el = document.getElementById(id);
   if (!el) return;
 
-  const target = el.getBoundingClientRect().top + window.scrollY;
+  const nav = document.querySelector('nav');
+  const navHeight = nav ? nav.offsetHeight : 0;
+
+  const isMobile = window.innerWidth < 768;
+  const offset = isMobile ? 64 : navHeight;
+
+  const target = el.getBoundingClientRect().top + window.scrollY - offset;
   const start = window.scrollY;
   const distance = target - start;
   const duration = 800;

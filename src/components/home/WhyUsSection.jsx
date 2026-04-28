@@ -23,11 +23,11 @@ function Pillar({ pillarKey, index, t }) {
       className="relative cursor-pointer select-none"
       onPointerEnter={(e) => { if (e.pointerType !== 'touch') setActive(true); }}
       onPointerLeave={(e) => { if (e.pointerType !== 'touch') setActive(false); }}
-      onClick={() => setActive(v => !v)}
+      onClick={() => setActive((v) => !v)}
     >
-      {/* Neviditelný spacer — rezervuje plnou výšku */}
-      <div className="invisible p-8 flex flex-col items-center text-center" aria-hidden="true">
-        <div className="w-12 h-12 mb-6" />
+      {/* Spacer pro desktop layout – udržuje výšku grid buňky */}
+      <div className="invisible hidden md:flex flex-col items-center text-center p-8" aria-hidden="true">
+        <div className="w-12 h-12 mb-6 shrink-0" />
         <h3 className="text-xl font-heading font-bold mb-4">{t(`why_us.${pillarKey}.title`)}</h3>
         <div className="w-full">
           <p className="text-sm leading-relaxed mb-4">{t(`why_us.${pillarKey}.desc`)}</p>
@@ -35,31 +35,32 @@ function Pillar({ pillarKey, index, t }) {
         </div>
       </div>
 
-      {/* Karta — zakotvená dole, roste nahoru; ikona+titulek se zvedají s horním okrajem */}
-      <div
-        className={`absolute inset-x-0 bottom-0 rounded-3xl border overflow-hidden flex flex-col items-center text-center p-8 transition-colors duration-300 ${
-          active ? 'border-primary/50 bg-primary/5' : 'border-border bg-card'
-        }`}
+      <motion.div
+        layout
+        transition={{ layout: { duration: 0.45, ease: [0.22, 1, 0.36, 1] } }}
+        className={`rounded-3xl border overflow-hidden p-6 sm:p-8 transition-colors duration-300
+          grid grid-cols-2 md:flex md:flex-col items-center justify-center text-left md:text-center
+          md:absolute md:inset-x-0 md:bottom-0 md:w-auto
+          ${active ? 'border-primary/50 bg-primary/5 w-full' : 'border-border bg-card w-fit'}`}
       >
-        <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 ${
-          active ? 'bg-primary' : 'bg-primary/10 border border-primary/20'
-        }`}>
-          <Icon className={`h-5 w-5 transition-colors duration-300 ${
-            active ? 'text-primary-foreground' : 'text-primary'
-          }`} />
-        </div>
-
-        <h3 className="text-xl font-heading font-bold text-foreground">
-          {t(`why_us.${pillarKey}.title`)}
-        </h3>
+        <motion.div layout="position" className="flex flex-col items-center justify-center">
+          <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-6 shrink-0 transition-all duration-300 ${
+            active ? 'bg-primary' : 'bg-primary/10 border border-primary/20'
+          }`}>
+            <Icon className={`h-5 w-5 transition-colors duration-300 ${active ? 'text-primary-foreground' : 'text-primary'}`} />
+          </div>
+          <h3 className="text-xl font-heading font-bold text-foreground">
+            {t(`why_us.${pillarKey}.title`)}
+          </h3>
+        </motion.div>
 
         <motion.div
           initial={false}
           animate={{ height: active ? 'auto' : 0, opacity: active ? 1 : 0 }}
-          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          className="w-full overflow-hidden"
+          transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+          className="overflow-hidden"
         >
-          <div className="mt-4">
+          <div className="mt-4 w-full">
             <p className="text-sm text-muted-foreground leading-relaxed mb-4">
               {t(`why_us.${pillarKey}.desc`)}
             </p>
@@ -68,7 +69,7 @@ function Pillar({ pillarKey, index, t }) {
             </p>
           </div>
         </motion.div>
-      </div>
+      </motion.div>
     </motion.div>
   );
 }

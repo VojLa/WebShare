@@ -197,7 +197,7 @@ const csTranslations = {
     'references.subtitle': 'REFERENCE',
     'references.title': 'Co říkají klienti',
     'references.desc': 'Konkrétní situace, konkrétní výsledky.',
-    'references.excellent': 'Výborné',
+    'references.excellent': 'Zkušenosti našich zákazníků',
     'references.verified': 'Ověřeno',
     'references.rating_text': 'Hodnocení 5,0 / 5,0 na základě 6 recenzí na',
     'references.footer_note': 'Zobrazujeme vybrané recenze klientů z Google',

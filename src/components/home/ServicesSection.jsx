@@ -1,11 +1,11 @@
 import useTranslation from '../../hooks/useTranslation';
 import { FileText, Calculator, Users, Briefcase, MessageSquare, ArrowRight, BarChart2} from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { homeContent } from '@/content/home';
 import { scrollTo } from '@/utils/scrollTo';
-
-
+import { useState } from 'react';
+import { scrollTo as smoothScrollTo } from '@/utils/scrollTo';
 
 const serviceIcons = {
   accounting: Calculator,
@@ -18,6 +18,33 @@ const serviceIcons = {
 export default function ServicesSection() {
   const { t } = useTranslation();
   const LinkIcon = BarChart2;
+  const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  
+
+
+  const handleHashLink = (e, link) => {
+    if (!link.hash) {
+      setOpen(false);
+      return;
+    }
+
+    e.preventDefault();
+
+    const [targetPath, targetHash] = link.to.split('#');
+
+    if (location.pathname === targetPath) {
+      if (targetHash) smoothScrollTo(targetHash);
+    } else {
+      navigate(targetPath);
+
+      setTimeout(() => {
+        if (targetHash) smoothScrollTo(targetHash);
+      }, 150);
+    }
+
+    setOpen(false);
+  };
 
   return (
     <section id="services" className="py-28 sm:py-36 relative overflow-hidden">
@@ -111,6 +138,16 @@ export default function ServicesSection() {
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                   {t('services.inquiry.desc')}
                 </p>
+
+                <div className='h-full flex items-end justify-center'>
+                  <Link
+                    to="/#poptavka"
+                    onClick={(e) => handleHashLink(e, { to: '/#poptavka', hash: true })}
+                    className="px-4 py-2 text-md font-heading font-bold rounded-sm bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+                  >
+                    {t('nav.cta')}
+                  </Link>
+                </div>
               </motion.div>
         </div>
       </div>

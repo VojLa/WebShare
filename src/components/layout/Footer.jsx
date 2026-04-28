@@ -3,6 +3,7 @@ import useTranslation from '@/hooks/useTranslation';
 import { Mail, Phone } from 'lucide-react';
 import logoBestAccount from '@/assets/BA HORIZONTAL - NO TEXT - WHITE.svg';
 import { companyInfo } from '@/content/company';
+import { homeContent } from '@/content/home';
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -42,11 +43,14 @@ export default function Footer() {
               {t('nav.services')}
             </h4>
             <div className="space-y-2.5">
-              {['consulting', 'taxes', 'accounting', 'payroll', 'eservis'].map(key => (
-                <Link key={key} to="/#services" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
+              {homeContent.services.map(({ key, url }) => (
+                <Link key={key} to={url} className="block text-sm text-muted-foreground hover:text-primary transition-colors">
                   {t(`services.${key}.title`)}
                 </Link>
               ))}
+              <Link to="/sluzby" className="inline-flex items-center gap-1.5 mt-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+                {t('services.button.all_services')}
+              </Link>
             </div>
           </div>
 

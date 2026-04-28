@@ -25,12 +25,13 @@ export default function Navbar() {
 
   const links = [
     { to: '/#home', label: t('nav.home'), hash: true },
-    { to: '/#services', label: t('nav.services'), hash: true },
     { to: '/#prevzeti', label: t('nav.takeover'), hash: true },
-    { to: '/#poptavka', label: t('nav.contact_form'), hash: true },
     { to: '/#references', label: t('nav.references'), hash: true },
+    { to: '/#poptavka', label: t('nav.contact_form'), hash: true },
+    { to: '/sluzby', label: t('nav.services'), hash: true },
     { to: '/contact#contact', label: t('nav.contact'), hash: true },
   ];
+
 
   const handleHashLink = (e, link) => {
     if (!link.hash) {
@@ -63,27 +64,16 @@ export default function Navbar() {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top bar */}
-        <div className="hidden md:flex items-center justify-between gap-6 py-2 text-xs text-muted-foreground border-b border-border/20">
-          <div className="flex items-center gap-6">
-            <a href={phoneHref} className="flex items-center gap-1.5 hover:text-primary transition-colors">
-              <Phone className="h-3 w-3" />
-              {companyInfo.contact.phone}
-              <span className="text-muted-foreground/60">({companyInfo.offices.headquarters.hours})</span>
-            </a>
-            <a href={mailHref} className="flex items-center gap-1.5 hover:text-primary transition-colors">
-              <Mail className="h-3 w-3" /> {companyInfo.contact.email}
-            </a>
-          </div>
-          <div className="flex items-center gap-4">
-            <Link
-              to="/#poptavka"
-              onClick={(e) => handleHashLink(e, poptavkaLink)}
-              className="px-3 py-1 text-xs font-semibold rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
-            >
-              {t('nav.cta')}
-            </Link>
-            <LanguageSwitcher />
-          </div>
+        <div className="hidden lg:flex items-center justify-end gap-6 py-2 text-xs text-muted-foreground border-b border-border/20">
+          <a href={mailHref} className="flex items-center gap-1.5 hover:text-primary transition-colors">
+            <Mail className="h-3 w-3" /> {companyInfo.contact.email}
+          </a>
+          <a href={phoneHref} className="flex items-center gap-1.5 hover:text-primary transition-colors">
+            <Phone className="h-3 w-3" />
+            {companyInfo.contact.phone}
+            <span className="text-muted-foreground/60">({companyInfo.offices.headquarters.hours})</span>
+          </a>
+          <LanguageSwitcher />
         </div>
 
         {/* Main nav */}
@@ -101,7 +91,7 @@ export default function Navbar() {
             />
           </Link>
 
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-1">
             {links.map(link => (
               <Link
                 key={link.to}
@@ -113,9 +103,16 @@ export default function Navbar() {
                 <span className="absolute inset-x-4 bottom-0 h-px bg-primary scale-x-0 group-hover:scale-x-100 transition-transform" />
               </Link>
             ))}
+            <Link
+              to="/#poptavka"
+              onClick={(e) => handleHashLink(e, poptavkaLink)}
+              className="px-2 py-1 text-sm font-medium rounded-sm bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+            >
+              {t('nav.cta')}
+            </Link>
           </div>
 
-          <div className="flex items-center gap-2 md:hidden">
+          <div className="flex items-center gap-2 lg:hidden">
             <LanguageSwitcher />
             <Button variant="ghost" size="icon" onClick={() => setOpen(!open)} className="text-foreground">
               {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -126,7 +123,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-background/98 backdrop-blur-xl border-t border-border">
+        <div className="lg:hidden bg-background/98 backdrop-blur-xl border-t border-border">
           <div className="px-4 py-3 space-y-1">
             {links.map(link => (
               <Link

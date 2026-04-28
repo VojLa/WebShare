@@ -14,7 +14,7 @@ export default function SocialImpactSection() {
   const { t } = useTranslation();
 
   return (
-    <section id="social-impact" className="relative py-24 overflow-hidden bg-gradient-to-r from-background via-primary/25 to-primary/50">
+    <section id="social-impact" className="relative py-24 overflow-hidden bg-gradient-to-b lg:bg-gradient-to-r from-background via-primary/25 to-primary/50">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
 
@@ -70,7 +70,7 @@ export default function SocialImpactSection() {
           </motion.div>
 
           {/* Right — 2 karty */}
-          <div className="flex flex-col gap-16">
+          <div className="grid grid-cols-2 lg:grid-cols-1 gap-16 lg:self-end lg:justify-items-start">
             <img
                 src={charitaLogo}
                 alt="Charita České republiky"

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence, useScroll } from 'framer-motion';
+import { motion, AnimatePresence, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import useTranslation from '@/hooks/useTranslation';
 import { homeContent } from '@/content/home';
@@ -24,18 +24,16 @@ export default function TakeoverSection() {
   const { t } = useTranslation();
   const [currentFrame, setCurrentFrame] = useState(0);
 
-  const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start start', 'end end'],
-  });
+  const sectionRef = useRef(null);
+  const inView = useInView(sectionRef, { margin: '-10% 0px' });
 
   useEffect(() => {
-    return scrollYProgress.on('change', (v) => {
-      const frame = Math.min(Math.floor(v * TOTAL_FRAMES), TOTAL_FRAMES - 1);
-      setCurrentFrame(frame);
-    });
-  }, [scrollYProgress]);
+    if (!inView) return;
+    const id = setInterval(() => {
+      setCurrentFrame((f) => (f + 1) % TOTAL_FRAMES);
+    }, 650);
+    return () => clearInterval(id);
+  }, [inView]);
 
   const activeStep =
     currentFrame < 5 ? 0 :
@@ -43,13 +41,11 @@ export default function TakeoverSection() {
     currentFrame < 22 ? 2 : 3;
 
   return (
-    <section id="prevzeti">
-      <div ref={containerRef} className="relative" style={{ height: '400vh' }}>
-        <div className="sticky top-0 h-screen flex items-center overflow-hidden">
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-          <div className="absolute -right-32 top-1/3 w-80 h-80 bg-primary/4 rounded-full blur-3xl pointer-events-none" />
-          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <section id="prevzeti" ref={sectionRef} className="py-28 sm:py-36 relative overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+      <div className="absolute -right-32 top-1/3 w-80 h-80 bg-primary/4 rounded-full blur-3xl pointer-events-none" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
               {/* Left: nadpis + steps */}
               <div>
@@ -180,8 +176,6 @@ export default function TakeoverSection() {
 
             </div>
           </div>
-        </div>
-      </div>
     </section>
   );
 }

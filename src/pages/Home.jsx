@@ -9,13 +9,14 @@ import FAQSection from '@/components/home/FAQSection';
 import ContactForm from '@/components/home/ContactForm';
 import SocialImpactSection from '@/components/home/SocialImpactSection';
 import KDPSection from '@/components/home/KDPSection';
-import Video from '@/components/home/Video';
+import VideoSection from '@/components/home/Video';
 
 export default function Home() {
   return (
     <div>
       <HeroSection />
       <TrustBar />
+      <VideoSection />
       <ServicesSection />
       <TakeoverSection />
       <WhyUsSection />
@@ -23,7 +24,6 @@ export default function Home() {
       <FlexibilitySection />
       <FAQSection />
       <ContactForm />
-      <Video />
       <KDPSection />
       <SocialImpactSection />
     </div>
