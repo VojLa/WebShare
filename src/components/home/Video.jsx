@@ -126,24 +126,6 @@ export default function VideoSection() {
               </motion.div>
             )}
           </AnimatePresence>
-
-          {/* Rychlost přehrávání */}
-          {unlocked && (
-            <div
-              className="absolute bottom-0 left-0 right-0 px-5 py-3 bg-gradient-to-t from-black/70 to-transparent flex justify-end items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <select
-                value={speed}
-                onChange={handleSpeed}
-                className="bg-black/60 text-white text-xs rounded-lg px-2 py-1 border border-white/20 cursor-pointer"
-              >
-                {SPEEDS.map((s) => (
-                  <option key={s} value={s}>{s}×</option>
-                ))}
-              </select>
-            </div>
-          )}
         </motion.div>
       </div>
     </section>
