@@ -6,13 +6,13 @@ import { homeContent } from '@/content/home';
 import { scrollTo } from '@/utils/scrollTo';
 
 const frameModules = /** @type {Record<string, { default: string }>} */ (
-  import.meta.glob('../../assets/Takeover animation/*.png', { eager: true })
+  import.meta.glob('../../assets/animace/*.png', { eager: true })
 );
 
 const frames = Object.entries(frameModules)
   .sort(([a], [b]) => {
-    const numA = parseInt(a.match(/-(\d+)\.png$/)[1]);
-    const numB = parseInt(b.match(/-(\d+)\.png$/)[1]);
+    const numA = parseInt(a.match(/(\d+)\.png$/)[1]);
+    const numB = parseInt(b.match(/(\d+)\.png$/)[1]);
     return numA - numB;
   })
   .map(([, mod]) => mod.default);
@@ -35,10 +35,7 @@ export default function TakeoverSection() {
     return () => clearInterval(id);
   }, [inView]);
 
-  const activeStep =
-    currentFrame < 5 ? 0 :
-    currentFrame < 12 ? 1 :
-    currentFrame < 22 ? 2 : 3;
+  const activeStep = Math.min(3, Math.floor((currentFrame / TOTAL_FRAMES) * 4));
 
   return (
     <section id="prevzeti" ref={sectionRef} className="py-28 sm:py-36 relative overflow-hidden">
