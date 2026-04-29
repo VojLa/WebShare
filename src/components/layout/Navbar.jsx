@@ -25,9 +25,9 @@ export default function Navbar() {
 
   const links = [
     { to: '/#home', label: t('nav.home'), hash: true },
-    { to: '/about_us', label: t('nav.about_us'), hash: true },
     { to: '/#references', label: t('nav.references'), hash: true },
-    { to: '/sluzby', label: t('nav.services'), hash: true },
+    { to: '/#services', label: t('nav.services'), hash: true },
+    { to: '/about_us', label: t('nav.about_us'), hash: true },
     { to: '/contact#contact', label: t('nav.contact'), hash: true },
   ];
 

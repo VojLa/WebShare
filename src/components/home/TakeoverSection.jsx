@@ -35,7 +35,10 @@ export default function TakeoverSection() {
     return () => clearInterval(id);
   }, [inView]);
 
-  const activeStep = Math.min(3, Math.floor((currentFrame / TOTAL_FRAMES) * 4));
+  const activeStep =
+    currentFrame < 5 ? 0 :
+    currentFrame < 10 ? 1 :
+    currentFrame < 22 ? 2 : 3;
 
   return (
     <section id="prevzeti" ref={sectionRef} className="py-28 sm:py-36 relative overflow-hidden">
