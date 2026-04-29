@@ -13,6 +13,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/reference" element={<ComingSoon />} />
+          <Route path="/about_us" element={<ComingSoon />} />
           <Route path="/o-nas" element={<ComingSoon />} />
           <Route path="/gdpr" element={<ComingSoon />} />
           <Route path="/cookies" element={<ComingSoon />} />

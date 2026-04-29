@@ -25,9 +25,8 @@ export default function Navbar() {
 
   const links = [
     { to: '/#home', label: t('nav.home'), hash: true },
-    { to: '/#prevzeti', label: t('nav.takeover'), hash: true },
+    { to: '/about_us', label: t('nav.about_us'), hash: true },
     { to: '/#references', label: t('nav.references'), hash: true },
-    { to: '/#poptavka', label: t('nav.contact_form'), hash: true },
     { to: '/sluzby', label: t('nav.services'), hash: true },
     { to: '/contact#contact', label: t('nav.contact'), hash: true },
   ];
@@ -106,7 +105,7 @@ export default function Navbar() {
             <Link
               to="/#poptavka"
               onClick={(e) => handleHashLink(e, poptavkaLink)}
-              className="px-2 py-1 text-sm font-medium rounded-sm bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+              className="px-4 py-2 text-sm font-medium rounded-sm bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
             >
               {t('nav.cta')}
             </Link>

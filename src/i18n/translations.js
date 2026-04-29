@@ -46,6 +46,7 @@ const csTranslations = {
     'nav.references': 'Reference',
     'nav.contact': 'Kontakt',
     'nav.cta': 'Nezávazná poptávka',
+    'nav.about_us': 'O nás',
 
     // Hero
     'hero.badge': 'Váš klid na daně a účetnictví',

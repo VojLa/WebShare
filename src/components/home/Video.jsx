@@ -1,8 +1,11 @@
 import { useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link, useNavigate } from 'react-router-dom';
 import { Play, Pause } from 'lucide-react';
 import videoSrc from '../../assets/file.mp4';
 import useTranslation from '../../hooks/useTranslation';
+import { scrollTo as smoothScrollTo } from '@/utils/scrollTo';
+
 
 
 const SPEEDS = [0.5, 0.75, 1, 1.25, 1.5, 2];
@@ -36,6 +39,9 @@ export default function VideoSection() {
   const [speed, setSpeed] = useState(1);
   const [indicator, setIndicator] = useState(null);
   const { t, language } = useTranslation();
+  const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+
   
 
   const flash = (type) => {
@@ -67,6 +73,29 @@ export default function VideoSection() {
       setPlaying(false);
       flash('pause');
     }
+  };
+
+  const handleHashLink = (e, link) => {
+    if (!link.hash) {
+      setOpen(false);
+      return;
+    }
+
+    e.preventDefault();
+
+    const [targetPath, targetHash] = link.to.split('#');
+  
+    if (location.pathname === targetPath) {
+      if (targetHash) smoothScrollTo(targetHash);
+    } else {
+      navigate(targetPath);
+
+      setTimeout(() => {
+        if (targetHash) smoothScrollTo(targetHash);
+      }, 150);
+    }
+  
+    setOpen(false);
   };
 
   const handleSpeed = (e) => {
@@ -159,7 +188,7 @@ export default function VideoSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-8"
+          className="mb-8 flex flex-col items-center text-center text-sm text-muted-foreground"
         >
           <div className="flex items-center gap-3 mb-1.5 mt-8">
             <span className="text-2xl font-bold text-foreground">{t('references.excellent')}</span>
@@ -170,6 +199,13 @@ export default function VideoSection() {
             <GoogleG />
             <span className="font-semibold text-foreground">Google</span>
           </div>
+          <Link
+            to="/#poptavka"
+            onClick={(e) => handleHashLink(e, { to: '/#poptavka', hash: true })}
+            className="px-4 py-2 mt-4 text-lg font-medium rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+          >
+            {t('nav.cta')}
+          </Link>
         </motion.div>
       </div>
     </section>
