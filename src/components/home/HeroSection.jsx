@@ -2,9 +2,9 @@ import { ArrowRight, Star  } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import useTranslation from '@/hooks/useTranslation';
-import HERO_IMAGE from '@/assets/Hero_background.webp';
-import PORTRET from '@/assets/Portret.jpg';
-import PORTRET_MOBILE from '@/assets/Portret_mobile.jpg';
+import PORTRET from '@/assets/Portret.png';
+import PORTRET_MOBILE from '@/assets/Portret_mobile.png';
+import LOGO from '@/assets/BA LOGO - ORIGINAL.svg';
 import { scrollTo } from '@/utils/scrollTo';
 
 export default function HeroSection() {
@@ -13,11 +13,16 @@ export default function HeroSection() {
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0">
+        <img
+          src={LOGO}
+          alt="Portrét"
+          className="absolute -right-16 top-1/2 h-[110%] w-auto -translate-y-1/2 object-contain opacity-20"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-20 md:pt-28 min-[900px]:pt-20">
+      <div className="relative z-10 max-w-7xl mx-auto pl-4 sm:pl-6 lg:pl-8 w-full pt-20 md:pt-28 min-[900px]:pt-20">
         <div className="flex flex-col min-[900px]:flex-row items-center gap-8 sm:gap-12">
 
           {/* Text */}
@@ -85,7 +90,7 @@ export default function HeroSection() {
           </div>
 
           {/* Portrét — pod tlačítky na mobilu */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
@@ -94,9 +99,9 @@ export default function HeroSection() {
             <img
               src={PORTRET_MOBILE}
               alt="Portrét"
-              className="w-full h-auto rounded-2xl object-cover shadow-2xl"
+              className="w-full h-auto rounded-2xl object-cover"
             />
-          </motion.div>
+          </motion.div> */}
 
           {/* Portrét — napravo na větší obrazovce */}
           <motion.div
@@ -108,7 +113,7 @@ export default function HeroSection() {
             <img
               src={PORTRET}
               alt="Portrét"
-              className="w-full h-auto rounded-2xl object-cover shadow-2xl"
+              className="w-full h-auto rounded-2xl object-cover opacity-90"
             />
           </motion.div>
 
